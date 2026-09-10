@@ -1,0 +1,17 @@
+id: jakobs-law
+slug: jakobs-law
+title_bn: "জ্যাকবের সূত্র (Jakob's Law)"
+title_en: "Jakob's Law"
+level: "06"
+reference_category: laws
+difficulty: beginner
+summary_bn: "ব্যবহারকারী অন্য সাইট/অ্যাপে যা শিখেছে, তোমার প্রোডাক্টেও সেটাই আশা করে — পরিচিত প্যাটার্ন ব্যবহার করো।"
+reading_time_minutes: 4
+prerequisites: [what-is-ux]
+related_topics: [hicks-law, fitts-law]
+tags: [law, ux, laws, beginner, mental-model, conventions, accessibility]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

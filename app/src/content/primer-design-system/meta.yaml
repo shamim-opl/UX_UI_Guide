@@ -1,0 +1,17 @@
+id: primer-design-system
+slug: primer-design-system
+title_bn: "GitHub Primer"
+title_en: GitHub Primer
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "GitHub-এর ডিজাইন সিস্টেম — ডেভেলপার-ফোকাসড প্রোডাক্টের জন্য শক্তিশালী অ্যাক্সেসিবিলিটি-প্রথম উদাহরণ।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [carbon-design-system, wcag-accessibility]
+tags: [design-system, github, primer, accessibility]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

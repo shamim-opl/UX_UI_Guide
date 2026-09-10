@@ -1,0 +1,148 @@
+# Glossary schema per UX_UI Documentation/docs/06-content-schema.md §Glossary entry schema
+- term: UX
+  term_bn: "ইউজার এক্সপেরিয়েন্স"
+  definition_en: "The overall experience a person has while using a product or service."
+  simple_explanation: "ব্যবহারকারীর সামগ্রিক অভিজ্ঞতা — শুধু চেহারা না, পুরো যাত্রা।"
+  example: "একটা অ্যাপে টাকা পাঠানোর পুরো প্রক্রিয়া কতটা সহজ, তা UX।"
+  related_terms: [UI, "User Journey"]
+  category: fundamentals
+- term: UI
+  term_bn: "ইউজার ইন্টারফেস"
+  definition_en: "The visual and interactive surface of a product that a user directly sees and touches."
+  simple_explanation: "যা ব্যবহারকারী চোখে দেখে আর স্পর্শ করে — বাটন, রং, লেআউট।"
+  example: "একটা বাটনের রং, সাইজ, এবং তার উপর লেখা টেক্সট — এসব UI।"
+  related_terms: [UX, "Design System"]
+  category: fundamentals
+- term: "Cognitive Load"
+  term_bn: "জ্ঞানীয় চাপ"
+  definition_en: "The amount of mental effort required to understand or use an interface."
+  simple_explanation: "একটা কাজ বুঝতে বা করতে মস্তিষ্কের কতটা পরিশ্রম লাগে।"
+  example: "১৫টা ফিল্ডের ফর্ম একবারে দেখানো বেশি জ্ঞানীয় চাপ তৈরি করে।"
+  related_terms: ["Progressive Disclosure"]
+  category: psychology
+- term: "Affordance"
+  term_bn: "অ্যাফোর্ডেন্স"
+  definition_en: "A visual cue that suggests how an element can be used."
+  simple_explanation: "একটা এলিমেন্ট দেখেই বোঝা যাওয়া উচিত সেটা দিয়ে কী করা যায়।"
+  example: "একটা বাটনের ছায়া/উচ্চতা বোঝায় এটা চাপা যায়।"
+  related_terms: ["Signifier"]
+  category: interaction-design
+- term: "Progressive Disclosure"
+  term_bn: "ধাপে ধাপে প্রকাশ"
+  definition_en: "Showing only necessary information at each step, revealing more as needed."
+  simple_explanation: "সবকিছু একসাথে না দেখিয়ে, দরকার অনুযায়ী ধাপে ধাপে দেখানো।"
+  example: "সাইন-আপ ফর্মে প্রথমে শুধু ইমেইল চাওয়া, পরের ধাপে বাকি তথ্য।"
+  related_terms: ["Cognitive Load"]
+  category: interaction-design
+- term: "Design Token"
+  term_bn: "ডিজাইন টোকেন"
+  definition_en: "A named, reusable design decision (color, spacing, type) used instead of a hardcoded value."
+  simple_explanation: "রং বা স্পেসিং-এর মান সরাসরি না লিখে একটা নামের মাধ্যমে ব্যবহার করা।"
+  example: "`--color-accent` একটা টোকেন, `#1A8917` তার মান।"
+  related_terms: ["Design System"]
+  category: design-systems
+- term: "Design System"
+  term_bn: "ডিজাইন সিস্টেম"
+  definition_en: "A collection of reusable components, tokens, and guidelines used to build products consistently."
+  simple_explanation: "কম্পোনেন্ট, টোকেন, আর নিয়মের একটা সংগ্রহ যা দিয়ে সামঞ্জস্যপূর্ণ প্রোডাক্ট বানানো যায়।"
+  example: "একটা বাটন কম্পোনেন্ট প্রতিটা পেজে একইভাবে দেখতে হওয়া।"
+  related_terms: ["Design Token"]
+  category: design-systems
+- term: "Usability"
+  term_bn: "ইউজেবিলিটি"
+  definition_en: "How easily and effectively users can accomplish their goals with a product."
+  simple_explanation: "একটা প্রোডাক্ট কতটা সহজে ও কার্যকরভাবে ব্যবহার করা যায়।"
+  example: "একটা ফর্ম প্রথমবারেই ভুল ছাড়া পূরণ করতে পারা।"
+  related_terms: ["Heuristic Evaluation"]
+  category: usability
+- term: "Heuristic Evaluation"
+  term_bn: "হিউরিস্টিক মূল্যায়ন"
+  definition_en: "A usability inspection method where evaluators check a design against established usability principles."
+  simple_explanation: "প্রতিষ্ঠিত ইউজেবিলিটি নীতির বিপরীতে একটা ডিজাইন যাচাই করা।"
+  example: "নিলসেনের ১০টা হিউরিস্টিক দিয়ে একটা স্ক্রিন পরীক্ষা করা।"
+  related_terms: ["Usability"]
+  category: usability
+- term: "Information Architecture"
+  term_bn: "তথ্য স্থাপত্য"
+  definition_en: "The structural design of how content is organized, labeled, and navigated."
+  simple_explanation: "কন্টেন্ট কীভাবে সাজানো, লেবেল করা, আর খুঁজে পাওয়া যায় তার কাঠামো।"
+  example: "একটা ওয়েবসাইটের মেনু স্ট্রাকচার IA-এর অংশ।"
+  related_terms: ["Navigation"]
+  category: information-architecture
+- term: "Persona"
+  term_bn: "পারসোনা"
+  definition_en: "A fictional but research-based representation of a user type."
+  simple_explanation: "গবেষণাভিত্তিক একটা কাল্পনিক ব্যবহারকারী চরিত্র, যা এক ধরনের আসল ব্যবহারকারীকে প্রতিনিধিত্ব করে।"
+  example: "\"রাহেলা, ৩৫, প্রথমবার অনলাইনে কেনাকাটা করছেন\" — একটা পারসোনা।"
+  related_terms: ["User Research"]
+  category: research
+- term: "A/B Testing"
+  term_bn: "এ/বি টেস্টিং"
+  definition_en: "Comparing two versions of a design to see which performs better."
+  simple_explanation: "একটা ডিজাইনের দুইটা ভার্সন বানিয়ে দেখা কোনটা ভালো কাজ করে।"
+  example: "একটা বাটনের দুইটা রং টেস্ট করে দেখা কোনটায় বেশি ক্লিক হয়।"
+  related_terms: ["Usability Testing"]
+  category: research
+- term: "Prototype"
+  term_bn: "প্রোটোটাইপ"
+  definition_en: "An early, testable version of a design used to validate ideas before full development."
+  simple_explanation: "সম্পূর্ণ তৈরি করার আগে ধারণা যাচাই করার জন্য একটা প্রাথমিক, টেস্টযোগ্য ভার্সন।"
+  example: "কাগজে আঁকা স্কেচ থেকে শুরু করে ক্লিকযোগ্য Figma ডিজাইন — সবই প্রোটোটাইপ।"
+  related_terms: ["Wireframe"]
+  category: fundamentals
+- term: "Wireframe"
+  term_bn: "ওয়্যারফ্রেম"
+  definition_en: "A low-fidelity structural blueprint of a screen, without visual styling."
+  simple_explanation: "কোনো ভিজ্যুয়াল স্টাইলিং ছাড়া একটা স্ক্রিনের কাঠামোগত নকশা।"
+  example: "শুধু বক্স আর লাইন দিয়ে আঁকা একটা হোমপেজের লেআউট।"
+  related_terms: ["Prototype"]
+  category: fundamentals
+- term: "Accessibility"
+  term_bn: "অ্যাক্সেসিবিলিটি"
+  definition_en: "Designing products so they are usable by people with a wide range of abilities."
+  simple_explanation: "প্রতিবন্ধী ব্যবহারকারীসহ সবার জন্য ব্যবহারযোগ্য করে ডিজাইন করা।"
+  example: "স্ক্রিন রিডার দিয়ে সম্পূর্ণ সাইট ব্যবহার করা যাওয়া।"
+  related_terms: [WCAG]
+  category: accessibility
+- term: WCAG
+  term_bn: "ডাব্লিউসিএজি (Web Content Accessibility Guidelines)"
+  definition_en: "W3C's international standard defining how to make web content accessible to people with disabilities."
+  simple_explanation: "ওয়েব কন্টেন্ট অ্যাক্সেসিবল করার আন্তর্জাতিক মান, W3C প্রকাশ করে।"
+  example: "এই প্ল্যাটফর্ম নিজেই WCAG 2.2 AA লক্ষ্য অনুসরণ করে।"
+  related_terms: [Accessibility]
+  category: accessibility
+- term: "Mental Model"
+  term_bn: "মানসিক মডেল"
+  definition_en: "A user's internal understanding of how something works, built from past experience."
+  simple_explanation: "আগের অভিজ্ঞতা থেকে ব্যবহারকারীর মনে তৈরি হওয়া ধারণা, কোনো জিনিস কীভাবে কাজ করে।"
+  example: "শপিং কার্ট আইকন উপরে-ডানদিকে থাকবে — এটা বেশিরভাগ ব্যবহারকারীর মানসিক মডেলের অংশ।"
+  related_terms: ["Jakob's Law"]
+  category: psychology
+- term: "Signifier"
+  term_bn: "সিগনিফায়ার"
+  definition_en: "An explicit signal that tells the user where to act, distinct from affordance (which is what an element can do)."
+  simple_explanation: "একটা এলিমেন্ট যে ব্যবহার করা যায় তা স্পষ্টভাবে বোঝানোর ভিজ্যুয়াল ইঙ্গিত।"
+  example: "একটা বাটনের চারপাশে বর্ডার বা রং সিগনিফায়ার — বলে দেয় এখানে ক্লিক করা যায়।"
+  related_terms: [Affordance]
+  category: interaction-design
+- term: "Navigation"
+  term_bn: "নেভিগেশন"
+  definition_en: "The system of menus, links, and controls that let a user move through a product's content and structure."
+  simple_explanation: "একটা প্রোডাক্টের ভেতরে ব্যবহারকারী কীভাবে এক জায়গা থেকে আরেক জায়গায় যায়, তার ব্যবস্থা।"
+  example: "একটা ওয়েবসাইটের টপ মেনু বা সাইডবার নেভিগেশনের উদাহরণ।"
+  related_terms: ["Information Architecture"]
+  category: information-architecture
+- term: "User Research"
+  term_bn: "ইউজার রিসার্চ"
+  definition_en: "The systematic study of users and their needs to inform design decisions."
+  simple_explanation: "ব্যবহারকারী ও তাদের প্রয়োজন বোঝার জন্য নিয়মতান্ত্রিক গবেষণা, যা ডিজাইন সিদ্ধান্তে কাজে লাগে।"
+  example: "ইউজার ইন্টারভিউ নিয়ে জানা কেন মানুষ চেকআউটের মাঝপথে ছেড়ে চলে যায়।"
+  related_terms: [Persona, "A/B Testing"]
+  category: research
+- term: "Usability Testing"
+  term_bn: "ইউজেবিলিটি টেস্টিং"
+  definition_en: "Observing real users attempt tasks with a product to find usability problems."
+  simple_explanation: "আসল ব্যবহারকারীকে দিয়ে প্রোডাক্ট ব্যবহার করিয়ে দেখা, কোথায় সমস্যা হয়।"
+  example: "৫ জন ব্যবহারকারীকে দিয়ে একটা নতুন সাইন-আপ ফ্লো টেস্ট করানো।"
+  related_terms: [Usability, "User Research"]
+  category: research

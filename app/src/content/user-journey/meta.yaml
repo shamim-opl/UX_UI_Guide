@@ -1,0 +1,17 @@
+id: user-journey
+slug: user-journey
+title_bn: "ইউজার জার্নি (User Journey)"
+title_en: User Journey
+level: "03"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একজন ব্যবহারকারী কোনো লক্ষ্য পূরণ করতে শুরু থেকে শেষ পর্যন্ত যে ধাপগুলো পার হয়, তার মানচিত্র।"
+reading_time_minutes: 6
+prerequisites: [what-is-ux]
+related_topics: [cognitive-load, what-is-ux]
+tags: [ux-fundamentals, journey, intermediate, journey-map, accessibility, research]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

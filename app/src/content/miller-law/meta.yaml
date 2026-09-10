@@ -1,0 +1,17 @@
+id: miller-law
+slug: miller-law
+title_bn: "মিলারের সূত্র (Miller's Law)"
+title_en: "Miller's Law"
+level: "02"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "মানুষ ওয়ার্কিং মেমরিতে গড়ে সীমিত সংখ্যক তথ্য-খণ্ড ধরে রাখতে পারে — তাই তথ্য ছোট ছোট দলে ভাগ করা উচিত।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux]
+related_topics: [cognitive-load, hicks-law]
+tags: [law, psychology, memory, chunking]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

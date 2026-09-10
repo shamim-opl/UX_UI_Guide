@@ -1,0 +1,17 @@
+id: apple-hig-system
+slug: apple-hig
+title_bn: "Apple Human Interface Guidelines (HIG)"
+title_en: Apple Human Interface Guidelines
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "Apple-এর প্ল্যাটফর্ম গাইডলাইন — iOS, iPadOS, macOS, watchOS, tvOS, visionOS জুড়ে ডিজাইনের সরকারি নিয়ম।"
+reading_time_minutes: 5
+prerequisites: [what-is-design-system]
+related_topics: [material-design, fluent-design-system]
+tags: [design-system, apple, ios, hig]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

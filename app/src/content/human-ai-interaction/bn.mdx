@@ -1,0 +1,43 @@
+## এটা কী?
+
+**Human-AI Interaction (HAI)** হলো একটা ডিজাইন ক্ষেত্র যা নির্ধারণ করে মানুষ ও AI সিস্টেমের মধ্যে নিয়ন্ত্রণ, সিদ্ধান্ত, এবং দায়িত্ব কীভাবে ভাগ হবে। মূল প্রশ্ন: AI কতটা স্বায়ত্তশাসিতভাবে কাজ করবে, আর কোথায় মানুষের সিদ্ধান্ত/অনুমোদন প্রয়োজন?
+
+## মূল মডেল
+
+```text
+Human → AI → Interaction → Decision → Action → Feedback → Human Oversight
+```
+
+এই চক্রে "Human Oversight" (মানবিক তদারকি) সবসময় থাকা উচিত — বিশেষ করে গুরুত্বপূর্ণ বা অপরিবর্তনীয় সিদ্ধান্তে।
+
+## কেন গুরুত্বপূর্ণ?
+
+**Automation Bias** — মানুষ স্বয়ংক্রিয় সিস্টেমের সিদ্ধান্তকে অতিরিক্ত বিশ্বাস করার প্রবণতা দেখায়, এমনকি যখন প্রমাণ বিপরীত কথা বলে। ভালো HAI ডিজাইন এই ঝুঁকি কমায় — AI-কে "চূড়ান্ত সিদ্ধান্তদাতা" না বানিয়ে "সহায়ক" হিসেবে উপস্থাপন করে।
+
+<Callout type="research-finding">
+মাইক্রোসফট রিসার্চের "Guidelines for Human-AI Interaction" (Amershi et al., ২০১৯) ১৮টা নির্দিষ্ট, প্রমাণ-ভিত্তিক গাইডলাইন দেয় — যেমন "AI-এর ক্ষমতা কী তা স্পষ্ট করো" এবং "AI ভুল করলে সহজে সংশোধনের সুযোগ দাও।"
+</Callout>
+
+## UI উদাহরণ
+
+- একটা AI-চালিত মেডিকেল ডায়াগনসিস টুল ডাক্তারকে চূড়ান্ত সিদ্ধান্ত নিতে দেয়, AI শুধু সাজেশন দেয় — মানবিক তদারকি বজায় রাখে।
+- একটা কনফিডেন্স স্কোর দেখানো ("৭৮% নিশ্চিত") যাতে ব্যবহারকারী বুঝতে পারে কতটা বিশ্বাস করা উচিত।
+
+## Rules / Best Practices
+
+- AI-এর সীমাবদ্ধতা স্পষ্টভাবে যোগাযোগ করো — এটা কী করতে পারে না, তা লুকিয়ো না।
+- গুরুত্বপূর্ণ/অপরিবর্তনীয় সিদ্ধান্তে মানবিক অনুমোদনের ধাপ রাখো ("Human-in-the-loop")।
+- AI ভুল করলে সহজে সংশোধন ও রিপোর্ট করার পথ দাও।
+
+## Limitations
+
+Human-AI Interaction একটা দ্রুত বিকাশমান গবেষণা ক্ষেত্র — এখানে দেওয়া নির্দেশনা বর্তমান সেরা অনুশীলন প্রতিফলিত করে, কিন্তু ভবিষ্যতে নতুন প্রমাণের ভিত্তিতে পরিবর্তিত হতে পারে। এই আর্টিকেলের `evidence_level: medium` চিহ্নিতকরণ এটাই প্রতিফলিত করে।
+
+## Sources & Evidence
+
+**গবেষণা (Research):**
+- Amershi, S., Weld, D., Vorvoreanu, M., et al. (2019). Guidelines for human-AI interaction. *CHI '19 Proceedings*, Paper 3.
+
+**প্রাথমিক উৎস (Primary):**
+- [Microsoft HAX Toolkit](https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)
+- [Microsoft Research — Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/research/project/guidelines-for-human-ai-interaction/)

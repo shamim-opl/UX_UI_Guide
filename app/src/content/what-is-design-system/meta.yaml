@@ -1,0 +1,17 @@
+id: what-is-design-system
+slug: what-is-design-system
+title_bn: "ডিজাইন সিস্টেম কী?"
+title_en: What is a Design System?
+level: "12"
+reference_category: null
+difficulty: beginner
+summary_bn: "কম্পোনেন্ট, টোকেন, এবং নিয়মের একটা সংগ্রহ, যা দিয়ে একটা টিম সামঞ্জস্যপূর্ণ প্রোডাক্ট বানায় — শুধু একটা UI কিট না।"
+reading_time_minutes: 6
+prerequisites: [what-is-ui]
+related_topics: [what-is-design-token, what-are-design-variables, material-design]
+tags: [design-system, fundamentals, component]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

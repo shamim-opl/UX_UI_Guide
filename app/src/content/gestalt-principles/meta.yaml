@@ -1,0 +1,17 @@
+id: gestalt-principles
+slug: gestalt-principles
+title_bn: "গেস্টাল্ট নীতিসমূহ (Gestalt Principles)"
+title_en: "Gestalt Principles"
+level: "07"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "মানুষ বিচ্ছিন্ন এলিমেন্টের বদলে সামগ্রিক প্যাটার্ন দেখে — Proximity, Similarity, Closure, Continuity, Figure-Ground এই ছয়টা মূল নীতি ভিজ্যুয়াল ডিজাইনের ভিত্তি।"
+reading_time_minutes: 8
+prerequisites: [what-is-ui]
+related_topics: [von-restorff-effect, what-is-ui]
+tags: [law, visual-design, perception, gestalt]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

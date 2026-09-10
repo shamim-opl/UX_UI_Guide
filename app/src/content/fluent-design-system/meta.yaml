@@ -1,0 +1,17 @@
+id: fluent-design-system
+slug: fluent-design
+title_bn: "Microsoft Fluent 2"
+title_en: Microsoft Fluent 2
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "Microsoft-এর ক্রস-প্ল্যাটফর্ম ডিজাইন সিস্টেম — Windows, Microsoft 365, এবং ওয়েব জুড়ে ব্যবহৃত।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [material-design, apple-hig-system]
+tags: [design-system, microsoft, fluent, windows]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

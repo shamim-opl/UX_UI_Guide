@@ -1,0 +1,17 @@
+id: button-component
+slug: button-component
+title_bn: "Button — কম্পোনেন্ট রেফারেন্স"
+title_en: Button
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "একটা একক অ্যাকশন ট্রিগার করার মূল ইন্টারঅ্যাক্টিভ কম্পোনেন্ট — অ্যানাটমি, ভ্যারিয়েন্ট, স্টেট, অ্যাক্সেসিবিলিটি।"
+reading_time_minutes: 8
+prerequisites: [what-is-ui]
+related_topics: [fitts-law, what-is-ui]
+tags: [component, ui, reference, button, touch-target, accessibility, design-system]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

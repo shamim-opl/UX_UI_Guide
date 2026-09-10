@@ -1,0 +1,17 @@
+id: atlassian-design-system
+slug: atlassian-design-system
+title_bn: "Atlassian Design System"
+title_en: Atlassian Design System
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "Atlassian-এর ডিজাইন সিস্টেম (Jira, Confluence, Trello) — টিম-কোলাবরেশন ও প্রজেক্ট-ম্যানেজমেন্ট প্রোডাক্টে বিশেষায়িত।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [carbon-design-system]
+tags: [design-system, atlassian, jira, collaboration]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

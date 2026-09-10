@@ -1,0 +1,17 @@
+id: material-design
+slug: material-design
+title_bn: "Material Design (Google)"
+title_en: Material Design
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "Google-এর ওপেন-সোর্স ডিজাইন সিস্টেম — Android, ওয়েব, এবং Google-এর নিজস্ব প্রোডাক্টের ভিত্তি।"
+reading_time_minutes: 5
+prerequisites: [what-is-design-system]
+related_topics: [what-is-design-system, apple-hig-system]
+tags: [design-system, google, material-design, android]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

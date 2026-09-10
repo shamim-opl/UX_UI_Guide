@@ -1,0 +1,17 @@
+id: wcag-accessibility
+slug: wcag-accessibility
+title_bn: "WCAG ও অ্যাক্সেসিবিলিটির ভিত্তি"
+title_en: WCAG & Accessibility Foundations
+level: "10"
+reference_category: null
+difficulty: intermediate
+summary_bn: "WCAG হলো ওয়েব অ্যাক্সেসিবিলিটির আন্তর্জাতিক মান — POUR চারটা নীতির উপর ভিত্তি করে তৈরি।"
+reading_time_minutes: 7
+prerequisites: [what-is-ui]
+related_topics: [button-component]
+tags: [accessibility, wcag, intermediate, pour, screen-reader, keyboard-navigation]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

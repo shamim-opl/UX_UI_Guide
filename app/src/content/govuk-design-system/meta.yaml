@@ -1,0 +1,17 @@
+id: govuk-design-system
+slug: govuk-design-system
+title_bn: "GOV.UK Design System"
+title_en: GOV.UK Design System
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "যুক্তরাজ্য সরকারের ডিজাইন সিস্টেম — অ্যাক্সেসিবল, সহজ সরকারি সেবা ডিজাইনের সবচেয়ে ভালো পাবলিক উদাহরণ।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [uswds, wcag-accessibility]
+tags: [design-system, government, accessibility, forms]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

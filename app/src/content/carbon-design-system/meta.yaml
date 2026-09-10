@@ -1,0 +1,17 @@
+id: carbon-design-system
+slug: carbon-design-system
+title_bn: "IBM Carbon Design System"
+title_en: IBM Carbon Design System
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "IBM-এর ওপেন-সোর্স এন্টারপ্রাইজ ডিজাইন সিস্টেম — ডেটা-ঘন, জটিল প্রোডাক্টের জন্য শক্তিশালী উদাহরণ।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [what-is-design-system, atlassian-design-system]
+tags: [design-system, ibm, carbon, enterprise]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

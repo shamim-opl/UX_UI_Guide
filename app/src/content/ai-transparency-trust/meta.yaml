@@ -1,0 +1,17 @@
+id: ai-transparency-trust
+slug: ai-transparency-trust
+title_bn: "AI স্বচ্ছতা ও বিশ্বাস (AI Transparency & Trust)"
+title_en: AI Transparency & Trust
+level: "17"
+reference_category: null
+difficulty: advanced
+summary_bn: "ব্যবহারকারীকে AI-এর প্রতি সঠিক পরিমাণ বিশ্বাস তৈরি করতে সাহায্য করা — না অতিরিক্ত, না অপর্যাপ্ত।"
+reading_time_minutes: 6
+prerequisites: [human-ai-interaction]
+related_topics: [human-ai-interaction, what-is-ai-ux]
+tags: [ai-ux, trust, transparency, explainability, emerging]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

@@ -1,0 +1,17 @@
+id: lightning-design-system
+slug: lightning-design-system
+title_bn: "Salesforce Lightning Design System"
+title_en: Salesforce Lightning Design System
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "Salesforce-এর ডিজাইন সিস্টেম — বৃহৎ CRM ও এন্টারপ্রাইজ ডেটা ম্যানেজমেন্ট ইন্টারফেসের জন্য বিশেষায়িত।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [carbon-design-system]
+tags: [design-system, salesforce, lightning, enterprise]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

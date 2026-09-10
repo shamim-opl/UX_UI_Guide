@@ -1,0 +1,17 @@
+id: what-is-ai-ux
+slug: what-is-ai-ux
+title_bn: "AI UX কী?"
+title_en: What is AI UX?
+level: "16"
+reference_category: null
+difficulty: intermediate
+summary_bn: "AI-চালিত ফিচারের UX ডিজাইন ঐতিহ্যবাহী UX থেকে আলাদা কেন — অনিশ্চয়তা, ভুল, এবং non-deterministic আচরণ সামলাতে হয়।"
+reading_time_minutes: 6
+prerequisites: [what-is-ux]
+related_topics: [conversational-ux, human-ai-interaction, ai-transparency-trust]
+tags: [ai-ux, artificial-intelligence, emerging]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

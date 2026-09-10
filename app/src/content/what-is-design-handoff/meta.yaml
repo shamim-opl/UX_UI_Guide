@@ -1,0 +1,17 @@
+id: what-is-design-handoff
+slug: what-is-design-handoff
+title_bn: "ডিজাইন হ্যান্ডঅফ কী?"
+title_en: What is Design Handoff?
+level: "12"
+reference_category: null
+difficulty: intermediate
+summary_bn: "ডিজাইনার থেকে ডেভেলপারের কাছে একটা ডিজাইন বাস্তবায়নযোগ্য তথ্যসহ হস্তান্তরের প্রক্রিয়া — শুধু একটা ছবি পাঠানো না।"
+reading_time_minutes: 5
+prerequisites: [what-is-design-token]
+related_topics: [what-are-design-variables, what-is-design-system]
+tags: [handoff, design-system, developer-collaboration]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

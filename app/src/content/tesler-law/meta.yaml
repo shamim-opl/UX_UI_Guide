@@ -1,0 +1,17 @@
+id: tesler-law
+slug: tesler-law
+title_bn: "টেসলারের সূত্র (Tesler's Law)"
+title_en: "Tesler's Law"
+level: "06"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "প্রতিটা প্রক্রিয়ার একটা ন্যূনতম জটিলতা থাকে যা দূর করা যায় না — শুধু সরানো যায়, হয় UI-তে নয়তো ব্যবহারকারীর কাছে।"
+reading_time_minutes: 4
+prerequisites: [what-is-ux]
+related_topics: [hicks-law, cognitive-load]
+tags: [law, complexity, interaction-design]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

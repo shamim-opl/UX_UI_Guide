@@ -1,0 +1,17 @@
+id: adobe-spectrum
+slug: adobe-spectrum
+title_bn: "Adobe Spectrum"
+title_en: Adobe Spectrum
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "Adobe-এর ডিজাইন সিস্টেম — ক্রিয়েটিভ টুলের জন্য বিশেষায়িত, ঘন টুলবার ও প্যানেল-ভিত্তিক UI-তে দক্ষ।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [what-is-design-token]
+tags: [design-system, adobe, spectrum, creative-tools]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

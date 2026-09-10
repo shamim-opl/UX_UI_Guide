@@ -1,0 +1,17 @@
+id: uswds
+slug: uswds
+title_bn: "US Web Design System (USWDS)"
+title_en: US Web Design System
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "যুক্তরাষ্ট্র সরকারের ওয়েব ডিজাইন সিস্টেম — accessible ও mobile-friendly সরকারি ওয়েবসাইট বানানোর জন্য।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-system]
+related_topics: [govuk-design-system, wcag-accessibility]
+tags: [design-system, government, accessibility, uswds]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

@@ -1,0 +1,17 @@
+id: goal-gradient-effect
+slug: goal-gradient-effect
+title_bn: "গোল-গ্রেডিয়েন্ট ইফেক্ট (Goal-Gradient Effect)"
+title_en: "Goal-Gradient Effect"
+level: "02"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "লক্ষ্যের যত কাছে পৌঁছানো যায়, প্রচেষ্টা তত বাড়ে — মানুষ ও প্রাণী উভয়েই এই প্রবণতা দেখায়।"
+reading_time_minutes: 4
+prerequisites: [zeigarnik-effect]
+related_topics: [zeigarnik-effect, user-journey]
+tags: [law, psychology, motivation, progress]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

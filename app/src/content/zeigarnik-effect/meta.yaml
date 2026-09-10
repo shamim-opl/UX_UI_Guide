@@ -1,0 +1,17 @@
+id: zeigarnik-effect
+slug: zeigarnik-effect
+title_bn: "জেইগার্নিক ইফেক্ট (Zeigarnik Effect)"
+title_en: "Zeigarnik Effect"
+level: "02"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "অসম্পূর্ণ কাজ সম্পূর্ণ কাজের চেয়ে বেশি মনে থাকে — এই নীতি প্রগ্রেস ইন্ডিকেটর ও অনবোর্ডিং ডিজাইনে ব্যবহৃত হয়।"
+reading_time_minutes: 4
+prerequisites: [cognitive-load]
+related_topics: [goal-gradient-effect, user-journey]
+tags: [law, psychology, motivation, progress]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

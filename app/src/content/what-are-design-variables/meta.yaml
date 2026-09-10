@@ -1,0 +1,17 @@
+id: what-are-design-variables
+slug: what-are-design-variables
+title_bn: "ডিজাইন ভেরিয়েবল (Variables) কী?"
+title_en: What are Design Variables?
+level: "12"
+reference_category: null
+difficulty: intermediate
+summary_bn: "Figma-এর মতো ডিজাইন টুলে টোকেনের ধারণা বাস্তবায়নের প্রকৃত ফিচার — মোড (লাইট/ডার্ক) সাপোর্ট সহ।"
+reading_time_minutes: 5
+prerequisites: [what-is-design-token]
+related_topics: [what-is-design-token, what-is-design-handoff]
+tags: [design-tokens, figma, design-system, variables]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

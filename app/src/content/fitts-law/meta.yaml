@@ -1,0 +1,17 @@
+id: fitts-law
+slug: fitts-law
+title_bn: "ফিটসের সূত্র (Fitts's Law)"
+title_en: Fitts's Law
+level: "06"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "কোনো টার্গেটে পৌঁছাতে সময় লাগে টার্গেটের দূরত্ব আর সাইজের উপর — কাছে ও বড় টার্গেট দ্রুত পৌঁছানো যায়।"
+reading_time_minutes: 6
+prerequisites: [what-is-ui]
+related_topics: [hicks-law, button-component]
+tags: [law, interaction-design, laws, touch-target, mobile-ui]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

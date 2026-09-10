@@ -1,0 +1,17 @@
+id: hicks-law
+slug: hicks-law
+title_bn: "হিকের সূত্র (Hick's Law)"
+title_en: Hick's Law
+level: "06"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "যত বেশি অপশন, সিদ্ধান্ত নিতে তত বেশি সময় লাগে — অপশন কমালে সিদ্ধান্ত দ্রুত হয়।"
+reading_time_minutes: 6
+prerequisites: [what-is-ui]
+related_topics: [fitts-law, cognitive-load]
+tags: [law, interaction-design, laws, choice-paralysis, decision-making, accessibility]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

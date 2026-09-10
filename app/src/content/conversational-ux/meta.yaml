@@ -1,0 +1,17 @@
+id: conversational-ux
+slug: conversational-ux
+title_bn: "কনভার্সেশনাল UX (Conversational UX)"
+title_en: Conversational UX
+level: "16"
+reference_category: null
+difficulty: intermediate
+summary_bn: "চ্যাটবট ও ভয়েস অ্যাসিস্ট্যান্টের মতো ভাষা-ভিত্তিক ইন্টারফেসের ডিজাইন — যেখানে কোনো মেনু নেই, শুধু কথোপকথন।"
+reading_time_minutes: 6
+prerequisites: [what-is-ai-ux]
+related_topics: [what-is-ai-ux, cognitive-load]
+tags: [ai-ux, chatbot, voice-ux, emerging]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

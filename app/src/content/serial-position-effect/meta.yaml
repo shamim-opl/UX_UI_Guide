@@ -1,0 +1,17 @@
+id: serial-position-effect
+slug: serial-position-effect
+title_bn: "সিরিয়াল পজিশন ইফেক্ট (Serial Position Effect)"
+title_en: "Serial Position Effect"
+level: "02"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "একটা তালিকার প্রথম ও শেষ আইটেম সবচেয়ে ভালো মনে থাকে, মাঝের আইটেমগুলো কম মনে থাকে।"
+reading_time_minutes: 4
+prerequisites: [cognitive-load]
+related_topics: [miller-law, cognitive-load]
+tags: [law, psychology, memory]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

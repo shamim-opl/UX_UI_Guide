@@ -1,0 +1,17 @@
+id: doherty-threshold
+slug: doherty-threshold
+title_bn: "ডোহার্টি থ্রেশহোল্ড (Doherty Threshold)"
+title_en: "Doherty Threshold"
+level: "06"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "সিস্টেমের রেসপন্স টাইম ৪০০ মিলিসেকেন্ডের কম হলে উৎপাদনশীলতা ও মনোযোগ সবচেয়ে ভালো থাকে।"
+reading_time_minutes: 4
+prerequisites: [what-is-ux]
+related_topics: [cognitive-load]
+tags: [law, performance, response-time]
+status: published
+source_type: research
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

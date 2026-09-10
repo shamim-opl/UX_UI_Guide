@@ -1,0 +1,17 @@
+id: what-is-design-token
+slug: what-is-design-token
+title_bn: "ডিজাইন টোকেন কী?"
+title_en: What is a Design Token?
+level: "12"
+reference_category: null
+difficulty: beginner
+summary_bn: "রং বা স্পেসিং-এর আসল মান সরাসরি না লিখে, একটা অর্থবহ নামের মাধ্যমে ব্যবহার করার পদ্ধতি — যেমন #1A8917-এর বদলে --color-accent।"
+reading_time_minutes: 5
+prerequisites: [what-is-design-system]
+related_topics: [what-is-design-system, what-are-design-variables]
+tags: [design-token, design-system, fundamentals]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-10
+content_status: verified

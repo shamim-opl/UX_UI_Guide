@@ -1,0 +1,11 @@
+/* This file is no longer the token source — it drifted out of sync with the
+   real implementation during the 2026-09-10 audit (sizes were bumped,
+   text-muted and on-accent were corrected for WCAG AA contrast) and
+   maintaining two copies by hand is exactly the kind of duplicate-structure
+   risk the master spec warns against (§33).
+
+   The actual, current tokens live in:
+   ../app/src/app/globals.css
+
+   Read that file directly — it's the one the running app uses. This file
+   is kept only so old links to it don't 404; do not edit values here. */

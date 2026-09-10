@@ -1,0 +1,17 @@
+id: cognitive-load
+slug: cognitive-load
+title_bn: "জ্ঞানীয় চাপ (Cognitive Load)"
+title_en: Cognitive Load
+level: "02"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একটা স্ক্রিন বুঝতে আর ব্যবহার করতে মস্তিষ্ককে কতটা কাজ করতে হয় — বেশি হলে ব্যবহারকারী হারিয়ে যায়।"
+reading_time_minutes: 7
+prerequisites: [what-is-ux]
+related_topics: [user-journey, hicks-law]
+tags: [psychology, cognitive-load, intermediate, accessibility, cognitive-accessibility, working-memory]
+status: published
+source_type: research
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

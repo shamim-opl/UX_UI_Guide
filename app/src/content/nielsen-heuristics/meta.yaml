@@ -1,0 +1,17 @@
+id: nielsen-heuristics
+slug: nielsen-heuristics
+title_bn: "নিলসেনের ১০টা ইউজেবিলিটি হিউরিস্টিক"
+title_en: "Nielsen's 10 Usability Heuristics"
+level: "09"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "ইউজেবিলিটি মূল্যায়নের সবচেয়ে বহুল-ব্যবহৃত ১০টা সাধারণ নীতি, ১৯৯৪ সাল থেকে প্রতিষ্ঠিত ও পরীক্ষিত।"
+reading_time_minutes: 9
+prerequisites: [what-is-ux]
+related_topics: [gestalt-principles, hicks-law, wcag-accessibility]
+tags: [heuristics, usability, evaluation, nielsen]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified

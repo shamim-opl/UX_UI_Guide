@@ -1,0 +1,17 @@
+id: norman-design-principles
+slug: norman-design-principles
+title_bn: "নরম্যানের ডিজাইন নীতিসমূহ"
+title_en: "Norman's Design Principles"
+level: "03"
+reference_category: laws
+difficulty: intermediate
+summary_bn: "Don Norman-এর প্রস্তাবিত ছয়টা মূল নীতি — Discoverability, Feedback, Conceptual Model, Affordance, Signifier, Mapping, Constraints — যা ভালো ডিজাইনের ভিত্তি।"
+reading_time_minutes: 7
+prerequisites: [what-is-ux]
+related_topics: [gestalt-principles, nielsen-heuristics]
+tags: [principles, norman, affordance, feedback]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-10
+content_status: verified
