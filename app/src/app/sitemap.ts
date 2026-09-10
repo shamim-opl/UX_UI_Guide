@@ -4,6 +4,8 @@ import { taxonomy } from "@/lib/taxonomy";
 import { getAllContent, getContentByReferenceCategory } from "@/lib/content";
 import { platforms } from "@/lib/platforms";
 
+export const dynamic = "force-static";
+
 // Dynamic sitemap (SEO pass, 2026-09-10 — see UX_UI Documentation/docs/decisions.md).
 // Learn URLs are listed as the canonical entry per doc.meta.reference_category
 // decision in decisions.md; the /reference/... alternate view isn't
