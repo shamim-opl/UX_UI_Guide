@@ -1,0 +1,17 @@
+id: raster-vs-vector
+slug: raster-vs-vector
+title_bn: "Raster বনাম Vector গ্রাফিক্স"
+title_en: "Raster vs Vector Graphics"
+level: "01"
+reference_category: null
+difficulty: beginner
+summary_bn: "Raster ছবি পিক্সেলের গ্রিড দিয়ে তৈরি, বড় করলে ঝাপসা হয়ে যায়; Vector গণিতের সমীকরণ দিয়ে তৈরি, যত বড়ই করো না কেন স্পষ্ট থাকে।"
+reading_time_minutes: 4
+prerequisites: [what-is-design-process]
+related_topics: [wireframe-mockup-prototype, responsive-design-basics]
+tags: [fundamentals, raster, vector, graphics, beginner]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-12
+content_status: verified

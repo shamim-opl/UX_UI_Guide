@@ -1,0 +1,17 @@
+id: responsive-design-basics
+slug: responsive-design-basics
+title_bn: "Responsive Design-এর ভিত্তি (Viewport, Breakpoint)"
+title_en: "Responsive Design Basics"
+level: "01"
+reference_category: null
+difficulty: beginner
+summary_bn: "একই ডিজাইন ফোন, ট্যাব আর ডেস্কটপে ভিন্নভাবে সাজানোর কৌশল — Viewport আর Breakpoint দিয়ে কন্ট্রোল করা হয়।"
+reading_time_minutes: 5
+prerequisites: [what-is-design-process]
+related_topics: [raster-vs-vector, wcag-accessibility]
+tags: [fundamentals, responsive, breakpoint, viewport, beginner]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-12
+content_status: verified

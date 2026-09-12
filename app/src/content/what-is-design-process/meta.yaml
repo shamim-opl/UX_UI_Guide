@@ -1,0 +1,17 @@
+id: what-is-design-process
+slug: what-is-design-process
+title_bn: "ডিজাইন প্রসেস কী? (Double Diamond)"
+title_en: "What is a Design Process?"
+level: "01"
+reference_category: null
+difficulty: beginner
+summary_bn: "ভালো ডিজাইন এলোমেলোভাবে আসে না — Discover, Define, Develop, Deliver এই চারটা ধাপে একটা কাঠামোবদ্ধ প্রসেস অনুসরণ করে।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux, what-is-ui]
+related_topics: [wireframe-mockup-prototype, user-journey]
+tags: [fundamentals, process, double-diamond, beginner]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-12
+content_status: verified
