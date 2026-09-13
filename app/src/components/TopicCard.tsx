@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ContentDoc } from "@/lib/content";
 
 const DIFFICULTY_LABEL: Record<string, string> = {
-  beginner: "শিক্ষানবিশ",
+  beginner: "প্রাইমারি",
   intermediate: "মধ্যম",
   advanced: "উন্নত",
 };

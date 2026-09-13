@@ -7,46 +7,76 @@ import { useSearchParams } from "next/navigation";
 export type SearchIndexItem = {
   id: string;
   title_bn: string;
+  title_en: string;
   category: string;
   summary_bn: string;
   difficulty: string;
   tags: string[];
+  body: string;
   href: string;
 };
 
 const FILTERS = [
   { value: "all", label: "সব" },
-  { value: "beginner", label: "শিক্ষানবিশ" },
+  { value: "beginner", label: "প্রাইমারি" },
   { value: "intermediate", label: "মধ্যম" },
   { value: "advanced", label: "উন্নত" },
 ];
 
 const DIFFICULTY_LABEL: Record<string, string> = {
-  beginner: "শিক্ষানবিশ",
+  beginner: "প্রাইমারি",
   intermediate: "মধ্যম",
   advanced: "উন্নত",
 };
 
-// MVP search per UX_UI Documentation/docs/11-search-strategy.md: client-side
-// substring match over title/summary/tags, bn + en both typed by the user
-// match since titles/tags are stored in bn already for MVP content. No
-// stemming/fuzzy Bangla matching yet — documented as a known limitation.
+// Unicode-normalize before comparing (NFC) — Bangla text can reach the page
+// through different combining-mark orderings that look identical but fail
+// a raw substring match otherwise. Also fixes nothing for case since Bangla
+// has none, but toLowerCase() still helps for the English half of queries.
+function normalize(s: string): string {
+  return s.normalize("NFC").toLowerCase();
+}
+
+// Find a short window of `text` around the first match of `q`, for a
+// search-result snippet — without this, a hit inside the body (the most
+// common case now that body is indexed) was invisible in the results list.
+function snippetAround(text: string, q: string, radius = 60): string | null {
+  const idx = normalize(text).indexOf(q);
+  if (idx === -1) return null;
+  const start = Math.max(0, idx - radius);
+  const end = Math.min(text.length, idx + q.length + radius);
+  return `${start > 0 ? "…" : ""}${text.slice(start, end)}${end < text.length ? "…" : ""}`;
+}
+
+// Full-text search: previously only title_bn/summary_bn/tags were indexed,
+// so any query matching only an article's body (the vast majority of real
+// searches, in Bangla or English) returned zero results. body now carries
+// the full stripped MDX text; title_en is included so an English title
+// (e.g. "Fitts's Law") matches even when the Bangla title doesn't spell it
+// out inline.
 export default function SearchClient({ index }: { index: SearchIndexItem[] }) {
   const params = useSearchParams();
   const [query, setQuery] = useState(params.get("q") ?? "");
   const [filter, setFilter] = useState("all");
 
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return index.filter((item) => {
-      const matchesQuery =
-        q.length === 0 ||
-        item.title_bn.toLowerCase().includes(q) ||
-        item.summary_bn.toLowerCase().includes(q) ||
-        item.tags.some((t) => t.toLowerCase().includes(q));
-      const matchesFilter = filter === "all" || item.difficulty === filter;
-      return matchesQuery && matchesFilter;
-    });
+    const q = normalize(query.trim());
+    return index
+      .filter((item) => {
+        const matchesQuery =
+          q.length === 0 ||
+          normalize(item.title_bn).includes(q) ||
+          normalize(item.title_en).includes(q) ||
+          normalize(item.summary_bn).includes(q) ||
+          normalize(item.body).includes(q) ||
+          item.tags.some((t) => normalize(t).includes(q));
+        const matchesFilter = filter === "all" || item.difficulty === filter;
+        return matchesQuery && matchesFilter;
+      })
+      .map((item) => ({
+        ...item,
+        snippet: q.length > 0 ? snippetAround(item.body, q) : null,
+      }));
   }, [index, query, filter]);
 
   return (
@@ -102,6 +132,11 @@ export default function SearchClient({ index }: { index: SearchIndexItem[] }) {
               <p className="type-body-sm mt-1" style={{ color: "var(--color-text-secondary)" }}>
                 {item.summary_bn}
               </p>
+              {item.snippet && (
+                <p className="type-caption mt-2" style={{ color: "var(--color-text-muted)" }}>
+                  {item.snippet}
+                </p>
+              )}
             </Link>
           </li>
         ))}

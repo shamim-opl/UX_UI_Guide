@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   output: isGithubPages ? "export" : undefined,
   basePath: isGithubPages ? "/UX_UI_Guide" : undefined,
   images: isGithubPages ? { unoptimized: true } : undefined,
+  // Next.js's own floating dev-tools button (bottom-left "N" icon, Bundler/
+  // Route Info/Preferences menu) — dev-only, never shipped to production,
+  // but distracting during review. Hidden per Morshed's request 2026-09-13.
+  devIndicators: false,
 };
 
 export default nextConfig;

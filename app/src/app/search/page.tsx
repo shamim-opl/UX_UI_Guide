@@ -3,12 +3,23 @@ import Breadcrumb from "@/components/Breadcrumb";
 import SearchClient, { type SearchIndexItem } from "@/components/SearchClient";
 import { getAllContent } from "@/lib/content";
 import { taxonomy } from "@/lib/taxonomy";
+import { stripMdx } from "@/lib/stripMdx";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = { title: "খুঁজুন" };
 
-const CATEGORY_LABEL: Record<string, string> = { laws: "আইন", components: "কম্পোনেন্ট" };
+const CATEGORY_LABEL: Record<string, string> = {
+  laws: "আইন",
+  components: "কম্পোনেন্ট",
+  "design-systems": "ডিজাইন সিস্টেম",
+  measurements: "মেজারমেন্ট",
+  patterns: "প্যাটার্ন",
+};
 
+// Search previously only matched title_bn/summary_bn/tags — a user typing
+// any word that only appeared in an article's body (the vast majority of
+// the actual content) got zero results. body is now the full stripped MDX
+// text, searched client-side alongside the metadata fields.
 function buildIndex(): SearchIndexItem[] {
   return getAllContent().map((doc) => {
     const level = taxonomy.find((l) => l.id === doc.meta.level);
@@ -18,10 +29,12 @@ function buildIndex(): SearchIndexItem[] {
     return {
       id: doc.meta.id,
       title_bn: doc.meta.title_bn,
-      category: doc.meta.reference_category ? CATEGORY_LABEL[doc.meta.reference_category] : level?.title_bn ?? "",
+      title_en: doc.meta.title_en,
+      category: doc.meta.reference_category ? (CATEGORY_LABEL[doc.meta.reference_category] ?? doc.meta.reference_category) : (level?.title_bn ?? ""),
       summary_bn: doc.meta.summary_bn,
       difficulty: doc.meta.difficulty,
       tags: doc.meta.tags,
+      body: stripMdx(doc.body_bn),
       href,
     };
   });
