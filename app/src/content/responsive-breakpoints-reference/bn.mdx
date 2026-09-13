@@ -1,0 +1,73 @@
+## এটা কী?
+
+এই পেজটা একটা সরাসরি-ব্যবহারযোগ্য রেফারেন্স — কোন ডিভাইস ক্লাসের জন্য কত পিক্সেল প্রস্থে ডিজাইন করবে, breakpoint কোথায় বসাবে, আর container-এর max-width কত রাখবে।
+
+<Callout type="convention">
+এখানে দেওয়া breakpoint সংখ্যাগুলো কোনো একক "অফিসিয়াল স্ট্যান্ডার্ড" না — কোনো ওয়েব স্ট্যান্ডার্ড সংস্থা breakpoint নির্দিষ্ট করে না। এগুলো Bootstrap, Tailwind CSS, Material Design-এর মতো ব্যাপকভাবে ব্যবহৃত সিস্টেমগুলোর মধ্যে মিল থাকা মানগুলো — ইন্ডাস্ট্রি-প্রচলিত কনভেনশন, গাণিতিক নিয়ম না।
+</Callout>
+
+## Breakpoint টেবিল (কপি-পেস্ট-যোগ্য)
+
+| ডিভাইস ক্লাস | Breakpoint শুরু | সাধারণ ব্যবহারিক প্রস্থ | Container Max-Width |
+|---|---|---|---|
+| Mobile (ছোট) | 0px | 360–390px | 100% (কোনো max-width না, শুধু padding) |
+| Mobile (বড়) | 480px | 414–480px | 100% |
+| Tablet (Portrait) | 768px | 768–834px | 720px |
+| Tablet (Landscape) | 1024px | 1024–1112px | 960px |
+| Desktop (ছোট) | 1280px | 1280–1366px | 1200px |
+| Desktop (বড়) | 1440px | 1440–1920px | 1280–1440px |
+
+## জনপ্রিয় ডিভাইসের প্রকৃত পিক্সেল প্রস্থ (CSS px, DPR বাদে)
+
+| ডিভাইস | CSS Viewport প্রস্থ |
+|---|---|
+| iPhone SE | 375px |
+| iPhone 14/15 | 390px |
+| iPhone 14/15 Pro Max | 430px |
+| Samsung Galaxy S23 | 360px |
+| iPad Mini (Portrait) | 744px |
+| iPad Air (Portrait) | 820px |
+| iPad Pro 12.9" (Portrait) | 1024px |
+| Laptop (সাধারণ) | 1366px বা 1440px |
+| Desktop Monitor (সাধারণ) | 1920px |
+
+<Callout type="guideline">
+এই টেবিল থেকে দেখা যায় কেন নির্দিষ্ট ডিভাইসের জন্য ডিজাইন করা ভুল পথ — iPhone মডেলভেদেই প্রস্থ 375px থেকে 430px পর্যন্ত ভিন্ন। এজন্যই breakpoint "ডিভাইস অনুযায়ী" না, "কন্টেন্ট কখন ভেঙে পড়া শুরু করে" তার অনুযায়ী ঠিক করা উচিত (দেখো [Responsive Design-এর ভিত্তি](/learn/01-digital-design-fundamentals/responsive-design-basics))।
+</Callout>
+
+## Container ও Margin — উদাহরণ (viewBox দিয়ে ভিজ্যুয়াল)
+
+```text
+Mobile (375px প্রস্থ):
+┌─────────────────────────────┐
+│ ←16px→ [   কন্টেন্ট   ] ←16px→ │
+└─────────────────────────────┘
+মোট usable width: 375 - 32 = 343px
+
+Tablet (768px প্রস্থ):
+┌───────────────────────────────────────┐
+│  ←24px→  [     কন্টেন্ট     ]  ←24px→   │
+└───────────────────────────────────────┘
+মোট usable width: 768 - 48 = 720px
+
+Desktop (1440px প্রস্থ):
+┌──────────────────────────────────────────────────┐
+│  ←(flex, min 32px)→ [ max-width: 1280px কন্টেন্ট ] ←→ │
+└──────────────────────────────────────────────────┘
+1280px-এর বেশি জায়গা দুই পাশে সমান ফাঁকা থাকে (auto margin)
+```
+
+## Rules / Best Practices
+
+- Mobile-এ পাশের margin ১৬px, Tablet-এ ২৪px, Desktop-এ কন্টেন্ট একটা নির্দিষ্ট max-width (সাধারণত ১২০০-১৪৪০px)-এ আটকে রেখে বাকি জায়গা auto margin দিয়ে ফাঁকা রাখো — পুরো স্ক্রিন-প্রস্থ জুড়ে টেক্সট টানলে পড়া কঠিন হয়ে যায়।
+- একটা প্রজেক্টে একবার breakpoint সংখ্যা ঠিক করার পর পুরো প্রোডাক্ট জুড়ে একই মান ব্যবহার করো — পেজ-ভেদে ভিন্ন breakpoint রাখলে অসামঞ্জস্যপূর্ণ আচরণ তৈরি হয়।
+- ডিজাইন করার সময় শুধু ৩টা (Mobile/Tablet/Desktop) না, মাঝামাঝি সাইজেও (যেমন ৯০০px) UI ভেঙে পড়ে কিনা টেস্ট করো — breakpoint-এর মাঝের অংশও বাস্তবে ব্যবহৃত হয়।
+
+## Sources & Evidence
+
+**ইন্ডাস্ট্রি সূত্র (Industry):**
+- [Tailwind CSS — Responsive Design Breakpoints](https://tailwindcss.com/docs/responsive-design)
+- [Material Design 3 — Window Size Classes](https://m3.material.io/foundations/layout/applying-layout/window-size-classes)
+
+**আরও পড়ুন (Further Reading):**
+- [MDN — Common Responsive Design Breakpoints](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

@@ -1,0 +1,69 @@
+## এটা কী?
+
+iOS ডিজাইনে পিক্সেলের বদলে **Points (pt)** ব্যবহার হয় — একটা রেজোলিউশন-স্বাধীন একক, যা ডিভাইসের পিক্সেল-ঘনত্ব (@1x, @2x, @3x) অনুযায়ী স্বয়ংক্রিয়ভাবে সঠিক পিক্সেল সংখ্যায় রূপান্তরিত হয়। এই পেজের সব মান pt-তে, যা Figma/Sketch-এ সরাসরি ব্যবহারযোগ্য।
+
+<Callout type="established">
+সব মান সরাসরি Apple Human Interface Guidelines থেকে — এটা কোনো অনুমান বা কনভেনশন না, বরং Apple-এর নিজস্ব, বাধ্যতামূলক ডিজাইন স্ট্যান্ডার্ড (App Store রিভিউ এই নিয়ম না মানলে অ্যাপ রিজেক্ট করতে পারে)।
+</Callout>
+
+## সম্পূর্ণ স্ক্রিন কাঠামো (iPhone, নচ/Dynamic Island সহ)
+
+```text
+┌─────────────────────────────┐
+│  Status Bar (~47pt)          │  ← ঘড়ি, ব্যাটারি, সিগন্যাল
+├─────────────────────────────┤
+│  Navigation Bar (44pt)       │  ← শিরোনাম, ব্যাক বাটন
+├─────────────────────────────┤
+│                               │
+│                               │
+│      Content Area            │  ← scroll হয়
+│      (margin: 16pt পাশে)      │
+│                               │
+│                               │
+├─────────────────────────────┤
+│  Tab Bar (49pt)               │  ← মূল নেভিগেশন
+├─────────────────────────────┤
+│  Home Indicator (34pt)        │  ← safe area, খালি রাখো
+└─────────────────────────────┘
+```
+
+## সঠিক মাপ — টেবিল
+
+| এলিমেন্ট | মাপ (pt) | মন্তব্য |
+|---|---|---|
+| Status Bar উচ্চতা | 44pt (নচ ছাড়া) / 47–59pt (নচ/Dynamic Island সহ) | ডিভাইসভেদে ভিন্ন, নিজে হার্ডকোড কোরো না — সিস্টেম নিজে বরাদ্দ করে |
+| Navigation Bar উচ্চতা | 44pt | |
+| Tab Bar উচ্চতা | 49pt | + Home Indicator এরিয়া (34pt) নচযুক্ত ডিভাইসে অতিরিক্ত |
+| ন্যূনতম Touch Target | 44×44pt | Apple HIG-এর হার্ড মিনিমাম, এর কম রাখা যাবে না |
+| স্ক্রিনের পাশের Margin | 16pt (কমপ্যাক্ট) / 20pt (রেগুলার) | Content-কে স্ক্রিনের কিনারা থেকে দূরে রাখে |
+| Corner Radius (কার্ড/বাটন) | 10–14pt | iOS-এর "continuous corner" স্টাইলের সাথে মিলিয়ে |
+| List Row উচ্চতা | 44pt (ন্যূনতম) | একটা টেক্সট লাইনের জন্য; সাবটাইটেল থাকলে বেশি |
+
+## টাইপোগ্রাফি স্কেল (SF Pro, Apple-এর Dynamic Type)
+
+| স্টাইল | সাইজ (pt) | ব্যবহার |
+|---|---|---|
+| Large Title | 34pt | পেজের প্রধান শিরোনাম |
+| Title 1 | 28pt | সেকশন শিরোনাম |
+| Title 2 | 22pt | সাব-সেকশন |
+| Headline | 17pt (semibold) | কার্ডের শিরোনাম |
+| Body | 17pt | মূল টেক্সট |
+| Footnote | 13pt | সহায়ক তথ্য |
+| Caption | 12pt | সবচেয়ে ছোট, লেবেলের জন্য |
+
+## বাস্তব উদাহরণ
+
+একটা লিস্ট-ভিত্তিক অ্যাপ (যেমন Mail) স্ক্রিনে: Navigation Bar-এ ৪৪pt উচ্চতায় "Inbox" শিরোনাম, তার নিচে প্রতিটা ইমেইল রো ৪৪pt-এর বেশি উচ্চতায় (কারণ প্রেরকের নাম + সাবজেক্ট + প্রিভিউ — ৩ লাইন), স্ক্রিনের পাশে ১৬pt margin। সবচেয়ে নিচে Tab Bar ৪৯pt, তার নিচে Home Indicator-এর জন্য ৩৪pt খালি জায়গা যেখানে কোনো ইন্টারঅ্যাক্টিভ এলিমেন্ট রাখা উচিত না।
+
+## Rules / Best Practices
+
+- Safe Area (status bar, home indicator, notch) কখনো হার্ডকোড করে বাদ দিও না — Apple-এর `safeAreaLayoutGuide` ব্যবহার করো, যাতে ভবিষ্যতের নতুন ডিভাইস সাইজেও স্বয়ংক্রিয়ভাবে ঠিক থাকে।
+- Touch target ৪৪×৪৪pt-এর কম রাখলে App Store রিভিউ-এ সমস্যা হতে পারে, এবং এমনিতেও ব্যবহারযোগ্যতা কমে যায় — দেখো [Fitts's Law](/reference/laws/fitts-law)।
+- Dynamic Type সাপোর্ট করো (ইউজার সিস্টেম সেটিংসে টেক্সট সাইজ বড়-ছোট করতে পারে) — নির্দিষ্ট pt সাইজ হার্ডকোড করলে দৃষ্টি-প্রতিবন্ধী ইউজারের জন্য অ্যাক্সেসিবিলিটি ভেঙে যায়।
+
+## Sources & Evidence
+
+**প্রাথমিক উৎস (Primary):**
+- [Apple Human Interface Guidelines — Layout](https://developer.apple.com/design/human-interface-guidelines/layout)
+- [Apple Human Interface Guidelines — Typography](https://developer.apple.com/design/human-interface-guidelines/typography)
+- [Apple Human Interface Guidelines — Tab Bars](https://developer.apple.com/design/human-interface-guidelines/tab-bars)

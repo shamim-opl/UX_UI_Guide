@@ -12,6 +12,7 @@ const CATEGORIES: { slug: string; title: string; description: string }[] = [
   { slug: "laws", title: "UX আইন ও নীতি", description: "Fitts's Law, Hick's Law, Nielsen's Heuristics, Gestalt Principles এবং আরও।" },
   { slug: "components", title: "UI কম্পোনেন্ট", description: "Button, Input, Modal ইত্যাদির সম্পূর্ণ স্পেসিফিকেশন।" },
   { slug: "design-systems", title: "ডিজাইন সিস্টেম", description: "Material Design, Apple HIG, Fluent, Carbon এবং আরও ১০+ প্রধান ডিজাইন সিস্টেম, তুলনাসহ।" },
+  { slug: "measurements", title: "মেজারমেন্ট ও স্পেসিং", description: "Grid, Breakpoint, Spacing, iOS/Android platform-নির্দিষ্ট সঠিক পিক্সেল/dp/pt মান।" },
 ];
 
 export default function ReferencePage() {

@@ -8,6 +8,7 @@ const CATEGORY_TITLES: Record<string, string> = {
   laws: "UX আইন ও নীতি",
   components: "UI কম্পোনেন্ট",
   "design-systems": "ডিজাইন সিস্টেম",
+  measurements: "মেজারমেন্ট ও স্পেসিং",
 };
 
 export function generateStaticParams() {

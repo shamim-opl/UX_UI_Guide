@@ -1,0 +1,76 @@
+## এটা কী?
+
+বেশিরভাগ SaaS/Web App (CRM, প্রজেক্ট ম্যানেজমেন্ট টুল, অ্যানালিটিক্স ড্যাশবোর্ড) একই মৌলিক লেআউট কাঠামো অনুসরণ করে: একটা fixed Sidebar (নেভিগেশন), একটা Topbar (সার্চ, প্রোফাইল), আর একটা scrollable Content এরিয়া। এই পেজে প্রতিটা অংশের বাস্তবসম্মত পিক্সেল মাপ দেওয়া হলো।
+
+## সম্পূর্ণ লেআউট ডায়াগ্রাম (Desktop, 1440px)
+
+```text
+┌────────────┬──────────────────────────────────────────┐
+│            │  Topbar (height: 64px)                    │
+│            ├──────────────────────────────────────────┤
+│  Sidebar   │                                            │
+│  (width:   │   Content Area                             │
+│   260px)   │   (padding: 32px, max-width: 1200px)       │
+│            │                                            │
+│            │                                            │
+└────────────┴──────────────────────────────────────────┘
+  ↑ পুরো height জুড়ে fixed         ↑ শুধু এই অংশ scroll হয়
+```
+
+## Sidebar
+
+| প্রপার্টি | মান |
+|---|---|
+| প্রস্থ (Expanded) | 240–280px (সাধারণত 260px) |
+| প্রস্থ (Collapsed, শুধু আইকন) | 64–72px |
+| একটা নেভ আইটেমের উচ্চতা | 40–44px |
+| নেভ আইটেমের ভেতরের প্যাডিং | 8px উপর-নিচ, 16px ডান-বাম |
+| আইকন সাইজ | 20×20px |
+| আইকন ও টেক্সটের মাঝে গ্যাপ | 12px |
+
+## Topbar
+
+| প্রপার্টি | মান |
+|---|---|
+| উচ্চতা | 56–64px |
+| ভেতরের padding (ডান-বাম) | 24px |
+| সার্চ বক্সের প্রস্থ | 320–400px (বা flexible, max 480px) |
+| প্রোফাইল আইকন সাইজ | 32×32px |
+
+## Content Area
+
+| প্রপার্টি | মান |
+|---|---|
+| ভেতরের padding | 24px (Tablet), 32px (Desktop) |
+| Max-width (রিডেবিলিটির জন্য) | 1200–1280px (খুব চওড়া মনিটরেও কন্টেন্ট এত চওড়া না হওয়া ভালো) |
+| Widget/Card-এর মাঝের গ্যাপ | 24px |
+| Section-এর মাঝের গ্যাপ (উপর-নিচ) | 32–48px |
+
+## Responsive আচরণ
+
+```text
+Desktop (≥1280px):     Sidebar সবসময় expanded, 260px
+Tablet (768–1279px):   Sidebar collapsed by default (72px, শুধু আইকন),
+                       ইউজার চাইলে টগল করে expand করতে পারে (overlay হিসেবে)
+Mobile (<768px):       Sidebar সম্পূর্ণ লুকানো, hamburger মেনু দিয়ে
+                       বাম দিক থেকে overlay হিসেবে খোলে (drawer pattern)
+```
+
+## বাস্তব উদাহরণ
+
+Notion, Linear, Slack-এর মতো টুলগুলো এই একই কাঠামো ব্যবহার করে — Sidebar-এর প্রস্থ প্রায় একই রেঞ্জে (২৪০-২৮০px), কারণ এই প্রস্থে ওয়ার্কস্পেস/চ্যানেলের নাম পুরোপুরি দেখানো যায় অতিরিক্ত জায়গা নষ্ট না করে। এই কনভারজেন্স ইঙ্গিত দেয় এটা একটা পরীক্ষিত, কার্যকর রেঞ্জ, নির্দিষ্ট "সঠিক" সংখ্যা না হলেও।
+
+## Rules / Best Practices
+
+- Sidebar-এর প্রস্থ ২৪০px-এর কম রাখলে লম্বা নাম/লেবেল কাটা পড়তে শুরু করে; ৩০০px-এর বেশি হলে Content-এর জন্য অপ্রয়োজনীয় জায়গা কমে যায়।
+- Topbar আর Sidebar-কে position: sticky/fixed রাখো, যাতে Content স্ক্রল করলেও নেভিগেশন সবসময় হাতের কাছে থাকে (দেখো Docspace-স্টাইল fixed panel প্যাটার্ন, যা এই প্ল্যাটফর্মেও ব্যবহৃত)।
+- Content-এর max-width নির্দিষ্ট করে দাও, বিশেষত টেবিল/টেক্সট-ভারী পেজে — খুব চওড়া মনিটরে সীমাহীন width পড়াকে কঠিন করে তোলে।
+
+## Sources & Evidence
+
+**ইন্ডাস্ট্রি সূত্র (Industry):**
+- [Nielsen Norman Group — Enterprise UX](https://www.nngroup.com/articles/enterprise-ux/)
+- [Ant Design — Layout Component Specs](https://ant.design/components/layout)
+
+**আরও পড়ুন (Further Reading):**
+- [Nielsen Norman Group — Dashboard Design Guidelines](https://www.nngroup.com/articles/dashboard-design/)

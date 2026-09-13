@@ -1,0 +1,17 @@
+id: responsive-breakpoints-reference
+slug: responsive-breakpoints-reference
+title_bn: "Breakpoint রেফারেন্স — কোন সাইজে কী পিক্সেল"
+title_en: "Responsive Breakpoints Reference"
+level: "01"
+reference_category: measurements
+difficulty: intermediate
+summary_bn: "Mobile, Tablet, Desktop-এর জন্য বাস্তবে ব্যবহৃত breakpoint পিক্সেল মান, container max-width, আর কোন ডিভাইসে কী রেজোলিউশন — একটা কপি-পেস্ট-যোগ্য রেফারেন্স টেবিল।"
+reading_time_minutes: 6
+prerequisites: [responsive-design-basics]
+related_topics: [web-design-grid-and-spacing, tablet-layout-specs]
+tags: [breakpoints, responsive, measurements, reference]
+status: published
+source_type: industry
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

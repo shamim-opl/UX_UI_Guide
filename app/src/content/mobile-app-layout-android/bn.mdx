@@ -1,0 +1,70 @@
+## এটা কী?
+
+Android ডিজাইনে **dp (density-independent pixels)** ব্যবহার হয় — iOS-এর pt-এর মতোই, ডিভাইসের স্ক্রিন-ঘনত্ব নির্বিশেষে একই ভিজ্যুয়াল সাইজ নিশ্চিত করার একক। Material Design 3 এই dp এককেই ভিত্তি করে একটা সম্পূর্ণ, সুনির্দিষ্ট গ্রিড সিস্টেম দেয়।
+
+<Callout type="established">
+সব মান সরাসরি Google-এর Material Design 3 স্পেসিফিকেশন থেকে — Android-এর অফিসিয়াল ডিজাইন সিস্টেম, যার উপর ভিত্তি করে বেশিরভাগ Android অ্যাপ বানানো হয়।
+</Callout>
+
+## সম্পূর্ণ স্ক্রিন কাঠামো
+
+```text
+┌─────────────────────────────┐
+│  Status Bar (24dp)           │  ← ঘড়ি, ব্যাটারি
+├─────────────────────────────┤
+│  Top App Bar (56dp/64dp)     │  ← শিরোনাম, অ্যাকশন আইকন
+├─────────────────────────────┤
+│                               │
+│      Content Area            │  ← margin: 16dp পাশে
+│      (8dp গ্রিড ভিত্তিক)       │
+│                               │
+├─────────────────────────────┤
+│  Bottom Navigation (80dp)     │  ← মূল নেভিগেশন
+└─────────────────────────────┘
+```
+
+## সঠিক মাপ — টেবিল
+
+| এলিমেন্ট | মাপ (dp) | মন্তব্য |
+|---|---|---|
+| Status Bar উচ্চতা | 24dp | সিস্টেম-নিয়ন্ত্রিত |
+| Top App Bar (Small) | 56dp | সাধারণ অ্যাপ বার |
+| Top App Bar (Medium/Large) | 112dp / 152dp | বড়, প্রধান শিরোনামের জন্য |
+| Bottom Navigation Bar | 80dp | ৩-৫টা আইটেম পর্যন্ত |
+| ন্যূনতম Touch Target | 48×48dp | Material Design-এর হার্ড মিনিমাম |
+| স্ক্রিনের পাশের Margin | 16dp (Compact) / 24dp (Medium+) | |
+| Base Grid Unit | 8dp | সব স্পেসিং এই ৮dp-এর গুণিতক হওয়া উচিত |
+| Corner Radius (কার্ড) | 12dp | Material 3-এর ডিফল্ট |
+| FAB (Floating Action Button) সাইজ | 56×56dp (স্ট্যান্ডার্ড) / 40×40dp (ছোট) | |
+
+## টাইপোগ্রাফি স্কেল (Material Design 3, Roboto)
+
+| স্টাইল | সাইজ (sp) | ব্যবহার |
+|---|---|---|
+| Display Large | 57sp | সবচেয়ে বড় হিরো টেক্সট |
+| Headline Large | 32sp | পেজের প্রধান শিরোনাম |
+| Title Large | 22sp | সেকশন শিরোনাম |
+| Body Large | 16sp | মূল টেক্সট |
+| Label Large | 14sp (medium) | বাটনের টেক্সট |
+| Body Small | 12sp | সহায়ক তথ্য |
+
+<Callout type="guideline">
+Android-এ ফন্ট সাইজের একক **sp (scale-independent pixels)**, dp না — sp ইউজারের সিস্টেম ফন্ট-সাইজ সেটিং অনুযায়ী স্কেল হয়, যেখানে dp হয় না। টেক্সট সাইজের জন্য সবসময় sp ব্যবহার করা উচিত, dp না — নাহলে অ্যাক্সেসিবিলিটি সেটিং কাজ করবে না।
+</Callout>
+
+## বাস্তব উদাহরণ
+
+একটা ই-কমার্স অ্যাপের প্রোডাক্ট লিস্ট স্ক্রিনে: Top App Bar ৫৬dp উচ্চতায় "প্রোডাক্ট" শিরোনাম, তার নিচে ৮dp গ্রিড মেনে প্রতিটা প্রোডাক্ট কার্ডের ভেতরে ১৬dp প্যাডিং, দুটো কার্ডের মাঝে ৮dp গ্যাপ। সবচেয়ে নিচে Bottom Navigation ৮০dp উচ্চতায় ৪টা মূল সেকশন (Home, Search, Cart, Profile)।
+
+## Rules / Best Practices
+
+- সব স্পেসিং ৮dp-এর গুণিতক রাখো (8, 16, 24, 32...) — Material Design-এর পুরো সিস্টেম এই একক গ্রিডের উপর ভিত্তি করে বানানো, এলোমেলো সংখ্যা সিস্টেমের সাথে বিরোধ তৈরি করে।
+- Touch target ৪৮×৪৮dp-এর কম রাখলে Google-এর নিজস্ব অ্যাক্সেসিবিলিটি স্ক্যানার (Accessibility Scanner) এটা চিহ্নিত করবে — এটা একটা কঠোর ন্যূনতম, ঐচ্ছিক না।
+- Elevation (shadow) দিয়ে হায়ারার্কি বোঝাও, Material Design-এর নিজস্ব elevation স্কেল (1dp, 3dp, 6dp, 8dp, 12dp) অনুসরণ করে — নিজের মতো এলোমেলো shadow বসিও না।
+
+## Sources & Evidence
+
+**প্রাথমিক উৎস (Primary):**
+- [Material Design 3 — Layout](https://m3.material.io/foundations/layout/understanding-layout/overview)
+- [Material Design 3 — Typography](https://m3.material.io/styles/typography/overview)
+- [Material Design 3 — Navigation Bar](https://m3.material.io/components/navigation-bar/overview)

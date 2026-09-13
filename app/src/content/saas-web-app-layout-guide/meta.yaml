@@ -1,0 +1,17 @@
+id: saas-web-app-layout-guide
+slug: saas-web-app-layout-guide
+title_bn: "SaaS / Web App লেআউট গাইড — Sidebar, Topbar, Content কত পিক্সেল"
+title_en: "SaaS / Web App Layout Guide"
+level: "13"
+reference_category: measurements
+difficulty: advanced
+summary_bn: "একটা SaaS ড্যাশবোর্ডের Sidebar প্রস্থ, Topbar উচ্চতা, Content max-width, আর responsive collapse আচরণ — সঠিক পিক্সেলসহ।"
+reading_time_minutes: 7
+prerequisites: [web-design-grid-and-spacing, what-is-enterprise-ux]
+related_topics: [web-design-grid-and-spacing, dashboard-design-principles]
+tags: [saas, web-app, layout, measurements, dashboard]
+status: published
+source_type: industry
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

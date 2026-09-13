@@ -8,12 +8,14 @@ const CATEGORY_TITLES: Record<string, string> = {
   laws: "UX আইন ও নীতি",
   components: "UI কম্পোনেন্ট",
   "design-systems": "ডিজাইন সিস্টেম",
+  measurements: "মেজারমেন্ট ও স্পেসিং",
 };
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   laws: "Fitts's Law, Hick's Law, Nielsen's Heuristics, Gestalt Principles সহ UX-এর মূল আইন ও নীতিগুলো, উৎসসহ ব্যাখ্যা করা।",
   components: "Button, Input, Modal সহ UI কম্পোনেন্টের সম্পূর্ণ স্পেসিফিকেশন — অ্যানাটমি, ভ্যারিয়েন্ট, অ্যাক্সেসিবিলিটি।",
   "design-systems": "Material Design, Apple HIG, Fluent, Carbon, Polaris সহ প্রধান ডিজাইন সিস্টেমগুলোর তুলনামূলক বিশ্লেষণ।",
+  measurements: "Grid, Breakpoint, Spacing, Platform-নির্দিষ্ট (iOS/Android) সঠিক পিক্সেল/dp/pt মান — সরাসরি ডিজাইনে ব্যবহারযোগ্য।",
 };
 
 export function generateStaticParams() {

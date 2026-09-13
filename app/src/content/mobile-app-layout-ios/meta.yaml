@@ -1,0 +1,17 @@
+id: mobile-app-layout-ios
+slug: mobile-app-layout-ios
+title_bn: "iOS App লেআউট স্পেসিফিকেশন — pt, Safe Area, নেভিগেশন উচ্চতা"
+title_en: "iOS App Layout Specifications"
+level: "11"
+reference_category: measurements
+difficulty: advanced
+summary_bn: "iOS অ্যাপ ডিজাইনের সঠিক মাপ — Safe Area, Navigation/Tab Bar উচ্চতা, টাইপোগ্রাফি স্কেল, মার্জিন — সরাসরি Apple HIG থেকে।"
+reading_time_minutes: 7
+prerequisites: [web-design-grid-and-spacing]
+related_topics: [mobile-app-layout-android, responsive-breakpoints-reference]
+tags: [ios, mobile, measurements, apple-hig, layout]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

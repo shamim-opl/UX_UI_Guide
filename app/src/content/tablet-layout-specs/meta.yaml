@@ -1,0 +1,17 @@
+id: tablet-layout-specs
+slug: tablet-layout-specs
+title_bn: "Tablet লেআউট স্পেসিফিকেশন — কলাম, মার্জিন, Master-Detail কত পিক্সেল"
+title_en: "Tablet Layout Specifications"
+level: "11"
+reference_category: measurements
+difficulty: advanced
+summary_bn: "iPad ও Android ট্যাবলেটের জন্য Master-Detail স্প্লিট-প্রস্থ, কলাম গ্রিড, মার্জিন — Portrait ও Landscape দুই অবস্থাতেই সঠিক পিক্সেল/pt/dp মান।"
+reading_time_minutes: 6
+prerequisites: [designing-for-tablets, web-design-grid-and-spacing]
+related_topics: [designing-for-tablets, mobile-app-layout-ios, mobile-app-layout-android]
+tags: [tablet, ipad, measurements, layout, master-detail]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

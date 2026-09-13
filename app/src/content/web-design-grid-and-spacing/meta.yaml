@@ -1,0 +1,17 @@
+id: web-design-grid-and-spacing
+slug: web-design-grid-and-spacing
+title_bn: "Grid ও Spacing সিস্টেম — কত পিক্সেল গ্যাপ, কত প্যাডিং"
+title_en: "Web Design Grid & Spacing System"
+level: "07"
+reference_category: measurements
+difficulty: intermediate
+summary_bn: "12-column grid, 8px spacing scale, gutter, padding, আর element-এর মধ্যে দূরত্বের সঠিক পিক্সেল মান — একটা কপি করে ব্যবহারযোগ্য সিস্টেম, উদাহরণ ডায়াগ্রামসহ।"
+reading_time_minutes: 8
+prerequisites: [responsive-breakpoints-reference]
+related_topics: [responsive-breakpoints-reference, saas-web-app-layout-guide]
+tags: [grid, spacing, measurements, layout, web]
+status: published
+source_type: industry
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

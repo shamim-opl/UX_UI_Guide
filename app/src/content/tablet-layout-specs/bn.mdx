@@ -1,0 +1,59 @@
+## এটা কী?
+
+এই পেজ [Designing for Tablets](/learn/11-platform-device-design/designing-for-tablets)-এর ধারণাগুলোকে সুনির্দিষ্ট পিক্সেল/pt/dp সংখ্যায় রূপান্তর করে — Master-Detail স্প্লিট কত প্রস্থে হবে, কলাম কয়টা, মার্জিন কত।
+
+## Portrait বনাম Landscape — কলাম গ্রিড
+
+```text
+iPad Portrait (834pt প্রস্থ, iPad Air):
+┌───────────────────────────────────┐
+│ ←20pt→ [   8-column grid   ] ←20pt→│
+└───────────────────────────────────┘
+
+iPad Landscape (1194pt প্রস্থ, iPad Air):
+┌────────────┬──────────────────────┐
+│  Master    │      Detail          │
+│  (~375pt)  │      (~819pt)        │
+│  তালিকা     │      বিস্তারিত        │
+└────────────┴──────────────────────┘
+```
+
+## Master-Detail স্প্লিট — সুনির্দিষ্ট প্রস্থ
+
+| Orientation | Master প্যানেল প্রস্থ | Detail প্যানেল প্রস্থ |
+|---|---|---|
+| Landscape (iPad, ≥1024pt) | 320–375pt (fixed) | বাকি সব জায়গা (flexible) |
+| Portrait (iPad) | সাধারণত পুরো স্ক্রিন (Master), Detail নতুন স্ক্রিনে push হয় | — |
+| Android Tablet (Landscape) | 320–400dp (fixed) | বাকি সব জায়গা (flexible) |
+
+## মার্জিন ও গ্রিড — টেবিল
+
+| ডিভাইস অবস্থা | পাশের Margin | কলাম সংখ্যা | Gutter |
+|---|---|---|---|
+| iPad Portrait | 20pt | 8 | 16pt |
+| iPad Landscape | 24pt | 12 | 20pt |
+| Android Tablet Portrait | 24dp | 8 | 16dp |
+| Android Tablet Landscape | 24dp | 12 | 24dp |
+
+<Callout type="guideline">
+Google-এর Material Design 3 "Window Size Classes" অনুযায়ী ৬০০dp-এর বেশি প্রস্থকে "Medium" আর ৮৪০dp-এর বেশিকে "Expanded" ধরা হয় — ট্যাবলেট সাধারণত এই দুই ক্লাসের মধ্যে পড়ে, আর লেআউট সিদ্ধান্ত (Master-Detail দেখাবে কিনা) এই ক্লাসের উপর ভিত্তি করে নেওয়া উচিত, নির্দিষ্ট ডিভাইস মডেলের উপর না।
+</Callout>
+
+## বাস্তব উদাহরণ
+
+একটা নোট-অ্যাপ iPad-এ Landscape মোডে: বাম পাশে ৩৭৫pt প্রস্থের Master প্যানেল (নোটের তালিকা, প্রতিটা রো ৬০pt উচ্চতা), ডান পাশে বাকি ~৮১৯pt জুড়ে Detail প্যানেল (নির্বাচিত নোটের কনটেন্ট, ২৪pt padding সহ)। Portrait মোডে ঘুরালে Master প্যানেল পুরো স্ক্রিন নেয়, একটা নোট ট্যাপ করলে Detail নতুন স্ক্রিনে push হয় (ফোনের আচরণের মতো)।
+
+## Rules / Best Practices
+
+- Master প্যানেলের প্রস্থ ফিক্সড রাখো (৩২০-৪০০pt/dp রেঞ্জে), Detail প্যানেলকে flexible (বাকি জায়গা) রাখো — উল্টোটা করলে Detail-এর কনটেন্ট বিভিন্ন স্ক্রিন সাইজে অসামঞ্জস্যপূর্ণভাবে চওড়া-সরু হয়ে যায়।
+- Portrait-এ জায়গা কম থাকায় Master-Detail একসাথে না দেখিয়ে ফোনের মতো single-panel navigation-এ ফিরে যাওয়াই ভালো — জোর করে ছোট জায়গায় দুটো প্যানেল গুঁজে দিলে দুটোই ব্যবহারযোগ্যতা হারায়।
+- Window Size Class অনুযায়ী সিদ্ধান্ত নাও (Compact/Medium/Expanded), নির্দিষ্ট ডিভাইস মডেল (যেমন "iPad Mini") দেখে না — Split-screen/multi-window মোডে একই ডিভাইসেও কার্যকর প্রস্থ বদলে যেতে পারে।
+
+## Sources & Evidence
+
+**প্রাথমিক উৎস (Primary):**
+- [Apple Human Interface Guidelines — Designing for iPadOS](https://developer.apple.com/design/human-interface-guidelines/designing-for-ipados)
+- [Material Design 3 — Window Size Classes](https://m3.material.io/foundations/layout/applying-layout/window-size-classes)
+
+**আরও পড়ুন (Further Reading):**
+- [Apple — Split View and Slide Over](https://developer.apple.com/design/human-interface-guidelines/multitasking)

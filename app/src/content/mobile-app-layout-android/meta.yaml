@@ -1,0 +1,17 @@
+id: mobile-app-layout-android
+slug: mobile-app-layout-android
+title_bn: "Android App লেআউট স্পেসিফিকেশন — dp, App Bar, Material Grid"
+title_en: "Android App Layout Specifications"
+level: "11"
+reference_category: measurements
+difficulty: advanced
+summary_bn: "Android অ্যাপ ডিজাইনের সঠিক মাপ — dp একক, App Bar/Bottom Navigation উচ্চতা, Material টাইপোগ্রাফি স্কেল, 8dp গ্রিড — সরাসরি Material Design 3 থেকে।"
+reading_time_minutes: 7
+prerequisites: [web-design-grid-and-spacing]
+related_topics: [mobile-app-layout-ios, responsive-breakpoints-reference]
+tags: [android, mobile, measurements, material-design, layout]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

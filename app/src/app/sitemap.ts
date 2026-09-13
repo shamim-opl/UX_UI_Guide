@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  const referenceCategoryRoutes = ["laws", "components", "design-systems"]
+  const referenceCategoryRoutes = ["laws", "components", "design-systems", "measurements"]
     .filter((c) => getContentByReferenceCategory(c).length > 0)
     .map((category) => ({
       url: `${SITE_URL}/reference/${category}`,
