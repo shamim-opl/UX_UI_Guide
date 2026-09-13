@@ -1,0 +1,17 @@
+id: pagination-component
+slug: pagination-component
+title_bn: "Pagination — কম্পোনেন্ট রেফারেন্স"
+title_en: "Pagination"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "একটা লম্বা তালিকাকে একাধিক পৃষ্ঠায় ভাগ করে দেখানোর কম্পোনেন্ট — সব ডেটা একসাথে না দেখিয়ে।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui, hicks-law]
+related_topics: [hicks-law, progress-bar-component]
+tags: [component, ui, reference, pagination, navigation]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

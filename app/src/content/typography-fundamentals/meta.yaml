@@ -1,0 +1,17 @@
+id: typography-fundamentals
+slug: typography-fundamentals
+title_bn: "Typography-এর ভিত্তি — Weight, Size, Line Height, Pairing"
+title_en: "Typography Fundamentals"
+level: "07"
+reference_category: null
+difficulty: beginner
+summary_bn: "Font Weight, Line Height, Letter Spacing, আর Font Pairing-এর মূল নিয়ম — টেক্সট পড়া সহজ করে তোলার ভিত্তি, বাংলা টাইপোগ্রাফির বিশেষ বিবেচনাসহ।"
+reading_time_minutes: 7
+prerequisites: [what-is-ui]
+related_topics: [color-theory-basics, visual-hierarchy-and-composition]
+tags: [visual-design, typography, fundamentals]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

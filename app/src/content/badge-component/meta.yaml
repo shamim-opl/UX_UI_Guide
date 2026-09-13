@@ -1,0 +1,17 @@
+id: badge-component
+slug: badge-component
+title_bn: "Badge — কম্পোনেন্ট রেফারেন্স"
+title_en: "Badge"
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "একটা ছোট, সংখ্যা বা স্ট্যাটাস দেখানোর ভিজ্যুয়াল ইন্ডিকেটর, সাধারণত একটা আইকন বা Avatar-এর কোণায় বসানো।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [avatar-component, toast-component]
+tags: [component, ui, reference, badge, notification]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

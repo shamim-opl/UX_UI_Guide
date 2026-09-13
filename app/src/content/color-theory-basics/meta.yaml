@@ -1,0 +1,17 @@
+id: color-theory-basics
+slug: color-theory-basics
+title_bn: "Color Theory-এর ভিত্তি — Hue, Saturation, Harmony"
+title_en: "Color Theory Basics"
+level: "07"
+reference_category: null
+difficulty: beginner
+summary_bn: "Color Wheel, Hue-Saturation-Lightness, আর Complementary/Analogous/Monochromatic হারমোনি — একটা প্রোডাক্টের রং বাছাইয়ের পেছনের যুক্তি।"
+reading_time_minutes: 6
+prerequisites: [what-is-ui]
+related_topics: [typography-fundamentals, visual-hierarchy-and-composition]
+tags: [visual-design, color, fundamentals]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

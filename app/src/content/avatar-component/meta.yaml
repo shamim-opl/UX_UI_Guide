@@ -1,0 +1,17 @@
+id: avatar-component
+slug: avatar-component
+title_bn: "Avatar — কম্পোনেন্ট রেফারেন্স"
+title_en: "Avatar"
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "একজন ব্যবহারকারী বা প্রতিষ্ঠানকে ভিজ্যুয়ালি প্রতিনিধিত্ব করার ছোট, গোলাকার (বা বর্গাকার) ছবি/আইকন কম্পোনেন্ট।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [badge-component, card-component]
+tags: [component, ui, reference, avatar]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

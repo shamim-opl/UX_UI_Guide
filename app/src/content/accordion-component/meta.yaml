@@ -1,0 +1,17 @@
+id: accordion-component
+slug: accordion-component
+title_bn: "Accordion — কম্পোনেন্ট রেফারেন্স"
+title_en: "Accordion"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "একাধিক কোলাপসিবল সেকশন, যেখানে একটা শিরোনামে ক্লিক করলে সেই সেকশনের কনটেন্ট খোলে/বন্ধ হয় — জায়গা বাঁচিয়ে বিস্তারিত তথ্য দেখানোর কম্পোনেন্ট।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui, progressive-disclosure]
+related_topics: [progressive-disclosure, tabs-component]
+tags: [component, ui, reference, accordion, progressive-disclosure]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

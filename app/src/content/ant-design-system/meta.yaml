@@ -1,0 +1,17 @@
+id: ant-design-system
+slug: ant-design
+title_bn: "Ant Design"
+title_en: "Ant Design"
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "চীনের Alibaba-র তৈরি, এশিয়ায় সবচেয়ে ব্যাপকভাবে ব্যবহৃত এন্টারপ্রাইজ ডিজাইন সিস্টেমগুলোর একটা — ডেটা-ঘন B2B ড্যাশবোর্ড ও অ্যাডমিন প্যানেলে বিশেষায়িত।"
+reading_time_minutes: 5
+prerequisites: [what-is-design-system]
+related_topics: [carbon-design-system, lightning-design-system, dashboard-design-principles]
+tags: [design-system, enterprise, dashboard, ant-design]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

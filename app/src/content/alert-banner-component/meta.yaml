@@ -1,0 +1,17 @@
+id: alert-banner-component
+slug: alert-banner-component
+title_bn: "Alert / Banner — কম্পোনেন্ট রেফারেন্স"
+title_en: "Alert / Banner"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "গুরুত্বপূর্ণ, স্থায়ীভাবে-দৃশ্যমান তথ্য বা সতর্কতা দেখানোর ইনলাইন কম্পোনেন্ট — Toast থেকে আলাদা, কারণ এটা নিজে থেকে অদৃশ্য হয় না।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [toast-component, empty-states]
+tags: [component, ui, reference, alert, banner, feedback]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified
