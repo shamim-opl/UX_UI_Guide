@@ -1,0 +1,41 @@
+## এটা কী?
+
+**Interaction Design (IxD)** হলো ব্যবহারকারী আর ইন্টারফেসের মধ্যে প্রতিটা "কথোপকথনের মুহূর্ত" ডিজাইন করা — ইউজার একটা বাটনে ক্লিক করলে কী হয়, একটা ফর্ম ভুল পূরণ করলে কী দেখায়, একটা লোডিং সময়ে ইউজার কী বোঝে। Visual Design "কেমন দেখতে" তা ঠিক করে; Interaction Design "কেমন আচরণ করে" তা ঠিক করে।
+
+## তিনটা মূল স্তম্ভ
+
+```text
+Affordance/Signifier  →  Action  →  Feedback  →  New State
+   (এটা কী করা যায়        (ইউজার        (কী ঘটল          (এখন সিস্টেম
+    বোঝা যাচ্ছে)           কিছু করল)      তা জানানো)        কোন অবস্থায়)
+```
+
+- **Affordance ও Signifier** — একটা এলিমেন্ট দেখেই বোঝা উচিত সেটা দিয়ে কী করা যায় (দেখো [Norman-এর ডিজাইন নীতিসমূহ](/reference/laws/norman-design-principles))।
+- **Feedback** — ইউজারের প্রতিটা অ্যাকশনের একটা তাৎক্ষণিক, স্পষ্ট প্রতিক্রিয়া থাকা উচিত।
+- **State (অবস্থা)** — প্রতিটা এলিমেন্টের একাধিক সম্ভাব্য অবস্থা (Default, Hover, Focus, Disabled, Error) আছে, যা স্পষ্টভাবে আলাদা দেখতে হবে।
+
+## কেন গুরুত্বপূর্ণ?
+
+একটা সুন্দর দেখতে UI-ও যদি ভুল আচরণ করে (ক্লিক করলে কিছু হয় না, বা কী ঘটল বোঝা যায় না), ইউজার হতাশ হয়ে যায়। Interaction Design নিশ্চিত করে প্রতিটা ইন্টারঅ্যাকশন পূর্বানুমানযোগ্য, দ্রুত, আর বোধগম্য।
+
+## বাস্তব উদাহরণ
+
+একটা "সংরক্ষণ করুন" বাটনে ক্লিক করার পর: বাটনটা সাথে সাথে একটা লোডিং স্পিনার দেখায় (Feedback: "কাজ শুরু হয়েছে"), তারপর একটা সবুজ চেকমার্কে বদলে যায় ২০০ মিলিসেকেন্ডের জন্য (Feedback: "সফল হয়েছে"), তারপর আবার স্বাভাবিক অবস্থায় ফিরে আসে (State reset)। পুরো প্রক্রিয়াটা ইউজারকে কোনো সংশয়ে না রেখে তথ্য দেয়।
+
+## Rules / Best Practices
+
+- প্রতিটা ইন্টারঅ্যাক্টিভ এলিমেন্টের কমপক্ষে ৪টা অবস্থা ডিজাইন করো: Default, Hover/Focus, Active/Pressed, Disabled — দেখো [Form Interactions ও States](/learn/06-interaction-design/form-interactions-and-states)।
+- Feedback ১০০-৪০০ মিলিসেকেন্ডের মধ্যে দাও (দেখো [Doherty Threshold](/reference/laws/doherty-threshold)), নাহলে ইউজার মনে করবে কিছু কাজ করছে না।
+- নতুন বা অপ্রচলিত ইন্টারঅ্যাকশন প্যাটার্ন তৈরির আগে ভাবো এটা আবিষ্কারযোগ্য (discoverable) কিনা — দেখো [Jakob's Law](/reference/laws/jakobs-law)।
+
+## সাধারণ ভুল
+
+শুধু "Default" আর "Hover" অবস্থা ডিজাইন করে Focus, Disabled, Error অবস্থা ভুলে যাওয়া। ফলাফল: কীবোর্ড ব্যবহারকারী জানে না সে কোথায় আছে, বা একটা নিষ্ক্রিয় বাটন সক্রিয় বাটনের মতোই দেখতে লাগে।
+
+## Sources & Evidence
+
+**প্রাথমিক উৎস (Primary):**
+- [Interaction Design Foundation — What is Interaction Design?](https://www.interaction-design.org/literature/topics/interaction-design)
+
+**আরও পড়ুন (Further Reading):**
+- Cooper, A., Reimann, R., & Cronin, D. (2007). *About Face: The Essentials of Interaction Design*. Wiley.

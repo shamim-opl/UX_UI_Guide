@@ -1,0 +1,17 @@
+id: what-is-interaction-design
+slug: what-is-interaction-design
+title_bn: "Interaction Design কী? — Affordance, Feedback, State"
+title_en: "What is Interaction Design?"
+level: "06"
+reference_category: null
+difficulty: beginner
+summary_bn: "ব্যবহারকারী যখন একটা ইন্টারফেসে ক্লিক, ট্যাপ, বা টাইপ করে — সেই মুহূর্তে ঠিক কী ঘটে তা ডিজাইন করার শাখা। Affordance, Feedback, আর State — তিনটা মূল স্তম্ভ।"
+reading_time_minutes: 5
+prerequisites: [what-is-ui, norman-design-principles]
+related_topics: [affordance-and-signifiers-in-practice, feedback-and-system-status, form-interactions-and-states]
+tags: [interaction-design, fundamentals]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

@@ -1,0 +1,17 @@
+id: color-contrast-reference
+slug: color-contrast-reference
+title_bn: "Color Contrast রেফারেন্স — WCAG অনুপাত ও ক্যালকুলেশন"
+title_en: "Color Contrast Reference"
+level: "10"
+reference_category: measurements
+difficulty: intermediate
+summary_bn: "টেক্সট আর ব্যাকগ্রাউন্ডের মধ্যে ঠিক কত কনট্রাস্ট অনুপাত লাগে (AA/AAA), কীভাবে হিসাব করা হয়, আর কোন সাইজে কোন মান প্রযোজ্য — একটা কপি-পেস্ট-যোগ্য রেফারেন্স।"
+reading_time_minutes: 5
+prerequisites: [wcag-accessibility, color-theory-basics]
+related_topics: [wcag-accessibility, color-theory-basics]
+tags: [accessibility, color, contrast, measurements, wcag]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

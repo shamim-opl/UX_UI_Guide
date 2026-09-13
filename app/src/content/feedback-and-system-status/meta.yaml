@@ -1,0 +1,17 @@
+id: feedback-and-system-status
+slug: feedback-and-system-status
+title_bn: "Feedback ও System Status — Microinteraction, Loading, Transition"
+title_en: "Feedback and System Status"
+level: "06"
+reference_category: null
+difficulty: intermediate
+summary_bn: "প্রতিটা ইউজার অ্যাকশনের একটা প্রতিক্রিয়া থাকা উচিত — Microinteraction, Loading State, আর Transition দিয়ে সিস্টেম কীভাবে 'কথা বলে'।"
+reading_time_minutes: 5
+prerequisites: [what-is-interaction-design, doherty-threshold]
+related_topics: [progress-bar-component, skeleton-loading, toast-component]
+tags: [interaction-design, feedback, microinteraction, animation]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

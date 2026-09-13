@@ -1,0 +1,17 @@
+id: form-interactions-and-states
+slug: form-interactions-and-states
+title_bn: "Form Interaction ও States — Error Prevention, Undo, Recovery"
+title_en: "Form Interactions and States"
+level: "06"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একটা ফর্মের প্রতিটা এলিমেন্টের Hover/Focus/Press/Disabled/Error অবস্থা, আর ভুল হওয়ার আগে প্রতিরোধ ও পরে সংশোধনের ব্যবহারিক নিয়ম।"
+reading_time_minutes: 6
+prerequisites: [what-is-interaction-design, text-input-component]
+related_topics: [text-input-component, nielsen-heuristics]
+tags: [interaction-design, forms, error-prevention, states]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

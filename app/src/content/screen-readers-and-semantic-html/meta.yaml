@@ -1,0 +1,17 @@
+id: screen-readers-and-semantic-html
+slug: screen-readers-and-semantic-html
+title_bn: "Screen Reader ও Semantic HTML — ডিজাইনারের জন্য যা জানা জরুরি"
+title_en: "Screen Readers and Semantic HTML"
+level: "10"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একজন স্ক্রিন রিডার ব্যবহারকারী একটা পেজ কীভাবে 'দেখে' (শোনে) — Semantic HTML, Alt Text, আর ARIA-র মৌলিক ধারণা, ডিজাইনারের দৃষ্টিকোণ থেকে।"
+reading_time_minutes: 6
+prerequisites: [wcag-accessibility]
+related_topics: [keyboard-navigation-and-focus, accessible-forms-and-error-messages]
+tags: [accessibility, screen-reader, semantic-html, aria]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

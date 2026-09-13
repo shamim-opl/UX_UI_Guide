@@ -1,0 +1,17 @@
+id: accessible-forms-and-error-messages
+slug: accessible-forms-and-error-messages
+title_bn: "Accessible Forms — Label, Error Association, Touch Target"
+title_en: "Accessible Forms and Error Messages"
+level: "10"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একটা ফর্ম প্রতিবন্ধী ব্যবহারকারীর জন্য অ্যাক্সেসিবল করার নির্দিষ্ট নিয়ম — Label বাঁধা, Error ঘোষণা করা, আর টাচ টার্গেট সাইজ।"
+reading_time_minutes: 5
+prerequisites: [screen-readers-and-semantic-html, form-interactions-and-states]
+related_topics: [form-interactions-and-states, text-input-component]
+tags: [accessibility, forms, error-messages]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

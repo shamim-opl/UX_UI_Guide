@@ -1,0 +1,17 @@
+id: keyboard-navigation-and-focus
+slug: keyboard-navigation-and-focus
+title_bn: "Keyboard Navigation ও Focus — মাউস ছাড়াই সম্পূর্ণ ব্যবহারযোগ্যতা"
+title_en: "Keyboard Navigation and Focus"
+level: "10"
+reference_category: null
+difficulty: intermediate
+summary_bn: "Tab, Enter, Arrow key দিয়ে সম্পূর্ণ সাইট ব্যবহার করা যাওয়া উচিত — Focus Order, Focus Trap, আর Skip Link-এর ব্যবহারিক নিয়ম।"
+reading_time_minutes: 5
+prerequisites: [wcag-accessibility]
+related_topics: [wcag-accessibility, screen-readers-and-semantic-html]
+tags: [accessibility, keyboard, focus]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified
