@@ -39,18 +39,20 @@ export default function SearchBar({ compact = false }: { compact?: boolean }) {
       <label htmlFor="global-search" className="sr-only">
         খুঁজুন
       </label>
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-        className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2"
+      {/* A real submit button, not a decorative icon — previously only
+          Enter triggered search, so a mouse-only user had no clickable
+          target at all. Same single search flow, just now clickable too. */}
+      <button
+        type="submit"
+        aria-label="খুঁজুন"
+        className="absolute left-1 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full p-2"
         style={{ color: "var(--color-text-muted)" }}
       >
-        <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
-        <path d="M21 21l-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
+          <path d="M21 21l-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      </button>
       <input
         ref={inputRef}
         id="global-search"

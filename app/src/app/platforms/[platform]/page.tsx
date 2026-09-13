@@ -24,7 +24,7 @@ export default async function PlatformDetailPage({ params }: PageProps<"/platfor
 
   return (
     <div className="mx-auto max-w-[900px] px-4 py-8 md:px-6">
-      <Breadcrumb items={[{ label: "Platforms", href: "/platforms" }, { label: p.title_bn }]} />
+      <Breadcrumb items={[{ label: "প্ল্যাটফর্ম", href: "/platforms" }, { label: p.title_bn }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         {p.title_bn}
       </h1>

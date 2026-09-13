@@ -12,18 +12,25 @@ import { SITE_NAME } from "@/lib/site";
 // Eight primary-nav items don't fit as flat tabs the way Docspace's five do,
 // so the lower-traffic sections group under "আরও" (More) instead of forcing
 // an 8-wide tab row.
+// Labels here must match each destination page's own Breadcrumb label
+// (and stay recognizably close to its H1) — they didn't before (English nav
+// label landing on a Bangla H1/breadcrumb reads as "did my click even
+// work?"), a real findability bug caught 2026-09-13. Bangla-first to match
+// the platform's own content; "AI" stays as-is since it's the term itself,
+// not a translation choice.
 const TABS = [
-  { href: "/learn", label: "Learn" },
-  { href: "/reference", label: "Reference" },
-  { href: "/patterns", label: "Patterns" },
-  { href: "/platforms", label: "Platforms" },
+  { href: "/learn", label: "শেখা" },
+  { href: "/reference", label: "রেফারেন্স" },
+  { href: "/patterns", label: "প্যাটার্ন" },
+  { href: "/platforms", label: "প্ল্যাটফর্ম" },
 ];
 
 const MORE_LINKS = [
-  { href: "/psychology", label: "Psychology" },
-  { href: "/ai", label: "AI" },
-  { href: "/resources", label: "Resources" },
-  { href: "/glossary", label: "Glossary" },
+  { href: "/reference/measurements", label: "পিক্সেল ও মেজারমেন্ট" },
+  { href: "/psychology", label: "মনোবিজ্ঞান" },
+  { href: "/ai", label: "AI UX" },
+  { href: "/resources", label: "রিসোর্স" },
+  { href: "/glossary", label: "শব্দকোষ" },
 ];
 
 const ALL_NAV = [...TABS, ...MORE_LINKS];

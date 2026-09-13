@@ -13,7 +13,7 @@ export default function PsychologyPage() {
 
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-8 md:px-6">
-      <Breadcrumb items={[{ label: "Psychology" }]} />
+      <Breadcrumb items={[{ label: "মনোবিজ্ঞান" }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         মানুষ ও মনোবিজ্ঞান
       </h1>

@@ -42,7 +42,7 @@ export default async function ReferenceCategoryPage({
 
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-8 md:px-6">
-      <Breadcrumb items={[{ label: "Reference", href: "/reference" }, { label: title }]} />
+      <Breadcrumb items={[{ label: "রেফারেন্স", href: "/reference" }, { label: title }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         {title}
       </h1>

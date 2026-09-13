@@ -39,7 +39,7 @@ export default async function PatternTopicPage({ params }: PageProps<"/patterns/
     <ArticleLayout
       doc={doc}
       mode="reference"
-      breadcrumb={[{ label: "Patterns", href: "/patterns" }, { label: doc.meta.title_bn }]}
+      breadcrumb={[{ label: "প্যাটার্ন", href: "/patterns" }, { label: doc.meta.title_bn }]}
       prev={null}
       next={null}
       related={resolveRelated(doc.meta.related_topics)}

@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "প্ল্যাটফর্ম �
 export default function PlatformsPage() {
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-8 md:px-6">
-      <Breadcrumb items={[{ label: "Platforms" }]} />
+      <Breadcrumb items={[{ label: "প্ল্যাটফর্ম" }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         প্ল্যাটফর্ম গাইডলাইন
       </h1>

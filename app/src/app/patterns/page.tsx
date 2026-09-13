@@ -14,7 +14,7 @@ export default function PatternsPage() {
 
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-8 md:px-6">
-      <Breadcrumb items={[{ label: "Patterns" }]} />
+      <Breadcrumb items={[{ label: "প্যাটার্ন" }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         UX প্যাটার্ন
       </h1>

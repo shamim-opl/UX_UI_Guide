@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
   return (
     <div className="mx-auto max-w-[1000px] px-4 py-8 md:px-6">
-      <Breadcrumb items={[{ label: "Resources" }]} />
+      <Breadcrumb items={[{ label: "রিসোর্স" }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         রিসোর্স
       </h1>

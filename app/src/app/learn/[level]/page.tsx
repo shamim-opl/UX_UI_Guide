@@ -20,7 +20,7 @@ export default async function LevelPage({ params }: PageProps<"/learn/[level]">)
     <div className="mx-auto flex max-w-[1280px] gap-8 px-4 py-8 md:px-6">
       <LearnSidebar activeLevelSlug={level.slug} />
       <div className="min-w-0 flex-1">
-        <Breadcrumb items={[{ label: "Learn", href: "/learn" }, { label: level.title_bn }]} />
+        <Breadcrumb items={[{ label: "শেখা", href: "/learn" }, { label: level.title_bn }]} />
         <p className="type-label mt-4">Level {level.id}</p>
         <h1 className="type-h1 mt-1" style={{ color: "var(--color-text-primary)" }}>
           {level.title_bn}

@@ -52,7 +52,7 @@ export default async function ReferenceTopicPage({
       doc={doc}
       mode="reference"
       breadcrumb={[
-        { label: "Reference", href: "/reference" },
+        { label: "রেফারেন্স", href: "/reference" },
         { label: categoryTitle, href: `/reference/${category}` },
         { label: doc.meta.title_bn },
       ]}

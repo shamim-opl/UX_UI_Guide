@@ -20,7 +20,7 @@ export default function ReferencePage() {
 
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-8 md:px-6">
-      <Breadcrumb items={[{ label: "Reference" }]} />
+      <Breadcrumb items={[{ label: "রেফারেন্স" }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         রেফারেন্স
       </h1>

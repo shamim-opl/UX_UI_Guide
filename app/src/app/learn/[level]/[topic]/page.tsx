@@ -46,7 +46,7 @@ export default async function LearnTopicPage({ params }: PageProps<"/learn/[leve
       mode="learn"
       levelSlug={level.slug}
       breadcrumb={[
-        { label: "Learn", href: "/learn" },
+        { label: "শেখা", href: "/learn" },
         { label: level.title_bn, href: `/learn/${level.slug}` },
         { label: doc.meta.title_bn },
       ]}
