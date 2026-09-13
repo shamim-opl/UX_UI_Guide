@@ -1,0 +1,17 @@
+id: service-blueprint
+slug: service-blueprint
+title_bn: "Service Blueprint — পর্দার পেছনের প্রক্রিয়া ম্যাপ করা"
+title_en: "Service Blueprinting"
+level: "14"
+reference_category: null
+difficulty: advanced
+summary_bn: "Customer Journey Map-এর পাশাপাশি সংগঠনের ভেতরের কর্মী, সিস্টেম আর প্রক্রিয়াও ম্যাপ করা হয় — সামনে যা দেখা যায় তার পেছনে কী ঘটছে তা বোঝার জন্য।"
+reading_time_minutes: 6
+prerequisites: [customer-journey-map]
+related_topics: [customer-journey-map, what-is-service-design, touchpoints-and-channels]
+tags: [service-design, blueprint, methodology]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

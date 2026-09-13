@@ -1,0 +1,17 @@
+id: customer-journey-map
+slug: customer-journey-map
+title_bn: "Customer Journey Map কীভাবে বানাতে হয়"
+title_en: "Customer Journey Mapping"
+level: "14"
+reference_category: null
+difficulty: intermediate
+summary_bn: "কাস্টমারের পুরো যাত্রাকে সময়ের ক্রমানুসারে ম্যাপ করা — প্রতিটা ধাপে সে কী করছে, কী অনুভব করছে, কোথায় সমস্যায় পড়ছে।"
+reading_time_minutes: 5
+prerequisites: [what-is-service-design, user-journey]
+related_topics: [what-is-service-design, service-blueprint]
+tags: [service-design, journey-map, methodology]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified
