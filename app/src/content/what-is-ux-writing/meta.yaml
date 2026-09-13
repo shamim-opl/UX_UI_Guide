@@ -1,0 +1,17 @@
+id: what-is-ux-writing
+slug: what-is-ux-writing
+title_bn: "UX Writing কী? — Microcopy-এর শক্তি"
+title_en: "What is UX Writing?"
+level: "06"
+reference_category: null
+difficulty: beginner
+summary_bn: "একটা বাটনের লেবেল, একটা এরর মেসেজ, একটা প্লেসহোল্ডার — এই ছোট ছোট টেক্সটই (Microcopy) ঠিক করে দেয় একটা প্রোডাক্ট ব্যবহার করতে কেমন লাগবে।"
+reading_time_minutes: 5
+prerequisites: [what-is-ui]
+related_topics: [writing-error-messages, writing-microcopy-for-states, bangla-ux-writing]
+tags: [ux-writing, content-design, microcopy]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

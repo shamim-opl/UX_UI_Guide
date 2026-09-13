@@ -1,0 +1,17 @@
+id: empathy-mapping
+slug: empathy-mapping
+title_bn: "Empathy Map — ইউজারের মাথায় ঢুকে দেখা"
+title_en: "Empathy Mapping"
+level: "04"
+reference_category: null
+difficulty: beginner
+summary_bn: "রিসার্চ থেকে পাওয়া তথ্যকে চারটা ভাগে (Says, Thinks, Does, Feels) সাজিয়ে একজন ব্যবহারকারীর অভিজ্ঞতা দলগতভাবে বোঝার একটা দ্রুত ভিজ্যুয়াল টুল।"
+reading_time_minutes: 4
+prerequisites: [user-interviews]
+related_topics: [personas, affinity-mapping]
+tags: [research, empathy-map, methodology]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

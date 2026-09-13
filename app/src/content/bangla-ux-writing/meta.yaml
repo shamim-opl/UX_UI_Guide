@@ -1,0 +1,17 @@
+id: bangla-ux-writing
+slug: bangla-ux-writing
+title_bn: "বাংলা UX Writing — কখন বাংলা, কখন ইংরেজি শব্দ"
+title_en: "Bangla UX Writing and Localization"
+level: "06"
+reference_category: null
+difficulty: intermediate
+summary_bn: "বাংলাদেশি/বাংলাভাষী প্রোডাক্টে টেক্সট লেখার সময় কখন প্রচলিত ইংরেজি শব্দ রাখা উচিত, কখন বাংলা অনুবাদ, আর ফরমাল-ইনফরমাল টোনের সিদ্ধান্ত।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux-writing]
+related_topics: [what-is-ux-writing, writing-error-messages]
+tags: [ux-writing, bangla, localization, content-design]
+status: published
+source_type: industry
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

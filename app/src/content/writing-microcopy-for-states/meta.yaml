@@ -1,0 +1,17 @@
+id: writing-microcopy-for-states
+slug: writing-microcopy-for-states
+title_bn: "Empty, Success, Onboarding State-এর জন্য Copy লেখা"
+title_en: "Writing Microcopy for States"
+level: "06"
+reference_category: null
+difficulty: intermediate
+summary_bn: "Empty State, Success Message, আর Onboarding-এর টেক্সট প্রতিটার আলাদা উদ্দেশ্য আছে — সঠিক টোন আর দৈর্ঘ্য বেছে নেওয়ার নিয়ম।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux-writing, empty-states, onboarding-flows]
+related_topics: [empty-states, onboarding-flows, toast-component]
+tags: [ux-writing, empty-state, onboarding, content-design]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

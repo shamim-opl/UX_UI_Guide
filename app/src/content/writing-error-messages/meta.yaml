@@ -1,0 +1,17 @@
+id: writing-error-messages
+slug: writing-error-messages
+title_bn: "Error Message লেখার নিয়ম — দোষ না দিয়ে সমাধান দেওয়া"
+title_en: "Writing Error Messages"
+level: "06"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একটা এরর মেসেজ ইউজারকে দোষারোপ না করে, কী ভুল হলো আর এখন কী করতে হবে তা স্পষ্টভাবে বলা উচিত।"
+reading_time_minutes: 4
+prerequisites: [what-is-ux-writing, form-interactions-and-states]
+related_topics: [what-is-ux-writing, accessible-forms-and-error-messages]
+tags: [ux-writing, error-message, content-design]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified
