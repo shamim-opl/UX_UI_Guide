@@ -1,0 +1,17 @@
+id: design-systems-comparison
+slug: design-systems-comparison
+title_bn: "১১টা প্রধান ডিজাইন সিস্টেম — একনজরে তুলনা"
+title_en: "Design Systems Comparison Table"
+level: "12"
+reference_category: design-systems
+difficulty: intermediate
+summary_bn: "Material Design, Apple HIG, Fluent, Carbon, Polaris সহ ১১টা প্রধান ডিজাইন সিস্টেমের মেইনটেইনার, ব্যবহারক্ষেত্র, লাইসেন্স, আর মূল বৈশিষ্ট্য একটা টেবিলে পাশাপাশি।"
+reading_time_minutes: 6
+prerequisites: [what-is-design-system]
+related_topics: [material-design, apple-hig-system, fluent-design-system, carbon-design-system]
+tags: [design-system, comparison, reference]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

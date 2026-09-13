@@ -33,9 +33,15 @@ Tooltip শুধুই ঐচ্ছিক, বাড়তি তথ্যে�
 
 ## States
 
-```text
-Hidden, Visible (হোভার/ফোকাসে), Fading out
-```
+| State | কখন হয় | সময়কাল |
+|---|---|---|
+| Hidden | ডিফল্ট, কোনো hover/focus নেই | — |
+| Visible | হোভার বা ফোকাসের ~৫০০ms পর দেখা দেয় | দৃশ্যমান থাকে যতক্ষণ hover/focus বহাল |
+| Fading out | মাউস সরে গেলে বা focus হারালে | ~১৫০ms অ্যানিমেশন |
+
+<Callout type="guideline">
+Tooltip সাথে সাথে দেখানোর বদলে একটা ছোট বিলম্ব (~৫০০ms) রাখা ভালো — মাউস স্রেফ একটা এলিমেন্টের উপর দিয়ে চলে গেলে প্রতিবার Tooltip ফ্ল্যাশ করা বিরক্তিকর।
+</Callout>
 
 ## Accessibility
 

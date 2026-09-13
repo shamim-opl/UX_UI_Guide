@@ -5,7 +5,7 @@ title_en: What is UI?
 level: "00"
 reference_category: null
 difficulty: beginner
-summary_bn: "UI মানে ব্যবহারকারী যা দেখে আর স্পর্শ করে — বাটন, রং, টাইপোগ্রাফি, লেআউট।"
+summary_bn: "UI (User Interface) মানে ব্যবহারকারী যা সরাসরি দেখে ও স্পর্শ করে — বাটন, রং, টাইপোগ্রাফি, আইকন, লেআউট। UX-এর একটা অংশ, পুরোটা না।"
 reading_time_minutes: 4
 prerequisites: []
 related_topics: [what-is-ux, ux-vs-ui, button-component, wcag-accessibility]

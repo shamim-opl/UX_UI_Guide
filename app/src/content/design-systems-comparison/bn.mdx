@@ -1,0 +1,48 @@
+## এটা কী?
+
+এই প্ল্যাটফর্মে ১১টা প্রধান ডিজাইন সিস্টেম আলাদা আলাদা আর্টিকেলে বিস্তারিত আলোচনা করা হয়েছে। এই পেজটা সেগুলোকে একটা টেবিলে পাশাপাশি রেখে দ্রুত তুলনা করার সুযোগ দেয় — কোনটা কার জন্য, কোনটা open source, কোনটা কোন প্ল্যাটফর্মের জন্য।
+
+## সম্পূর্ণ তুলনা টেবিল
+
+| ডিজাইন সিস্টেম | মেইনটেইনার | প্রথম প্রকাশ | মূল প্ল্যাটফর্ম | ব্যবহারক্ষেত্র | Open Source |
+|---|---|---|---|---|---|
+| [Material Design](/reference/design-systems/material-design) | Google | 2014 | Android, Web | সাধারণ ভোক্তা অ্যাপ | হ্যাঁ |
+| [Apple HIG](/reference/design-systems/apple-hig) | Apple | 1987 (আধুনিকীকৃত) | iOS, macOS, visionOS | Apple ইকোসিস্টেম অ্যাপ | না (নির্দেশিকা উন্মুক্ত, কোড না) |
+| [Fluent Design](/reference/design-systems/fluent-design) | Microsoft | 2017 | Windows, Web, Office | এন্টারপ্রাইজ, প্রোডাক্টিভিটি টুল | হ্যাঁ |
+| [Carbon](/reference/design-systems/carbon-design-system) | IBM | 2018 | Web (এন্টারপ্রাইজ) | B2B/এন্টারপ্রাইজ সফটওয়্যার | হ্যাঁ |
+| [Polaris](/reference/design-systems/polaris-design-system) | Shopify | 2017 | Web (Admin) | ই-কমার্স অ্যাডমিন প্যানেল | হ্যাঁ |
+| [Primer](/reference/design-systems/primer-design-system) | GitHub | 2018 | Web | ডেভেলপার টুলস | হ্যাঁ |
+| [Lightning](/reference/design-systems/lightning-design-system) | Salesforce | 2015 | Web (CRM) | এন্টারপ্রাইজ CRM | হ্যাঁ |
+| [Atlassian Design System](/reference/design-systems/atlassian-design-system) | Atlassian | 2016 | Web | প্রজেক্ট ম্যানেজমেন্ট টুল | হ্যাঁ |
+| [GOV.UK Design System](/reference/design-systems/govuk-design-system) | UK GDS | 2015 | Web | সরকারি সেবা | হ্যাঁ |
+| [USWDS](/reference/design-systems/uswds) | US সরকার (GSA) | 2015 | Web | মার্কিন সরকারি সেবা | হ্যাঁ |
+| [Adobe Spectrum](/reference/design-systems/adobe-spectrum) | Adobe | 2017 | Web, Desktop | Creative Cloud অ্যাপ | হ্যাঁ |
+
+<Callout type="guideline">
+"Open Source" মানে এই না যে প্রতিটার কোড হুবহু একই স্বাধীনতায় ব্যবহারযোগ্য — লাইসেন্স ভিন্ন (Apache 2.0, MIT, BSD-3 ইত্যাদি), তাই বাস্তবে ব্যবহারের আগে প্রতিটার নিজস্ব লাইসেন্স শর্ত যাচাই করা জরুরি।
+</Callout>
+
+## কোনটা কখন বেছে নেবে?
+
+| তোমার প্রয়োজন | সুপারিশকৃত সিস্টেম |
+|---|---|
+| একটা সাধারণ Android/Web কনজিউমার অ্যাপ | Material Design |
+| একটা iOS/macOS অ্যাপ | Apple HIG |
+| একটা এন্টারপ্রাইজ B2B ড্যাশবোর্ড | Carbon বা Lightning |
+| একটা সরকারি বা অ্যাক্সেসিবিলিটি-কেন্দ্রিক সেবা | GOV.UK Design System বা USWDS |
+| একটা ই-কমার্স অ্যাডমিন টুল | Polaris |
+| একটা ডেভেলপার-মুখী প্রোডাক্ট | Primer |
+
+## Rules / Best Practices
+
+- একটা প্রতিষ্ঠিত ডিজাইন সিস্টেম থেকে শেখাটা মূল্যবান, কিন্তু হুবহু কপি করে নিজের ব্র্যান্ডে বসিয়ে দেওয়া উচিত না — প্রতিটা সিস্টেম একটা নির্দিষ্ট প্রতিষ্ঠানের নিজস্ব প্রোডাক্ট ও ব্যবহারকারীর জন্য অপ্টিমাইজড।
+- সরকারি বা অ্যাক্সেসিবিলিটি-বাধ্যতামূলক প্রোডাক্টের জন্য GOV.UK বা USWDS-এর প্যাটার্নগুলো বিশেষভাবে অধ্যয়নযোগ্য — এগুলো আইনি অ্যাক্সেসিবিলিটি মানদণ্ডের সাথে সরাসরি সংযুক্ত।
+- একাধিক সিস্টেম থেকে ধারণা নিলেও, নিজের প্রোডাক্টের জন্য একটামাত্র সামঞ্জস্যপূর্ণ টোকেন সিস্টেম বানানো উচিত — বিভিন্ন সিস্টেমের প্যাটার্ন এলোমেলোভাবে মিশিয়ে ফেললে অসামঞ্জস্য তৈরি হয়।
+
+## Sources & Evidence
+
+**প্রাথমিক উৎস (Primary):**
+- প্রতিটা সিস্টেমের নিজস্ব অফিসিয়াল ডকুমেন্টেশন — লিংক প্রতিটা সংশ্লিষ্ট আর্টিকেলে দেওয়া আছে।
+
+**আরও পড়ুন (Further Reading):**
+- [Design Systems Repo — A community-driven list of design systems](https://designsystemsrepo.com/)
