@@ -1,14 +1,15 @@
 import Breadcrumb from "@/components/Breadcrumb";
+import GlossaryClient from "@/components/GlossaryClient";
 import { getGlossary } from "@/lib/glossary";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "শব্দকোষ — UX/UI পরিভাষা",
-  description: "ইংরেজি ও বাংলায় UX/UI-এর গুরুত্বপূর্ণ পরিভাষার তালিকা, উদাহরণসহ।",
+  description: "ইংরেজি ও বাংলায় UX/UI-এর গুরুত্বপূর্ণ পরিভাষার তালিকা, সহজ ব্যাখ্যা ও উদাহরণসহ।",
 };
 
 export default function GlossaryPage() {
-  const terms = [...getGlossary()].sort((a, b) => a.term.localeCompare(b.term));
+  const terms = getGlossary();
 
   return (
     <div className="mx-auto max-w-[900px] px-4 py-8 md:px-6">
@@ -17,38 +18,13 @@ export default function GlossaryPage() {
         শব্দকোষ
       </h1>
       <p className="type-body-lg mt-2" style={{ color: "var(--color-text-secondary)" }}>
-        ইংরেজি ↔ বাংলা UX/UI পরিভাষা।
+        আর্টিকেল পড়ার সময় কোনো ইংরেজি UX/UI শব্দ (যেমন &quot;Affordance&quot; বা &quot;Cognitive
+        Load&quot;) না বুঝলে এখানে খুঁজে দেখো — প্রতিটার সহজ বাংলা ব্যাখ্যা ও বাস্তব উদাহরণ আছে।
+        নিচে বিষয় অনুযায়ী ফিল্টার করতে পারো, বা সরাসরি সার্চ বক্সে টাইপ করো। একটা শব্দের
+        &quot;সম্পর্কিত&quot; ট্যাগে ক্লিক করলে সেই শব্দে সরাসরি চলে যাবে।
       </p>
 
-      <dl className="mt-8 flex flex-col gap-6">
-        {terms.map((entry) => (
-          <div key={entry.term} id={entry.term.toLowerCase().replace(/\s+/g, "-")} className="card">
-            <dt>
-              <span className="type-h4" style={{ color: "var(--color-text-primary)" }}>
-                {entry.term}
-              </span>
-              <span className="type-body-sm ml-2" style={{ color: "var(--color-text-secondary)" }}>
-                ({entry.term_bn})
-              </span>
-            </dt>
-            <dd className="mt-2">
-              <p className="type-body-sm" style={{ color: "var(--color-text-secondary)" }}>
-                {entry.simple_explanation}
-              </p>
-              <p className="type-caption mt-2">উদাহরণ: {entry.example}</p>
-              {entry.related_terms.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {entry.related_terms.map((rt) => (
-                    <span key={rt} className="tag">
-                      {rt}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </dd>
-          </div>
-        ))}
-      </dl>
+      <GlossaryClient terms={terms} />
     </div>
   );
 }
