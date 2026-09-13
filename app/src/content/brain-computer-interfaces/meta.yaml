@@ -1,0 +1,17 @@
+id: brain-computer-interfaces
+slug: brain-computer-interfaces
+title_bn: "Brain-Computer Interface — চিন্তা দিয়ে নিয়ন্ত্রণ"
+title_en: "Brain-Computer Interfaces"
+level: "18"
+reference_category: null
+difficulty: advanced
+summary_bn: "মস্তিষ্কের সংকেত সরাসরি ডিভাইসে পাঠিয়ে নিয়ন্ত্রণ করার প্রযুক্তি — এখনো মূলত পরীক্ষামূলক ও চিকিৎসা-গবেষণা পর্যায়ে, ভোক্তা প্রোডাক্টে অনুমানভিত্তিক।"
+reading_time_minutes: 4
+prerequisites: [what-is-ux]
+related_topics: [spatial-computing, gesture-interaction]
+tags: [bci, emerging-interaction, future]
+status: published
+source_type: research
+evidence_level: emerging
+last_reviewed: 2026-09-13
+content_status: needs-review

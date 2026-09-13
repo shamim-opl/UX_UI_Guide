@@ -1,0 +1,17 @@
+id: what-is-information-architecture
+slug: what-is-information-architecture
+title_bn: "তথ্য স্থাপত্য (Information Architecture) কী?"
+title_en: "What is Information Architecture?"
+level: "05"
+reference_category: null
+difficulty: beginner
+summary_bn: "একটা প্রোডাক্টের কন্টেন্ট ও ফিচারগুলো কীভাবে সংগঠিত, গঠন করা এবং লেবেল করা হবে তার নকশা — যাতে মানুষ সহজে খুঁজে পায়।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux]
+related_topics: [navigation-patterns, labeling-systems, card-sorting]
+tags: [information-architecture, fundamentals, beginner]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

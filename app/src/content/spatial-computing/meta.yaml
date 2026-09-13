@@ -1,0 +1,17 @@
+id: spatial-computing
+slug: spatial-computing
+title_bn: "Spatial Computing — 3D স্পেসে ইন্টারফেস"
+title_en: "Spatial Computing"
+level: "18"
+reference_category: null
+difficulty: advanced
+summary_bn: "AR/VR হেডসেটে ডিজিটাল কনটেন্ট বাস্তব বা ভার্চুয়াল ৩D জগতে বসানো হয় — একদম নতুন ডিজাইন নিয়মের প্রয়োজন হয়, ফ্ল্যাট স্ক্রিনের নিয়ম এখানে খাটে না।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux]
+related_topics: [gesture-interaction, voice-interfaces]
+tags: [spatial-computing, ar, vr, emerging-interaction]
+status: published
+source_type: industry
+evidence_level: emerging
+last_reviewed: 2026-09-13
+content_status: needs-review

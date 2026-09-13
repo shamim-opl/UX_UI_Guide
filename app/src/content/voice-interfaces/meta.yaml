@@ -1,0 +1,17 @@
+id: voice-interfaces
+slug: voice-interfaces
+title_bn: "Voice Interface (VUI) — কথা বলে ইন্টারঅ্যাকশন"
+title_en: "Voice User Interfaces"
+level: "18"
+reference_category: null
+difficulty: intermediate
+summary_bn: "স্ক্রিন-বিহীন, কণ্ঠস্বর-ভিত্তিক ইন্টারঅ্যাকশন — Alexa, Google Assistant-এর মতো প্রোডাক্টে প্রতিষ্ঠিত, কিন্তু ডিজাইনের নিয়ম ভিজ্যুয়াল UI থেকে আলাদা।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux]
+related_topics: [gesture-interaction, spatial-computing]
+tags: [voice, vui, emerging-interaction]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

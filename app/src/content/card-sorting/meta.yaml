@@ -1,0 +1,17 @@
+id: card-sorting
+slug: card-sorting
+title_bn: "Card Sorting — কাঠামো ইউজারের কাছ থেকে শেখা"
+title_en: "Card Sorting"
+level: "05"
+reference_category: null
+difficulty: intermediate
+summary_bn: "ইউজারকে বিষয়বস্তুর কার্ড নিজের মতো করে গ্রুপ করতে দিয়ে বোঝা হয় তারা তথ্যকে কীভাবে সংগঠিত হতে দেখতে চায়।"
+reading_time_minutes: 5
+prerequisites: [what-is-information-architecture]
+related_topics: [what-is-information-architecture, labeling-systems]
+tags: [information-architecture, card-sorting, methodology]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

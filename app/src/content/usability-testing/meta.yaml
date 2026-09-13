@@ -1,0 +1,17 @@
+id: usability-testing
+slug: usability-testing
+title_bn: "Usability Testing কী ও কীভাবে করতে হয়"
+title_en: "Usability Testing"
+level: "04"
+reference_category: null
+difficulty: beginner
+summary_bn: "বাস্তব ব্যবহারকারীকে দিয়ে প্রোডাক্ট ব্যবহার করিয়ে দেখা হয় সে কাজটা করতে পারছে কিনা এবং কোথায় আটকাচ্ছে।"
+reading_time_minutes: 5
+prerequisites: [user-interviews]
+related_topics: [qualitative-vs-quantitative-research, personas]
+tags: [research, usability-testing, methodology]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

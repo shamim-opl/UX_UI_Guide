@@ -1,0 +1,17 @@
+id: gesture-interaction
+slug: gesture-interaction
+title_bn: "Gesture-Based Interaction — হাতের নড়াচড়া দিয়ে নিয়ন্ত্রণ"
+title_en: "Gesture-Based Interaction"
+level: "18"
+reference_category: null
+difficulty: intermediate
+summary_bn: "স্পর্শ ছাড়াই হাত/শরীরের নড়াচড়া দিয়ে নিয়ন্ত্রণ — টাচস্ক্রিন সোয়াইপ থেকে শুরু করে touchless gesture পর্যন্ত, পরিপক্কতার মাত্রা বিষয়ভেদে ভিন্ন।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux]
+related_topics: [voice-interfaces, spatial-computing]
+tags: [gesture, touch, emerging-interaction]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

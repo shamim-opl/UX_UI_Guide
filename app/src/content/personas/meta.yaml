@@ -1,0 +1,17 @@
+id: personas
+slug: personas
+title_bn: "Persona কী এবং কেন বানানো হয়"
+title_en: "User Personas"
+level: "04"
+reference_category: null
+difficulty: beginner
+summary_bn: "রিসার্চ থেকে পাওয়া প্যাটার্নকে একটা কাল্পনিক কিন্তু বাস্তব-ভিত্তিক 'প্রতিনিধি ব্যবহারকারী' হিসেবে সাজানো, যাতে পুরো টিম একই ইউজারের কথা ভেবে সিদ্ধান্ত নিতে পারে।"
+reading_time_minutes: 5
+prerequisites: [user-interviews]
+related_topics: [qualitative-vs-quantitative-research, user-journey]
+tags: [research, persona, methodology]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

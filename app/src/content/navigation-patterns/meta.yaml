@@ -1,0 +1,17 @@
+id: navigation-patterns
+slug: navigation-patterns
+title_bn: "সাধারণ Navigation প্যাটার্ন"
+title_en: "Common Navigation Patterns"
+level: "05"
+reference_category: null
+difficulty: beginner
+summary_bn: "Tab Bar, Hamburger Menu, Breadcrumb-এর মতো প্রচলিত ন্যাভিগেশন প্যাটার্ন — কখন কোনটা ব্যবহার করা উচিত।"
+reading_time_minutes: 5
+prerequisites: [what-is-information-architecture]
+related_topics: [what-is-information-architecture, labeling-systems]
+tags: [information-architecture, navigation, patterns]
+status: published
+source_type: industry
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified
