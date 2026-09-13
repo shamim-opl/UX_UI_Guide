@@ -1,0 +1,17 @@
+id: card-component
+slug: card-component
+title_bn: "Card — কম্পোনেন্ট রেফারেন্স"
+title_en: "Card"
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "সম্পর্কিত তথ্যকে একটা স্বতন্ত্র, ভিজ্যুয়ালি আলাদা কন্টেইনারে গুচ্ছবদ্ধ করার সবচেয়ে সাধারণ কম্পোনেন্ট।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [tabs-component, gestalt-principles]
+tags: [component, ui, reference, card, layout]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

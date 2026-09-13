@@ -1,0 +1,17 @@
+id: tooltip-component
+slug: tooltip-component
+title_bn: "Tooltip — কম্পোনেন্ট রেফারেন্স"
+title_en: "Tooltip"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "একটা এলিমেন্ট সম্পর্কে অতিরিক্ত, ঐচ্ছিক তথ্য দেখানোর ছোট, সাময়িক পপ-আপ — মূল UI-তে জায়গা না নিয়ে।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [button-component, wcag-accessibility]
+tags: [component, ui, reference, tooltip, accessibility]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

@@ -1,0 +1,17 @@
+id: designing-for-tablets
+slug: designing-for-tablets
+title_bn: "ট্যাবলেটের জন্য ডিজাইন করা — না মোবাইল, না ডেস্কটপ"
+title_en: "Designing for Tablets"
+level: "11"
+reference_category: null
+difficulty: intermediate
+summary_bn: "ট্যাবলেট মোবাইল ফোনের বড় সংস্করণ না — বড় স্ক্রিন, টাচ ইনপুট, আর প্রায়ই ল্যান্ডস্কেপ ব্যবহার মিলিয়ে নিজস্ব ডিজাইন প্রয়োজনীয়তা তৈরি করে।"
+reading_time_minutes: 5
+prerequisites: [responsive-design-basics]
+related_topics: [desktop-vs-mobile-interaction, cross-platform-consistency]
+tags: [platform, tablet, responsive]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

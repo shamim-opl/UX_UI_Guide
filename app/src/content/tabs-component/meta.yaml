@@ -1,0 +1,17 @@
+id: tabs-component
+slug: tabs-component
+title_bn: "Tabs — কম্পোনেন্ট রেফারেন্স"
+title_en: "Tabs"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "সম্পর্কিত কিন্তু আলাদা কনটেন্টের মধ্যে একই জায়গায় সুইচ করার কম্পোনেন্ট, একটার বেশি পেজে না গিয়ে।"
+reading_time_minutes: 5
+prerequisites: [what-is-ui]
+related_topics: [navigation-patterns, card-component]
+tags: [component, ui, reference, tabs, navigation]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

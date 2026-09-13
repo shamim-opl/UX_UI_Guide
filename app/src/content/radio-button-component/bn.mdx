@@ -1,0 +1,57 @@
+## Definition
+
+একটা **Radio Button** একাধিক অপশনের একটা গ্রুপ থেকে ঠিক একটা মাত্র নির্বাচনের সুযোগ দেয় — একটা বেছে নিলে বাকি সব স্বয়ংক্রিয়ভাবে বাদ যায়। নাম এসেছে পুরনো রেডিওর প্রিসেট-স্টেশন বাটন থেকে, যেখানে একটা চাপলে আগেরটা ছেড়ে দিত।
+
+## Anatomy
+
+```text
+( ) অপশন ১
+(●) অপশন ২  (নির্বাচিত)
+( ) অপশন ৩
+```
+
+একটা বৃত্তাকার বাটন (নির্বাচিত/অনির্বাচিত) + একটা ক্লিকযোগ্য লেবেল, একটা গ্রুপে সাজানো।
+
+## Purpose
+
+পারস্পরিক-বর্জনীয় (mutually exclusive) অপশনের মধ্যে থেকে একটা মাত্র নির্বাচন করানো, এবং সব অপশন একনজরে দৃশ্যমান রাখা যাতে ইউজার তুলনা করে সিদ্ধান্ত নিতে পারে।
+
+## When to use / When not to use
+
+**ব্যবহার করো:** ২-৫টা অপশনের মধ্যে ঠিক একটা বেছে নিতে হলে (যেমন পেমেন্ট মেথড, ডেলিভারি স্পিড)।
+**ব্যবহার করো না:** একাধিক নির্বাচন করা গেলে (তার জন্য [Checkbox](/reference/components/checkbox-component)), বা ৭টার বেশি অপশন থাকলে (তার জন্য [Select/Dropdown](/reference/components/select-dropdown-component) ভালো, জায়গা বাঁচায়)।
+
+## Variants
+
+- **Standard Radio Group** — উল্লম্বভাবে সাজানো তালিকা।
+- **Segmented Control** — Radio Button-এর একটা ভিজ্যুয়াল বিকল্প, বাটনগুলো একসাথে পাশাপাশি একটা কন্টেইনারে (যেমন iOS-এর Segmented Control), কম জায়গায় ২-৪টা অপশনের জন্য উপযোগী।
+
+## States
+
+```text
+Unselected, Selected, Disabled, Focus, Error
+```
+
+## Accessibility
+
+- একই গ্রুপের সব Radio Button-এ একই `name` attribute থাকা আবশ্যক (native HTML-এ), যাতে ব্রাউজার বুঝতে পারে এগুলো পারস্পরিক-বর্জনীয়।
+- Arrow key দিয়ে গ্রুপের ভেতরে নেভিগেট করা যাওয়া উচিত (native `<input type="radio">` এটা স্বয়ংক্রিয়ভাবে দেয়)।
+- পুরো গ্রুপের একটা সাধারণ লেবেল (`<fieldset>` + `<legend>`) থাকা উচিত, যাতে স্ক্রিন রিডার বুঝতে পারে এটা কোন প্রশ্নের উত্তর।
+
+## Mobile / Tablet / Desktop
+
+মোবাইলে প্রতিটা Radio Button-এর পুরো সারি (label-সহ) ট্যাপযোগ্য হওয়া উচিত, শুধু ছোট বৃত্তটুকু না — টাচ টার্গেট বড় রাখতে।
+
+## Good Example / Bad Example
+
+**ভালো:** একটা চেকআউট ফর্মে ৩টা ডেলিভারি অপশন (স্ট্যান্ডার্ড, এক্সপ্রেস, একই দিনে) Radio Button দিয়ে দেখানো, প্রতিটার সাথে দাম স্পষ্টভাবে — ইউজার সব অপশন একনজরে তুলনা করতে পারে।
+
+**খারাপ:** ২টা মাত্র অপশনের ("হ্যাঁ"/"না") জন্য Radio Button ব্যবহার করা, যেখানে একটা Toggle Switch অনেক দ্রুত ও কম জায়গা নিত।
+
+## Sources & Evidence
+
+**প্রাথমিক উৎস (Primary):**
+- [W3C WAI-ARIA — Radio Group Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/radio/)
+
+**আরও পড়ুন (Further Reading):**
+- [Nielsen Norman Group — Checkboxes vs. Radio Buttons](https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/)

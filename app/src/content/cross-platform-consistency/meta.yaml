@@ -1,0 +1,17 @@
+id: cross-platform-consistency
+slug: cross-platform-consistency
+title_bn: "Cross-Platform ধারাবাহিকতা — ব্র্যান্ড না প্ল্যাটফর্ম কনভেনশন?"
+title_en: "Cross-Platform Consistency"
+level: "11"
+reference_category: null
+difficulty: advanced
+summary_bn: "একই প্রোডাক্ট iOS, Android, Web-এ বানানোর সময় ব্র্যান্ড পরিচয় ধরে রাখা আর প্রতিটা প্ল্যাটফর্মের নিজস্ব কনভেনশন মেনে চলার মধ্যে ভারসাম্য দরকার।"
+reading_time_minutes: 5
+prerequisites: [jakobs-law]
+related_topics: [desktop-vs-mobile-interaction, designing-for-tablets]
+tags: [platform, cross-platform, consistency]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

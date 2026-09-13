@@ -1,0 +1,17 @@
+id: desktop-vs-mobile-interaction
+slug: desktop-vs-mobile-interaction
+title_bn: "Desktop বনাম Mobile ইন্টারঅ্যাকশন প্যারাডাইম"
+title_en: "Desktop vs Mobile Interaction"
+level: "11"
+reference_category: null
+difficulty: intermediate
+summary_bn: "মাউস-কীবোর্ড আর টাচের ইনপুট পদ্ধতি মৌলিকভাবে ভিন্ন — hover, right-click, precision-এর মতো ধারণা টাচে নেই।"
+reading_time_minutes: 5
+prerequisites: [responsive-design-basics]
+related_topics: [designing-for-tablets, fitts-law]
+tags: [platform, mobile, desktop, interaction]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

@@ -1,0 +1,17 @@
+id: foldable-and-multiwindow-design
+slug: foldable-and-multiwindow-design
+title_bn: "Foldable ও Multi-Window ডিভাইসের জন্য ডিজাইন"
+title_en: "Foldable and Multi-Window Design"
+level: "11"
+reference_category: null
+difficulty: advanced
+summary_bn: "ভাঁজ করা যায় এমন ফোন আর একই স্ক্রিনে একাধিক অ্যাপ পাশাপাশি চালানোর সুবিধা — অ্যাপের লেআউট স্ক্রিন সাইজের সাথে সাথে রিয়েল-টাইমে বদলাতে পারতে হয়।"
+reading_time_minutes: 4
+prerequisites: [responsive-design-basics, designing-for-tablets]
+related_topics: [designing-for-tablets, desktop-vs-mobile-interaction]
+tags: [platform, foldable, multi-window, emerging]
+status: published
+source_type: industry
+evidence_level: emerging
+last_reviewed: 2026-09-13
+content_status: needs-review

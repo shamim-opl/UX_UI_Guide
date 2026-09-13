@@ -1,0 +1,17 @@
+id: radio-button-component
+slug: radio-button-component
+title_bn: "Radio Button — কম্পোনেন্ট রেফারেন্স"
+title_en: "Radio Button"
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "একাধিক অপশনের মধ্য থেকে ঠিক একটা মাত্র নির্বাচনের জন্য ব্যবহৃত কম্পোনেন্ট, সব অপশন একনজরে দৃশ্যমান রেখে।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [checkbox-component, select-dropdown-component]
+tags: [component, ui, reference, radio-button, form, accessibility]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

@@ -1,0 +1,17 @@
+id: toggle-switch-component
+slug: toggle-switch-component
+title_bn: "Toggle / Switch — কম্পোনেন্ট রেফারেন্স"
+title_en: "Toggle Switch"
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "চালু/বন্ধ (on/off) এর মতো একটা সেটিং তাৎক্ষণিকভাবে বদলানোর কম্পোনেন্ট — Checkbox থেকে আলাদা, কারণ পরিবর্তন সাথে সাথে কার্যকর হয়।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [checkbox-component, radio-button-component]
+tags: [component, ui, reference, toggle, switch, settings]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

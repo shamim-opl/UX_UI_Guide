@@ -1,0 +1,17 @@
+id: toast-component
+slug: toast-component
+title_bn: "Toast / Snackbar — কম্পোনেন্ট রেফারেন্স"
+title_en: "Toast / Snackbar"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "একটা অ্যাকশনের পর সংক্ষিপ্ত, সাময়িক ফিডব্যাক দেওয়ার কম্পোনেন্ট, যা নিজে থেকেই কিছুক্ষণ পর অদৃশ্য হয়ে যায়।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [button-component, empty-states]
+tags: [component, ui, reference, toast, snackbar, feedback]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified
