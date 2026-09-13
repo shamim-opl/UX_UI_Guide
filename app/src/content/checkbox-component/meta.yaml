@@ -1,0 +1,17 @@
+id: checkbox-component
+slug: checkbox-component
+title_bn: "Checkbox — কম্পোনেন্ট রেফারেন্স"
+title_en: "Checkbox"
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "একাধিক অপশনের মধ্য থেকে শূন্য, এক বা একাধিক নির্বাচনের জন্য ব্যবহৃত কম্পোনেন্ট — Radio Button থেকে আলাদা।"
+reading_time_minutes: 5
+prerequisites: [what-is-ui]
+related_topics: [button-component, wcag-accessibility]
+tags: [component, ui, reference, checkbox, form, accessibility]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

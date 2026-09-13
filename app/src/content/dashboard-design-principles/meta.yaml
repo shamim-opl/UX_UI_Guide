@@ -1,0 +1,17 @@
+id: dashboard-design-principles
+slug: dashboard-design-principles
+title_bn: "Dashboard ডিজাইনের মূলনীতি"
+title_en: "Dashboard Design Principles"
+level: "15"
+reference_category: null
+difficulty: advanced
+summary_bn: "একসাথে অনেক ডেটা দেখানোর সময় হায়ারার্কি ও অগ্রাধিকার ঠিক না করলে ড্যাশবোর্ড একটা 'সব ডেটার স্তূপ'-এ পরিণত হয়, তথ্যে না।"
+reading_time_minutes: 6
+prerequisites: [what-is-enterprise-ux]
+related_topics: [what-is-enterprise-ux, progressive-disclosure]
+tags: [enterprise-ux, dashboard, data-visualization]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

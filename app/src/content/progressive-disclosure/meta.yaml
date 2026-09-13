@@ -1,0 +1,17 @@
+id: progressive-disclosure
+slug: progressive-disclosure
+title_bn: "Progressive Disclosure — ধাপে ধাপে তথ্য দেখানো"
+title_en: "Progressive Disclosure"
+level: "06"
+reference_category: patterns
+difficulty: intermediate
+summary_bn: "একসাথে সব অপশন না দেখিয়ে, শুরুতে শুধু প্রয়োজনীয় অংশ দেখানো এবং বাকিটা চাহিদামতো প্রকাশ করা — জটিলতা লুকানো, মুছে ফেলা না।"
+reading_time_minutes: 4
+prerequisites: [cognitive-load]
+related_topics: [dashboard-design-principles, what-is-enterprise-ux]
+tags: [enterprise-ux, progressive-disclosure, cognitive-load]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

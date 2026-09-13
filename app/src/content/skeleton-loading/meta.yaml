@@ -1,0 +1,17 @@
+id: skeleton-loading
+slug: skeleton-loading
+title_bn: "Skeleton Loading — কন্টেন্ট আসার আগে কাঠামো দেখানো"
+title_en: "Skeleton Loading Screens"
+level: "06"
+reference_category: patterns
+difficulty: beginner
+summary_bn: "খালি স্ক্রিন বা স্পিনারের বদলে কন্টেন্টের ধূসর কাঠামো দেখিয়ে অপেক্ষাকে দ্রুত ও পূর্বানুমানযোগ্য মনে করানো।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [empty-states, progressive-disclosure]
+tags: [pattern, loading, perceived-performance]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

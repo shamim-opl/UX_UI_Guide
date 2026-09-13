@@ -1,0 +1,17 @@
+id: designing-complex-workflows
+slug: designing-complex-workflows
+title_bn: "জটিল Workflow ডিজাইন করা"
+title_en: "Designing Complex Workflows"
+level: "15"
+reference_category: null
+difficulty: advanced
+summary_bn: "বহু-ধাপ, বহু-ভূমিকার এন্টারপ্রাইজ প্রক্রিয়া (যেমন অনুমোদন প্রক্রিয়া) ডিজাইন করার সময় প্রতিটা ব্যবহারকারীর অবস্থান ও প্রেক্ষাপট বিবেচনা করতে হয়।"
+reading_time_minutes: 5
+prerequisites: [what-is-enterprise-ux]
+related_topics: [what-is-enterprise-ux, dashboard-design-principles]
+tags: [enterprise-ux, workflow, advanced]
+status: published
+source_type: primary
+evidence_level: medium
+last_reviewed: 2026-09-13
+content_status: verified

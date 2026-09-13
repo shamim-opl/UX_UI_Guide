@@ -1,0 +1,17 @@
+id: onboarding-flows
+slug: onboarding-flows
+title_bn: "Onboarding Flow — নতুন ইউজারকে পথ দেখানো"
+title_en: "Onboarding Flows"
+level: "06"
+reference_category: patterns
+difficulty: intermediate
+summary_bn: "একজন নতুন ব্যবহারকারীকে প্রোডাক্টের মূল্য দ্রুত বুঝিয়ে প্রথম সফল কাজ (first success) পর্যন্ত পৌঁছে দেওয়ার পরিকল্পিত পথ।"
+reading_time_minutes: 5
+prerequisites: [what-is-ui]
+related_topics: [empty-states, progressive-disclosure]
+tags: [pattern, onboarding, first-use]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

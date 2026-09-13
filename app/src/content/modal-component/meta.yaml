@@ -1,0 +1,17 @@
+id: modal-component
+slug: modal-component
+title_bn: "Modal — কম্পোনেন্ট রেফারেন্স"
+title_en: "Modal"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "মূল কনটেন্টের উপর ভেসে থাকা একটা ফোকাসড উইন্ডো, যা ব্যবহারকারীকে একটা নির্দিষ্ট কাজ শেষ করতে বা সিদ্ধান্ত নিতে বাধ্য করে।"
+reading_time_minutes: 6
+prerequisites: [what-is-ui]
+related_topics: [button-component, wcag-accessibility]
+tags: [component, ui, reference, modal, dialog, accessibility]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

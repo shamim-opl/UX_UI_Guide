@@ -1,0 +1,17 @@
+id: select-dropdown-component
+slug: select-dropdown-component
+title_bn: "Select / Dropdown — কম্পোনেন্ট রেফারেন্স"
+title_en: "Select / Dropdown"
+level: "08"
+reference_category: components
+difficulty: intermediate
+summary_bn: "অনেকগুলো অপশনের মধ্যে থেকে একটা (বা কয়েকটা) বেছে নেওয়ার কম্পোনেন্ট, যা বন্ধ অবস্থায় জায়গা বাঁচায়।"
+reading_time_minutes: 5
+prerequisites: [what-is-ui, hicks-law]
+related_topics: [checkbox-component, hicks-law]
+tags: [component, ui, reference, select, dropdown, form]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

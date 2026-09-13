@@ -1,0 +1,17 @@
+id: empty-states
+slug: empty-states
+title_bn: "Empty State — যখন দেখানোর মতো কিছুই নেই"
+title_en: "Empty States"
+level: "06"
+reference_category: patterns
+difficulty: beginner
+summary_bn: "কোনো তালিকা বা ড্যাশবোর্ডে এখনো ডেটা না থাকলে খালি স্ক্রিন না দেখিয়ে, ইউজারকে পরবর্তী পদক্ষেপে গাইড করা।"
+reading_time_minutes: 4
+prerequisites: [what-is-ui]
+related_topics: [onboarding-flows, progressive-disclosure]
+tags: [pattern, empty-state, onboarding]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

@@ -1,0 +1,17 @@
+id: text-input-component
+slug: text-input-component
+title_bn: "Text Input — কম্পোনেন্ট রেফারেন্স"
+title_en: "Text Input"
+level: "08"
+reference_category: components
+difficulty: beginner
+summary_bn: "ব্যবহারকারীর কাছ থেকে টেক্সট নেওয়ার মূল কম্পোনেন্ট — লেবেল, প্লেসহোল্ডার, এরর স্টেট, অ্যাক্সেসিবিলিটি।"
+reading_time_minutes: 7
+prerequisites: [what-is-ui]
+related_topics: [button-component, wcag-accessibility]
+tags: [component, ui, reference, input, form, accessibility]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

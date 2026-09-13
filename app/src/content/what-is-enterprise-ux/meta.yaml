@@ -1,0 +1,17 @@
+id: what-is-enterprise-ux
+slug: what-is-enterprise-ux
+title_bn: "Enterprise UX — সাধারণ ভোক্তা প্রোডাক্ট থেকে কীভাবে আলাদা"
+title_en: "What is Enterprise UX?"
+level: "15"
+reference_category: null
+difficulty: advanced
+summary_bn: "অফিসে ব্যবহৃত জটিল সফটওয়্যার (CRM, ERP, ড্যাশবোর্ড) ডিজাইনের নিয়ম সাধারণ কনজিউমার অ্যাপ থেকে আলাদা — ইউজার বাধ্য হয়ে ব্যবহার করে, পছন্দ করে না।"
+reading_time_minutes: 5
+prerequisites: [what-is-ux, cognitive-load]
+related_topics: [dashboard-design-principles, designing-complex-workflows]
+tags: [enterprise-ux, advanced, b2b]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-13
+content_status: verified

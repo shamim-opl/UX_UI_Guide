@@ -12,7 +12,7 @@ export type ContentMeta = {
   title_bn: string;
   title_en: string;
   level: string; // taxonomy level id, e.g. "00"
-  reference_category?: "laws" | "components" | "measurements" | "design-systems" | null;
+  reference_category?: "laws" | "components" | "measurements" | "design-systems" | "patterns" | null;
   difficulty: "beginner" | "intermediate" | "advanced";
   summary_bn: string;
   reading_time_minutes: number;
