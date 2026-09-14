@@ -55,17 +55,6 @@ export default function SearchBar({ compact = false }: { compact?: boolean }) {
           height: "var(--size-input-height)",
         }}
       />
-      <kbd
-        aria-hidden="true"
-        className="type-caption pointer-events-none absolute top-1/2 hidden -translate-y-1/2 rounded px-1.5 py-0.5 sm:block"
-        style={{
-          right: "calc(var(--size-touch-target) + var(--space-2))",
-          background: "var(--color-surface-elevated)",
-          border: "1px solid var(--color-border)",
-        }}
-      >
-        /
-      </kbd>
       {/* Right-side circular CTA (moved from a left-side icon, redesigned
           2026-09-15 per Morshed's reference) — Enter still submits since
           this stays a real <form>, the button just gives the same action a

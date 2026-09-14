@@ -134,9 +134,14 @@ export default function Header() {
           {SITE_NAME}
         </Link>
 
-        <div className="hidden flex-1 max-w-md md:block">
-          <SearchBar compact />
-        </div>
+        {/* Hidden on /search itself — that page has its own, larger search
+            box in the main content; showing both read as a duplicate
+            search affordance, flagged by Morshed 2026-09-15. */}
+        {pathname !== "/search" && (
+          <div className="hidden flex-1 max-w-md md:block">
+            <SearchBar compact />
+          </div>
+        )}
 
         <div className="ml-auto hidden md:block">
           <ThemeToggle compact />
