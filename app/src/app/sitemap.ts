@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
-import { taxonomy } from "@/lib/taxonomy";
+import { taxonomy, levelGroups } from "@/lib/taxonomy";
 import { getAllContent, getContentByReferenceCategory } from "@/lib/content";
 import { platforms } from "@/lib/platforms";
 
@@ -37,6 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const learningPathRoutes = levelGroups.map((group) => ({
+    url: `${SITE_URL}/learn/path/${group.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
   const articleRoutes = getAllContent().map((doc) => {
     const level = taxonomy.find((l) => l.id === doc.meta.level);
     return {
@@ -63,5 +70,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...levelRoutes, ...articleRoutes, ...referenceCategoryRoutes, ...platformRoutes];
+  return [...staticRoutes, ...levelRoutes, ...learningPathRoutes, ...articleRoutes, ...referenceCategoryRoutes, ...platformRoutes];
 }

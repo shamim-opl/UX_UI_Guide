@@ -55,12 +55,37 @@ export function getLevelBySlug(slug: string): Level | undefined {
 // which stays flat 00-25 per 05-content-taxonomy.md — a level's group
 // here is derived, not stored, so this can be re-shuffled freely without
 // touching any level's id/slug/URL.
-export type LevelGroup = { title_bn: string; levelIds: string[] };
+export type LevelGroup = { slug: string; title_bn: string; description_bn: string; levelIds: string[] };
 
 export const levelGroups: LevelGroup[] = [
-  { title_bn: "Design Foundations", levelIds: ["00", "01", "02", "03"] },
-  { title_bn: "UX Design", levelIds: ["04", "05", "06", "09"] },
-  { title_bn: "UI Design ও Design Systems", levelIds: ["07", "08", "10", "11", "12"] },
-  { title_bn: "Product Design ও Management", levelIds: ["13", "14", "15", "19", "20", "21", "22", "23", "24"] },
-  { title_bn: "Advanced ও Career", levelIds: ["16", "17", "18", "25"] },
+  {
+    slug: "design-foundations",
+    title_bn: "Design Foundations",
+    description_bn: "ডিজাইন, UX, UI-এর মূল ধারণা আর মানুষ কীভাবে চিন্তা করে — বাকি সবকিছুর ভিত্তি।",
+    levelIds: ["00", "01", "02", "03"],
+  },
+  {
+    slug: "ux-design",
+    title_bn: "UX Design",
+    description_bn: "ব্যবহারকারী গবেষণা, তথ্য স্থাপত্য, আর ইন্টারঅ্যাকশন ডিজাইন — সমস্যা বোঝা থেকে সমাধান কাঠামো পর্যন্ত।",
+    levelIds: ["04", "05", "06", "09"],
+  },
+  {
+    slug: "ui-design-and-systems",
+    title_bn: "UI Design ও Design Systems",
+    description_bn: "ভিজ্যুয়াল ডিজাইন, UI কম্পোনেন্ট, প্ল্যাটফর্ম-নির্দিষ্ট গাইডলাইন, আর স্কেলযোগ্য ডিজাইন সিস্টেম।",
+    levelIds: ["07", "08", "10", "11", "12"],
+  },
+  {
+    slug: "product-design-and-management",
+    title_bn: "Product Design ও Management",
+    description_bn: "ব্যবসায়িক লক্ষ্য, প্রাধান্য নির্ধারণ, Agile ডেলিভারি, আর প্রোডাক্ট অ্যানালিটিক্স — UX-এর সাথে প্রোডাক্ট থিংকিং যুক্ত করা।",
+    levelIds: ["13", "14", "15", "19", "20", "21", "22", "23", "24"],
+  },
+  {
+    slug: "advanced-and-career",
+    title_bn: "Advanced ও Career",
+    description_bn: "AI UX, ভবিষ্যৎ ইন্টারঅ্যাকশন, আর পোর্টফোলিও/ইন্টারভিউ প্রস্তুতি — শেখার পথের শেষ ধাপ।",
+    levelIds: ["16", "17", "18", "25"],
+  },
 ];

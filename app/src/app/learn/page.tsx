@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "শেখার পথ — শূন্য থেকে UX/UI",
-  description: "১৯টা ধাপে সাজানো UX/UI শেখার কাঠামোবদ্ধ পথ — মানুষ বোঝা থেকে শুরু করে AI UX পর্যন্ত।",
+  description: `${taxonomy.length}টা ধাপে সাজানো UX/UI ও Product শেখার কাঠামোবদ্ধ পথ — মানুষ বোঝা থেকে শুরু করে Product Management ও ক্যারিয়ার পর্যন্ত।`,
 };
 
 export default function LearnPage() {
@@ -17,7 +17,7 @@ export default function LearnPage() {
         শেখার পথ
       </h1>
       <p className="type-body-lg mt-2 max-w-2xl" style={{ color: "var(--color-text-secondary)" }}>
-        ১৯টা ধাপে সাজানো — মানুষ বোঝা থেকে শুরু করে AI UX পর্যন্ত। প্রতিটা ধাপ আগেরটার উপর ভিত্তি করে তৈরি।
+        {taxonomy.length}টা ধাপে সাজানো — মানুষ বোঝা থেকে শুরু করে Product Management ও ক্যারিয়ার পর্যন্ত। প্রতিটা ধাপ আগেরটার উপর ভিত্তি করে তৈরি।
       </p>
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {taxonomy.map((level) => (

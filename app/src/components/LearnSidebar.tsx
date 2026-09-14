@@ -22,10 +22,14 @@ export default function LearnSidebar({ activeLevelSlug, activeTopicSlug }: { act
     >
       <div className="flex flex-col gap-6">
         {levelGroups.map((group) => (
-          <div key={group.title_bn}>
-            <p className="type-label mb-2 px-3" style={{ textTransform: "uppercase", letterSpacing: "0.04em" }}>
+          <div key={group.slug}>
+            <Link
+              href={`/learn/path/${group.slug}`}
+              className="type-label mb-2 block px-3"
+              style={{ textTransform: "uppercase", letterSpacing: "0.04em", color: "var(--color-text-secondary)" }}
+            >
               {group.title_bn}
-            </p>
+            </Link>
             <ul className="flex flex-col gap-0.5">
               {group.levelIds.map((levelId) => {
                 const level = taxonomy.find((l) => l.id === levelId);
