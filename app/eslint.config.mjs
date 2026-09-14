@@ -12,6 +12,12 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // .vercel/output is `vercel build`'s generated deploy artifact (minified
+    // bundles, launcher shims) — gitignored already, but a local `vercel
+    // build`/`vercel deploy` run leaves it on disk and it otherwise gets
+    // swept into `eslint .` along with real source. Added 2026-09-15 after
+    // it surfaced ~1900 warnings from bundled/minified code that isn't ours.
+    ".vercel/**",
   ]),
 ]);
 
