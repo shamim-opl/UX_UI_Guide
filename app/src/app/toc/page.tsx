@@ -27,12 +27,12 @@ export const metadata: Metadata = {
 // new mental model — just makes the existing one scannable on one page.
 export default function TocPage() {
   return (
-    <div className="mx-auto max-w-[900px] px-4 py-8 md:px-6">
+    <div className="mx-auto max-w-[1100px] px-4 py-8 md:px-6">
       <Breadcrumb items={[{ label: "সুচিপত্র" }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
         সুচিপত্র
       </h1>
-      <p className="type-body-lg mt-2" style={{ color: "var(--color-text-secondary)" }}>
+      <p className="type-body-lg mt-2 max-w-2xl" style={{ color: "var(--color-text-secondary)" }}>
         প্ল্যাটফর্মের সব Learning Path, Level ও Topic এক পাতায়। নির্দিষ্ট কিছু খুঁজলে ব্রাউজারের সার্চ (Ctrl+F / Cmd+F) ব্যবহার করতে পারো, অথবা{" "}
         <Link href="/search" style={{ color: "var(--color-accent)" }}>
           পূর্ণ সার্চ পেজে
@@ -71,12 +71,24 @@ export default function TocPage() {
                       {/* One table per level, per Morshed's feedback (2026-09-15) —
                           the earlier flat "link — description" list read as one long
                           run-on; a real table with its own header row scans far
-                          faster, especially for a level with 8-10 topics. No
-                          horizontal-scroll wrapper needed here (unlike article
-                          content tables): only 3 columns, and the description
-                          column wraps naturally instead of forcing width. */}
+                          faster, especially for a level with 8-10 topics.
+
+                          table-layout: fixed with explicit column widths, added
+                          after a follow-up fix: the Topic column previously forced
+                          whiteSpace:nowrap, so a long title (common — many titles
+                          carry a " — " subtitle) pushed Description/Level off the
+                          visible width, and reaching them needed an unlabeled
+                          horizontal scroll most people never noticed. Both text
+                          columns now wrap normally; only the short Level badge
+                          stays nowrap. This is also what makes the table render
+                          correctly on mobile without its own scrollbar. */}
                       <div className="mt-2 overflow-x-auto rounded-md" style={{ border: "1px solid var(--color-border)" }}>
-                        <table className="w-full" style={{ borderCollapse: "collapse" }}>
+                        <table className="w-full" style={{ borderCollapse: "collapse", tableLayout: "fixed" }}>
+                          <colgroup>
+                            <col style={{ width: "35%" }} />
+                            <col />
+                            <col style={{ width: "126px" }} />
+                          </colgroup>
                           <thead>
                             <tr style={{ borderBottom: "1px solid var(--color-border)", background: "var(--color-surface)" }}>
                               <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600 }}>
@@ -85,7 +97,7 @@ export default function TocPage() {
                               <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600 }}>
                                 Description
                               </th>
-                              <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600, whiteSpace: "nowrap" }}>
+                              <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600 }}>
                                 Level
                               </th>
                             </tr>
@@ -98,7 +110,7 @@ export default function TocPage() {
                                   borderBottom: i < topics.length - 1 ? "1px solid var(--color-border)" : "none",
                                 }}
                               >
-                                <td className="px-3 py-2" style={{ verticalAlign: "top", whiteSpace: "nowrap" }}>
+                                <td className="px-3 py-2" style={{ verticalAlign: "top", wordBreak: "break-word" }}>
                                   <Link
                                     href={`/learn/${level.slug}/${doc.meta.slug}`}
                                     className="type-body-sm"
@@ -107,11 +119,11 @@ export default function TocPage() {
                                     {doc.meta.title_bn}
                                   </Link>
                                 </td>
-                                <td className="type-body-sm px-3 py-2" style={{ verticalAlign: "top", color: "var(--color-text-secondary)" }}>
+                                <td className="type-body-sm px-3 py-2" style={{ verticalAlign: "top", color: "var(--color-text-secondary)", wordBreak: "break-word" }}>
                                   {doc.meta.summary_bn}
                                 </td>
                                 <td className="px-3 py-2" style={{ verticalAlign: "top" }}>
-                                  <span className="tag">{DIFFICULTY_LABEL[doc.meta.difficulty]}</span>
+                                  <span className="tag" style={{ whiteSpace: "nowrap" }}>{DIFFICULTY_LABEL[doc.meta.difficulty]}</span>
                                 </td>
                               </tr>
                             ))}
