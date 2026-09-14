@@ -4,6 +4,12 @@ import { levelGroups, taxonomy } from "@/lib/taxonomy";
 import { getContentByLevel } from "@/lib/content";
 import type { Metadata } from "next";
 
+const DIFFICULTY_LABEL: Record<string, string> = {
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
+};
+
 export const metadata: Metadata = {
   title: "সুচিপত্র",
   description: "প্ল্যাটফর্মের সব Learning Path, Level ও Topic এক পাতায় — সরাসরি লিংকসহ।",
@@ -62,20 +68,56 @@ export default function TocPage() {
                       >
                         {level.title_bn}
                       </Link>
-                      <ul className="mt-2 flex flex-col" style={{ borderLeft: "2px solid var(--color-border)" }}>
-                        {topics.map((doc) => (
-                          <li key={doc.meta.id} className="pl-4 py-1.5">
-                            <Link
-                              href={`/learn/${level.slug}/${doc.meta.slug}`}
-                              className="type-body-sm"
-                              style={{ color: "var(--color-accent)" }}
-                            >
-                              {doc.meta.title_bn}
-                            </Link>
-                            <span className="type-caption ml-2">— {doc.meta.summary_bn}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {/* One table per level, per Morshed's feedback (2026-09-15) —
+                          the earlier flat "link — description" list read as one long
+                          run-on; a real table with its own header row scans far
+                          faster, especially for a level with 8-10 topics. No
+                          horizontal-scroll wrapper needed here (unlike article
+                          content tables): only 3 columns, and the description
+                          column wraps naturally instead of forcing width. */}
+                      <div className="mt-2 overflow-x-auto rounded-md" style={{ border: "1px solid var(--color-border)" }}>
+                        <table className="w-full" style={{ borderCollapse: "collapse" }}>
+                          <thead>
+                            <tr style={{ borderBottom: "1px solid var(--color-border)", background: "var(--color-surface)" }}>
+                              <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600 }}>
+                                Topic
+                              </th>
+                              <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600 }}>
+                                Description
+                              </th>
+                              <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600, whiteSpace: "nowrap" }}>
+                                Level
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {topics.map((doc, i) => (
+                              <tr
+                                key={doc.meta.id}
+                                style={{
+                                  borderBottom: i < topics.length - 1 ? "1px solid var(--color-border)" : "none",
+                                }}
+                              >
+                                <td className="px-3 py-2" style={{ verticalAlign: "top", whiteSpace: "nowrap" }}>
+                                  <Link
+                                    href={`/learn/${level.slug}/${doc.meta.slug}`}
+                                    className="type-body-sm"
+                                    style={{ color: "var(--color-accent)" }}
+                                  >
+                                    {doc.meta.title_bn}
+                                  </Link>
+                                </td>
+                                <td className="type-body-sm px-3 py-2" style={{ verticalAlign: "top", color: "var(--color-text-secondary)" }}>
+                                  {doc.meta.summary_bn}
+                                </td>
+                                <td className="px-3 py-2" style={{ verticalAlign: "top" }}>
+                                  <span className="tag">{DIFFICULTY_LABEL[doc.meta.difficulty]}</span>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   );
                 })}
