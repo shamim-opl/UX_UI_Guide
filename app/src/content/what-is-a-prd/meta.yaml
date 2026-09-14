@@ -1,0 +1,17 @@
+id: what-is-a-prd
+slug: what-is-a-prd
+title_bn: "PRD কী? — একটা ফিচার লিখে পুরো দলকে বোঝানো"
+title_en: "What is a PRD?"
+level: "20"
+reference_category: null
+difficulty: intermediate
+summary_bn: "Product Requirements Document একটা ফিচারের 'কেন, কী, কার জন্য' একটা জায়গায় লিখে রাখে, যাতে ডিজাইন-ইঞ্জিনিয়ারিং-QA সবাই একই বোঝাপড়া নিয়ে কাজ শুরু করে।"
+reading_time_minutes: 5
+prerequisites: [what-is-product-management]
+related_topics: [writing-user-stories-and-acceptance-criteria, functional-vs-nonfunctional-requirements]
+tags: [product-management, prd, documentation]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-14
+content_status: verified

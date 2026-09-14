@@ -1,0 +1,44 @@
+## এটা কী?
+
+Scrum-এ প্রতিটা Sprint-এর চারপাশে কয়েকটা নির্দিষ্ট মিটিং ("Ceremony") আর ডকুমেন্ট ("Artifact") থাকে, প্রতিটার একটা আলাদা, নির্দিষ্ট উদ্দেশ্য।
+
+## চারটা মূল Ceremony
+
+| Ceremony | কখন | উদ্দেশ্য |
+|---|---|---|
+| Sprint Planning | Sprint শুরুতে | এই Sprint-এ কী কাজ হবে ঠিক করা |
+| Daily Scrum | প্রতিদিন (১৫ মিনিট) | কী করছি, কোথায় আটকে আছি তা দ্রুত শেয়ার করা |
+| Sprint Review | Sprint শেষে | সম্পন্ন কাজ Stakeholder-দের দেখানো |
+| Sprint Retrospective | Sprint শেষে | টিমের নিজস্ব প্রক্রিয়া নিয়ে আলোচনা — কী ভালো হলো, কী উন্নতি দরকার |
+
+## মূল Artifact
+
+- **Product Backlog** — সব সম্ভাব্য কাজের একটা অগ্রাধিকার-ক্রমে সাজানো তালিকা, ক্রমাগত আপডেট হয়।
+- **Sprint Backlog** — একটা নির্দিষ্ট Sprint-এর জন্য বেছে নেওয়া কাজের উপসেট।
+- **Definition of Done (DoD)** — একটা টিমের সম্মত মানদণ্ড, যা পূরণ না হলে কোনো কাজ "সম্পন্ন" গণ্য হয় না (দেখো [Acceptance Criteria](/learn/20-product-requirements-and-documentation/writing-user-stories-and-acceptance-criteria)-এর সাথে সম্পর্ক — DoD সব কাজের জন্য সাধারণ, Acceptance Criteria একটা নির্দিষ্ট Story-র জন্য)।
+
+<Callout type="guideline">
+Definition of Done-এ প্রায়ই অ্যাক্সেসিবিলিটি চেক, ক্রস-ব্রাউজার টেস্টিং, বা ডিজাইন রিভিউ অন্তর্ভুক্ত থাকা উচিত — নাহলে এই বিষয়গুলো নিয়মিতভাবে বাদ পড়ে যেতে পারে, শুধু "কোড কাজ করে" যথেষ্ট গণ্য হয়ে যায়।
+</Callout>
+
+## বাস্তব উদাহরণ
+
+একটা টিমের Definition of Done-এ লেখা: "কোড রিভিউ হয়েছে, ইউনিট টেস্ট পাস করেছে, Designer ভিজ্যুয়ালি যাচাই করেছেন, এবং কীবোর্ড-নেভিগেশন টেস্ট করা হয়েছে।" একটা ফিচার এই সবগুলো শর্ত পূরণ না করলে, তা "সম্পন্ন" হিসেবে গণ্য হয় না, এমনকি কোড টেকনিক্যালি কাজ করলেও।
+
+## Rules / Best Practices
+
+- Sprint Review-কে শুধু "ডেমো" না ভেবে, Stakeholder-দের কাছ থেকে সরাসরি ফিডব্যাক নেওয়ার সুযোগ হিসেবে ব্যবহার করো।
+- Retrospective-এ শুধু সমস্যা তালিকা না করে, প্রতিটা সমস্যার জন্য একটা নির্দিষ্ট, পরের Sprint-এ বাস্তবায়নযোগ্য পদক্ষেপ ঠিক করো।
+- Definition of Done-এ ডিজাইন/অ্যাক্সেসিবিলিটি-সম্পর্কিত শর্ত অন্তর্ভুক্ত করার জন্য Scrum Master-এর সাথে কথা বলো।
+
+## সাধারণ ভুল
+
+Sprint Retrospective নিয়মিত বাদ দেওয়া বা তাড়াহুড়ো করে শেষ করা, "সময় নেই" অজুহাতে। এটাই একমাত্র নির্ধারিত সময় যেখানে টিম নিজের কাজ করার পদ্ধতি নিয়ে প্রতিফলন করে — এটা বাদ দিলে একই সমস্যা Sprint-এর পর Sprint পুনরাবৃত্তি হতে থাকে।
+
+## Sources & Evidence
+
+**প্রাথমিক উৎস (Primary):**
+- [Scrum.org — The Scrum Guide](https://scrumguides.org/)
+
+**আরও পড়ুন (Further Reading):**
+- [Atlassian — Definition of Done](https://www.atlassian.com/agile/project-management/definition-of-done)

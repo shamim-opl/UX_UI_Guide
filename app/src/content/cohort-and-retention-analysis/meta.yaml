@@ -1,0 +1,17 @@
+id: cohort-and-retention-analysis
+slug: cohort-and-retention-analysis
+title_bn: "Cohort Analysis ও Retention — ব্যবহারকারী কতদিন থাকছে"
+title_en: "Cohort and Retention Analysis"
+level: "23"
+reference_category: null
+difficulty: advanced
+summary_bn: "সব ব্যবহারকারীকে একসাথে না দেখে, একই সময়ে যোগ দেওয়া দলকে (Cohort) আলাদাভাবে ট্র্যাক করে বোঝা প্রোডাক্ট আসলে মানুষকে ধরে রাখছে কিনা।"
+reading_time_minutes: 5
+prerequisites: [aarrr-growth-framework]
+related_topics: [aarrr-growth-framework, product-metrics-and-north-star-metric]
+tags: [product-management, cohort-analysis, retention, analytics]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-14
+content_status: verified

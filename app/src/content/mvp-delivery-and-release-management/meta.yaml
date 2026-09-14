@@ -1,0 +1,17 @@
+id: mvp-delivery-and-release-management
+slug: mvp-delivery-and-release-management
+title_bn: "MVP Delivery ও Release Management"
+title_en: "MVP Delivery and Release Management"
+level: "22"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একটা ফিচার সবার কাছে একবারে না ছেড়ে, ধাপে ধাপে (Phased Rollout, Feature Flag) নিরাপদে লঞ্চ করার কৌশল।"
+reading_time_minutes: 5
+prerequisites: [sprint-ceremonies-and-artifacts]
+related_topics: [mvp-and-product-market-fit, sprint-ceremonies-and-artifacts]
+tags: [product-management, release, mvp, delivery]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-14
+content_status: verified

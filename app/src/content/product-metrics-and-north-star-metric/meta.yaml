@@ -1,0 +1,17 @@
+id: product-metrics-and-north-star-metric
+slug: product-metrics-and-north-star-metric
+title_bn: "North Star Metric, KPI, ও OKR"
+title_en: "Product Metrics and North Star Metric"
+level: "23"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একটা টিমের সব সিদ্ধান্তকে একমুখী রাখার জন্য একটা একক 'North Star Metric' বেছে নেওয়া, আর KPI/OKR দিয়ে সেই লক্ষ্যের দিকে অগ্রগতি মাপা।"
+reading_time_minutes: 5
+prerequisites: [ux-metrics-and-success-metrics]
+related_topics: [ux-metrics-and-success-metrics, aarrr-growth-framework]
+tags: [product-management, metrics, north-star, okr, analytics]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-14
+content_status: verified

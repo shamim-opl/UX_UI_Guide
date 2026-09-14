@@ -1,0 +1,17 @@
+id: agile-and-scrum-basics
+slug: agile-and-scrum-basics
+title_bn: "Agile ও Scrum-এর ভিত্তি"
+title_en: "Agile and Scrum Basics"
+level: "22"
+reference_category: null
+difficulty: intermediate
+summary_bn: "Scrum-এর তিনটা ভূমিকা (Product Owner, Scrum Master, Developers) আর ছোট ছোট 'Sprint'-এ কাজ করার কাঠামো — একজন ডিজাইনার হিসেবে এই প্রক্রিয়ায় কীভাবে যুক্ত হবে।"
+reading_time_minutes: 5
+prerequisites: [product-lifecycle-and-agile-development]
+related_topics: [product-lifecycle-and-agile-development, sprint-ceremonies-and-artifacts]
+tags: [product-management, agile, scrum]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-14
+content_status: verified

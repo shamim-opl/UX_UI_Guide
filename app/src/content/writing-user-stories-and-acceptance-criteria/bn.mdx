@@ -1,0 +1,52 @@
+## এটা কী?
+
+একটা **User Story** একটা প্রয়োজনীয়তাকে ব্যবহারকারীর দৃষ্টিকোণ থেকে সংক্ষেপে লেখে, টেকনিক্যাল স্পেসিফিকেশনের বদলে। **Acceptance Criteria** সেই Story-র সাথে যুক্ত নির্দিষ্ট শর্ত, যা দিয়ে বোঝা যায় কাজটা "সম্পন্ন" কিনা।
+
+## User Story ফরম্যাট
+
+```text
+একজন [ব্যবহারকারীর ধরন] হিসেবে,
+আমি চাই [একটা কাজ/ফিচার],
+যাতে [প্রত্যাশিত সুফল]।
+
+উদাহরণ:
+একজন নতুন ব্যবহারকারী হিসেবে,
+আমি চাই ইমেইল দিয়ে দ্রুত সাইন-আপ করতে,
+যাতে জটিল ফর্ম পূরণ না করেই অ্যাপ ব্যবহার শুরু করতে পারি।
+```
+
+## Acceptance Criteria
+
+একটা Story-র সাথে যুক্ত থাকে কয়েকটা নির্দিষ্ট, পরীক্ষাযোগ্য শর্ত — প্রায়ই "Given-When-Then" ফরম্যাটে লেখা হয়:
+
+```text
+Given: ইউজার সাইন-আপ পেজে আছে
+When: সে একটা বৈধ ইমেইল ও পাসওয়ার্ড দিয়ে সাবমিট করে
+Then: তার অ্যাকাউন্ট তৈরি হয় এবং সে হোমপেজে চলে যায়
+
+Given: ইউজার একটা অব্যবহৃত ইমেইল দিয়ে সাইন-আপ করার চেষ্টা করে
+When: সেই ইমেইল আগে থেকেই রেজিস্টার্ড
+Then: একটা স্পষ্ট এরর মেসেজ দেখায় "এই ইমেইল ইতিমধ্যে ব্যবহৃত"
+```
+
+## কেন গুরুত্বপূর্ণ?
+
+Acceptance Criteria ছাড়া "সম্পন্ন" শব্দটা অস্পষ্ট থেকে যায় — একজন ডেভেলপার মনে করতে পারেন মূল ফ্লো কাজ করলেই যথেষ্ট, কিন্তু QA এরর-হ্যান্ডলিং-ও আশা করতে পারে। স্পষ্ট শর্ত এই অনিশ্চয়তা দূর করে এবং [Definition of Done](/learn/22-agile-scrum-and-delivery/sprint-ceremonies-and-artifacts)-এর ভিত্তি তৈরি করে।
+
+## Rules / Best Practices
+
+- Acceptance Criteria-তে "Happy Path" (সাধারণ সফল কেস) আর "Edge Case" (ভুল ইনপুট, খালি অবস্থা) — দুটোই অন্তর্ভুক্ত করো।
+- একটা User Story যথেষ্ট ছোট রাখো যাতে এক Sprint-এ শেষ করা যায় — খুব বড় Story-কে ছোট ছোট Story-তে ভাগ করো।
+- Acceptance Criteria লেখার সময় Designer-এর সাথে মিলিয়ে দেখো UI-এর [States](/learn/06-interaction-design/form-interactions-and-states) (Error, Empty, Loading) কভার হয়েছে কিনা।
+
+## সাধারণ ভুল
+
+শুধু "মূল ফিচারটা কাজ করছে কিনা" চেক করা Acceptance Criteria লেখা, এরর স্টেট বা এজ কেস উপেক্ষা করে। ফলাফল: ডেভেলপার সেগুলো বানায় না, পরে প্রোডাকশনে গিয়ে ধরা পড়ে, যা ঠিক করতে অনেক বেশি খরচ হয়।
+
+## Sources & Evidence
+
+**দ্বিতীয়ক উৎস (Secondary):**
+- [Atlassian — User Stories](https://www.atlassian.com/agile/project-management/user-stories)
+
+**আরও পড়ুন (Further Reading):**
+- [Mountain Goat Software — User Stories](https://www.mountaingoatsoftware.com/agile/user-stories)

@@ -1,0 +1,17 @@
+id: functional-vs-nonfunctional-requirements
+slug: functional-vs-nonfunctional-requirements
+title_bn: "Functional বনাম Non-Functional Requirements"
+title_en: "Functional vs Non-Functional Requirements"
+level: "20"
+reference_category: null
+difficulty: intermediate
+summary_bn: "একটা প্রোডাক্ট 'কী করে' (Functional) আর 'কতটা ভালো করে' (Non-Functional, যেমন গতি, নিরাপত্তা) — দুটোই প্রয়োজনীয়তা, কিন্তু আলাদা ধরনের।"
+reading_time_minutes: 4
+prerequisites: [what-is-a-prd]
+related_topics: [what-is-a-prd, writing-user-stories-and-acceptance-criteria]
+tags: [product-management, requirements, documentation]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-14
+content_status: verified

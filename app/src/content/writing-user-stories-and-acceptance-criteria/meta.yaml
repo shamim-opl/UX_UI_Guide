@@ -1,0 +1,17 @@
+id: writing-user-stories-and-acceptance-criteria
+slug: writing-user-stories-and-acceptance-criteria
+title_bn: "User Story ও Acceptance Criteria লেখা"
+title_en: "Writing User Stories and Acceptance Criteria"
+level: "20"
+reference_category: null
+difficulty: intermediate
+summary_bn: "'একজন ইউজার হিসেবে, আমি চাই...' ফরম্যাটে একটা প্রয়োজনীয়তা লেখা, আর সেটা 'সম্পন্ন' কখন বলা যাবে তার স্পষ্ট শর্ত যোগ করা।"
+reading_time_minutes: 5
+prerequisites: [what-is-a-prd]
+related_topics: [what-is-a-prd, sprint-ceremonies-and-artifacts]
+tags: [product-management, user-story, acceptance-criteria]
+status: published
+source_type: secondary
+evidence_level: medium
+last_reviewed: 2026-09-14
+content_status: verified

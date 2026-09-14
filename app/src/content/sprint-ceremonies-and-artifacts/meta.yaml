@@ -1,0 +1,17 @@
+id: sprint-ceremonies-and-artifacts
+slug: sprint-ceremonies-and-artifacts
+title_bn: "Sprint-এর অনুষ্ঠান ও আর্টিফ্যাক্ট — Backlog, Review, Retro"
+title_en: "Sprint Ceremonies and Artifacts"
+level: "22"
+reference_category: null
+difficulty: intermediate
+summary_bn: "Sprint Planning, Review, Retrospective — প্রতিটা মিটিং-এর আলাদা উদ্দেশ্য, আর Product Backlog আর Definition of Done কী।"
+reading_time_minutes: 5
+prerequisites: [agile-and-scrum-basics]
+related_topics: [agile-and-scrum-basics, writing-user-stories-and-acceptance-criteria]
+tags: [product-management, scrum, sprint, ceremonies]
+status: published
+source_type: primary
+evidence_level: high
+last_reviewed: 2026-09-14
+content_status: verified
