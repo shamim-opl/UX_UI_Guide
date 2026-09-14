@@ -143,12 +143,16 @@ export default function Header() {
         </div>
 
         <button
-          className="ml-auto rounded-md p-2 md:hidden"
+          className="ml-auto flex items-center justify-center rounded-md md:hidden"
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav-sheet"
           aria-label="মেনু খুলুন/বন্ধ করুন"
           onClick={() => setMobileOpen(true)}
-          style={{ color: "var(--color-text-primary)" }}
+          style={{
+            color: "var(--color-text-primary)",
+            width: "var(--size-touch-target)",
+            height: "var(--size-touch-target)",
+          }}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />

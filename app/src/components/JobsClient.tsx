@@ -114,9 +114,27 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
       {/* Results */}
       <div className="mt-8">
         {filtered.length === 0 && (
-          <p className="type-body-sm" style={{ color: "var(--color-text-muted)" }}>
-            এই মুহূর্তে এই শর্তে কোনো চাকরির পোস্ট নেই। ফিল্টার বদলে আবার চেষ্টা করো।
-          </p>
+          <div className="list-item-in">
+            <p className="type-body-sm" style={{ color: "var(--color-text-muted)" }}>
+              {query || activeCategory
+                ? "এই সার্চ বা ক্যাটাগরিতে কোনো চাকরির পোস্ট নেই।"
+                : "এই মুহূর্তে কোনো খোলা পোস্ট নেই।"}
+              {!showClosed && " মেয়াদ শেষ হওয়া পোস্টসহ দেখতে নিচের চেকবক্সে টিক দাও।"}
+            </p>
+            {(query || activeCategory) && (
+              <button
+                type="button"
+                onClick={() => {
+                  setQuery("");
+                  setActiveCategory(null);
+                }}
+                className="tag mt-2"
+                style={{ cursor: "pointer" }}
+              >
+                সব ফিল্টার মুছে দাও
+              </button>
+            )}
+          </div>
         )}
 
         <div className="flex flex-col gap-4">

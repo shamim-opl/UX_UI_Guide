@@ -8,6 +8,7 @@ import RelatedTopics from "@/components/RelatedTopics";
 import CopyPageButton from "@/components/CopyPageButton";
 import Callout from "@/components/mdx/Callout";
 import { H2, H3 } from "@/components/mdx/Heading";
+import { Table } from "@/components/mdx/Table";
 import type { ContentDoc } from "@/lib/content";
 import { SITE_NAME } from "@/lib/site";
 
@@ -84,7 +85,7 @@ export default function ArticleLayout({
         <article className="article-prose">
           <MDXRemote
             source={doc.body_bn}
-            components={{ Callout, h2: H2, h3: H3 }}
+            components={{ Callout, h2: H2, h3: H3, table: Table }}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
           />
         </article>

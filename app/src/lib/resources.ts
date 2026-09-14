@@ -35,7 +35,7 @@ export const RESOURCE_TIERS: { tier: ResourceTier; title_bn: string; description
   {
     tier: "research",
     title_bn: "গবেষণা উৎস (Research)",
-    description_bn: "মানুষের আচরণ, ব্যবহারযোগ্যতা, এবং কার্যকারিতা সংক্রান্ত দাবির পেছনের প্রমাণ।",
+    description_bn: "মানুষের আচরণ, Usability, এবং কার্যকারিতা সংক্রান্ত দাবির পেছনের প্রমাণ।",
     items: [
       { name: "Nielsen Norman Group (NN/g)", url: "https://www.nngroup.com/", note: "UX গবেষণা ও ইউজেবিলিটি" },
       { name: "Baymard Institute", url: "https://baymard.com/", note: "ই-কমার্স UX গবেষণা" },

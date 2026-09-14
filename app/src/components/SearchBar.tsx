@@ -45,8 +45,12 @@ export default function SearchBar({ compact = false }: { compact?: boolean }) {
       <button
         type="submit"
         aria-label="খুঁজুন"
-        className="absolute left-1 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full p-2"
-        style={{ color: "var(--color-text-muted)" }}
+        className="absolute left-0 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full"
+        style={{
+          color: "var(--color-text-muted)",
+          width: "var(--size-touch-target)",
+          height: "var(--size-touch-target)",
+        }}
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
@@ -60,7 +64,7 @@ export default function SearchBar({ compact = false }: { compact?: boolean }) {
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="ডকুমেন্টেশন খুঁজুন…"
-        className="input-field w-full rounded-full py-2 pl-10 pr-10 outline-none"
+        className="input-field w-full rounded-full py-2 pl-11 pr-10 outline-none"
         style={{
           background: "var(--color-surface)",
           border: "1px solid var(--color-border)",

@@ -333,6 +333,16 @@ a:hover {
 button.tag:active {
   transform: scale(0.95);
 }
+/* Responsive-audit fix (2026-09-15, see decisions.md): the padding above
+   gives a ~24px-tall hit area on filter-pill buttons (Glossary/Jobs/Search
+   category & difficulty filters) — well under the 44px touch target this
+   project already targets everywhere else (--size-touch-target). Padding
+   stays visually compact; the box just gets tall enough to tap reliably. */
+button.tag {
+  min-height: var(--size-touch-target);
+  display: inline-flex;
+  align-items: center;
+}
 
 /* Full rounded box + icon, matching the Docspace reference note-box
    pattern (2026-09-10 redesign, see decisions.md) — replaces the earlier

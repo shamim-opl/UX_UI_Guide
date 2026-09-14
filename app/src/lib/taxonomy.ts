@@ -12,11 +12,11 @@ export type Level = {
 export const taxonomy: Level[] = [
   { id: "00", slug: "00-getting-started", title_bn: "শুরু করা", title_en: "Getting Started", description_bn: "ডিজাইন, UX, UI — মূল শব্দগুলো বোঝা দিয়ে শুরু।" },
   { id: "01", slug: "01-digital-design-fundamentals", title_bn: "ডিজিটাল ডিজাইনের ভিত্তি", title_en: "Digital Design Fundamentals", description_bn: "ডিজিটাল প্রোডাক্ট ডিজাইনের বুনিয়াদি ধারণা।" },
-  { id: "02", slug: "02-human-and-psychology", title_bn: "মানুষ ও মনোবিজ্ঞান", title_en: "Human & Psychology", description_bn: "উপলব্ধি, স্মৃতি, জ্ঞানীয় চাপ, সিদ্ধান্ত গ্রহণ।" },
+  { id: "02", slug: "02-human-and-psychology", title_bn: "মানুষ ও মনোবিজ্ঞান", title_en: "Human & Psychology", description_bn: "উপলব্ধি, স্মৃতি, Cognitive Load, Decision Making।" },
   { id: "03", slug: "03-ux-fundamentals", title_bn: "UX-এর ভিত্তি", title_en: "UX Fundamentals", description_bn: "ইউজার, নিড, জার্নি, ফ্লো এবং UX প্রসেস।" },
   { id: "04", slug: "04-ux-research", title_bn: "UX গবেষণা", title_en: "UX Research", description_bn: "রিসার্চ পদ্ধতি ও ডেলিভারেবল।" },
-  { id: "05", slug: "05-information-architecture", title_bn: "তথ্য স্থাপত্য", title_en: "Information Architecture", description_bn: "স্ট্রাকচার, ন্যাভিগেশন, লেবেলিং।" },
-  { id: "06", slug: "06-interaction-design", title_bn: "ইন্টারঅ্যাকশন ডিজাইন", title_en: "Interaction Design", description_bn: "অ্যাফোর্ডেন্স, ফিডব্যাক, কম্পোনেন্ট স্টেট।" },
+  { id: "05", slug: "05-information-architecture", title_bn: "Information Architecture", title_en: "Information Architecture", description_bn: "স্ট্রাকচার, ন্যাভিগেশন, লেবেলিং।" },
+  { id: "06", slug: "06-interaction-design", title_bn: "Interaction Design", title_en: "Interaction Design", description_bn: "অ্যাফোর্ডেন্স, ফিডব্যাক, কম্পোনেন্ট স্টেট।" },
   { id: "07", slug: "07-visual-design", title_bn: "ভিজ্যুয়াল ডিজাইন", title_en: "Visual Design", description_bn: "রং, টাইপোগ্রাফি, গ্রিড, হায়ারার্কি।" },
   { id: "08", slug: "08-ui-design", title_bn: "UI ডিজাইন", title_en: "UI Design", description_bn: "সম্পূর্ণ UI কম্পোনেন্ট রেফারেন্স।" },
   { id: "09", slug: "09-usability", title_bn: "ইউজেবিলিটি", title_en: "Usability", description_bn: "লার্নেবিলিটি, এফিশিয়েন্সি, SUS।" },
@@ -37,7 +37,7 @@ export const taxonomy: Level[] = [
   // alongside, not a full standalone PM bootcamp.
   { id: "19", slug: "19-product-management-fundamentals", title_bn: "প্রোডাক্ট ম্যানেজমেন্টের ভিত্তি", title_en: "Product Management Fundamentals", description_bn: "PM/PO/Designer-এর ভূমিকার পার্থক্য, প্রোডাক্ট লাইফসাইকেল, Agile প্রোডাক্ট ডেভেলপমেন্ট।" },
   { id: "20", slug: "20-product-requirements-and-documentation", title_bn: "প্রোডাক্ট রিকোয়ারমেন্ট ও ডকুমেন্টেশন", title_en: "Product Requirements & Documentation", description_bn: "PRD, User Story, Acceptance Criteria — একটা ফিচার লেখার মাধ্যমে দলকে বোঝানো।" },
-  { id: "21", slug: "21-prioritization-and-roadmapping", title_bn: "প্রাধান্য নির্ধারণ ও রোডম্যাপ", title_en: "Prioritization & Roadmapping", description_bn: "RICE, MoSCoW, Kano Model — কোন ফিচার আগে বানাবে তা সিদ্ধান্ত নেওয়ার ফ্রেমওয়ার্ক।" },
+  { id: "21", slug: "21-prioritization-and-roadmapping", title_bn: "Prioritization ও Roadmap", title_en: "Prioritization & Roadmapping", description_bn: "RICE, MoSCoW, Kano Model — কোন ফিচার আগে বানাবে তা সিদ্ধান্ত নেওয়ার ফ্রেমওয়ার্ক।" },
   { id: "22", slug: "22-agile-scrum-and-delivery", title_bn: "Agile, Scrum ও প্রোডাক্ট ডেলিভারি", title_en: "Agile, Scrum & Product Delivery", description_bn: "Scrum-এর ভূমিকা ও অনুষ্ঠান, MVP ডেলিভারি, রিলিজ ম্যানেজমেন্ট।" },
   { id: "23", slug: "23-product-analytics-and-growth", title_bn: "প্রোডাক্ট অ্যানালিটিক্স ও গ্রোথ", title_en: "Product Analytics & Growth", description_bn: "North Star Metric, Funnel, Retention, AARRR — সংখ্যা দিয়ে প্রোডাক্টের স্বাস্থ্য বোঝা।" },
   { id: "24", slug: "24-business-market-and-monetization", title_bn: "বিজনেস, মার্কেট ও মনিটাইজেশন", title_en: "Business, Market & Monetization", description_bn: "Business Model Canvas, TAM/SAM/SOM, প্রাইসিং ও রেভিনিউ মডেল।" },
@@ -67,7 +67,7 @@ export const levelGroups: LevelGroup[] = [
   {
     slug: "ux-design",
     title_bn: "UX Design",
-    description_bn: "ব্যবহারকারী গবেষণা, তথ্য স্থাপত্য, আর ইন্টারঅ্যাকশন ডিজাইন — সমস্যা বোঝা থেকে সমাধান কাঠামো পর্যন্ত।",
+    description_bn: "User Research, Information Architecture, আর Interaction Design — সমস্যা বোঝা থেকে সমাধান কাঠামো পর্যন্ত।",
     levelIds: ["04", "05", "06", "09"],
   },
   {
@@ -79,7 +79,7 @@ export const levelGroups: LevelGroup[] = [
   {
     slug: "product-design-and-management",
     title_bn: "Product Design ও Management",
-    description_bn: "ব্যবসায়িক লক্ষ্য, প্রাধান্য নির্ধারণ, Agile ডেলিভারি, আর প্রোডাক্ট অ্যানালিটিক্স — UX-এর সাথে প্রোডাক্ট থিংকিং যুক্ত করা।",
+    description_bn: "ব্যবসায়িক লক্ষ্য, Prioritization, Agile ডেলিভারি, আর প্রোডাক্ট অ্যানালিটিক্স — UX-এর সাথে প্রোডাক্ট থিংকিং যুক্ত করা।",
     levelIds: ["13", "14", "15", "19", "20", "21", "22", "23", "24"],
   },
   {

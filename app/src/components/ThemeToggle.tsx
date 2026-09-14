@@ -137,10 +137,11 @@ function FullThemeToggle() {
           key={t.value}
           aria-pressed={theme === t.value}
           onClick={() => handleChange(t.value)}
-          className="type-label rounded-full px-3 py-1 transition-colors"
+          className="type-label rounded-full px-3 transition-colors"
           style={{
             background: theme === t.value ? "var(--color-accent-strong)" : "transparent",
             color: theme === t.value ? "var(--color-on-accent)" : "var(--color-text-secondary)",
+            minHeight: "var(--size-touch-target)",
           }}
           suppressHydrationWarning
         >
