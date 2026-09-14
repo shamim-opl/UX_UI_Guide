@@ -14,6 +14,8 @@ export type JobCategory =
   | "product-management"
   | "software-development"
   | "frontend"
+  | "backend"
+  | "full-stack"
   | "app-development"
   | "web-development"
   | "vibe-coding"
@@ -49,6 +51,8 @@ export const CATEGORY_LABELS: Record<JobCategory, string> = {
   "product-management": "Product Management",
   "software-development": "Software Development",
   frontend: "Frontend Development",
+  backend: "Backend Development",
+  "full-stack": "Full Stack Development",
   "app-development": "App Development",
   "web-development": "Web Development",
   "vibe-coding": "Vibe Coding / AI-Assisted Dev",
