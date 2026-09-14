@@ -16,7 +16,11 @@
   --color-surface-hover: #f3f4f6;
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
-  --color-text-muted: #64748b;
+  /* UX audit, 2026-09-15 (see decisions.md): measured 4.76:1 on white —
+     technically AA (4.5:1) but hugging the floor for a color used
+     everywhere (captions, reading time, labels). Darkened to land at
+     ~5.8:1, a real safety margin against rendering variance. */
+  --color-text-muted: #57667c;
   --color-border: #e5e7eb;
   /* Indigo accent (Docspace-style redesign, 2026-09-10) replaces the
      earlier Medium-green direction — see decisions.md. accent-600 (not
@@ -112,7 +116,8 @@
   --color-surface-hover: #24272d;
   --color-text-primary: #f2f3f5;
   --color-text-secondary: #b4b8bf;
-  --color-text-muted: #7e848e;
+  /* Same audit as :root — lightened for a real safety margin (~6.1:1). */
+  --color-text-muted: #8b909a;
   --color-border: #2a2d33;
   --color-accent: #818cf8;
   --color-accent-hover: #a5b4fc;
@@ -137,7 +142,9 @@
   --color-surface-hover: #2b2f38;
   --color-text-primary: #e7e9ec;
   --color-text-secondary: #a6acb5;
-  --color-text-muted: #7e848e;
+  /* Same audit as :root — this was the tightest margin in the system
+     (4.72:1 against Semi-Dark's lighter background); now ~5.5:1. */
+  --color-text-muted: #8b909a;
   --color-border: #2e323a;
   --color-accent: #818cf8;
   --color-accent-hover: #a5b4fc;
