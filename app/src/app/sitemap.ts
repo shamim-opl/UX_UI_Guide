@@ -26,11 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/search",
     "/jobs",
     "/feedback",
+    "/toc",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
-    priority: path === "" ? 1 : path === "/feedback" ? 0.3 : 0.7,
+    priority: path === "" ? 1 : path === "/feedback" ? 0.3 : path === "/toc" ? 0.5 : 0.7,
   }));
 
   const levelRoutes = taxonomy.map((level) => ({

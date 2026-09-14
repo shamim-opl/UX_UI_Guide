@@ -55,9 +55,14 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} {SITE_NAME} — তৈরি করেছেন morshedUX
         </p>
 
-        <Link href="/feedback" className="type-caption" style={{ color: "var(--color-text-muted)" }}>
-          মতামত ও পরামর্শ
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/toc" className="type-caption" style={{ color: "var(--color-text-muted)" }}>
+            সুচিপত্র
+          </Link>
+          <Link href="/feedback" className="type-caption" style={{ color: "var(--color-text-muted)" }}>
+            মতামত ও পরামর্শ
+          </Link>
+        </div>
 
         <div className="flex items-center gap-1">
           {SOCIAL_LINKS.map((s) => (

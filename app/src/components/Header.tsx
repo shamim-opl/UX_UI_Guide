@@ -32,6 +32,7 @@ const MORE_LINKS = [
   { href: "/ai", label: "AI UX" },
   { href: "/resources", label: "রিসোর্স" },
   { href: "/glossary", label: "শব্দকোষ" },
+  { href: "/toc", label: "সুচিপত্র" },
   { href: "/feedback", label: "মতামত ও পরামর্শ" },
 ];
 
