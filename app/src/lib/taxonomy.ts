@@ -12,7 +12,7 @@ export type Level = {
 export const taxonomy: Level[] = [
   { id: "00", slug: "00-getting-started", title_bn: "শুরু করা", title_en: "Getting Started", description_bn: "ডিজাইন, UX, UI — মূল শব্দগুলো বোঝা দিয়ে শুরু।" },
   { id: "01", slug: "01-digital-design-fundamentals", title_bn: "ডিজিটাল ডিজাইনের ভিত্তি", title_en: "Digital Design Fundamentals", description_bn: "ডিজিটাল প্রোডাক্ট ডিজাইনের বুনিয়াদি ধারণা।" },
-  { id: "02", slug: "02-human-and-psychology", title_bn: "মানুষ ও মনোবিজ্ঞান", title_en: "Human & Psychology", description_bn: "উপলব্ধি, স্মৃতি, Cognitive Load, Decision Making।" },
+  { id: "02", slug: "02-human-and-psychology", title_bn: "Human & Psychology", title_en: "Human & Psychology", description_bn: "উপলব্ধি, স্মৃতি, Cognitive Load, Decision Making।" },
   { id: "03", slug: "03-ux-fundamentals", title_bn: "UX-এর ভিত্তি", title_en: "UX Fundamentals", description_bn: "ইউজার, নিড, জার্নি, ফ্লো এবং UX প্রসেস।" },
   { id: "04", slug: "04-ux-research", title_bn: "UX গবেষণা", title_en: "UX Research", description_bn: "রিসার্চ পদ্ধতি ও ডেলিভারেবল।" },
   { id: "05", slug: "05-information-architecture", title_bn: "Information Architecture", title_en: "Information Architecture", description_bn: "স্ট্রাকচার, ন্যাভিগেশন, লেবেলিং।" },

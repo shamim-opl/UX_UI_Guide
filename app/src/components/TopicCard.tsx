@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { ContentDoc } from "@/lib/content";
 
 const DIFFICULTY_LABEL: Record<string, string> = {
-  beginner: "প্রাইমারি",
-  intermediate: "মধ্যম",
-  advanced: "উন্নত",
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
 };
 
 export default function TopicCard({ doc, href }: { doc: ContentDoc; href: string }) {

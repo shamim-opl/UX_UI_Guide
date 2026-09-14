@@ -330,6 +330,11 @@ a:hover {
   transform: scale(0.92);
 }
 
+.footer-social-link:hover {
+  color: var(--color-accent);
+  background: var(--color-surface-hover);
+}
+
 .tag {
   display: inline-block;
   font-family: var(--font-heading);

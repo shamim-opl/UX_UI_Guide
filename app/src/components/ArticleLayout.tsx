@@ -12,10 +12,13 @@ import { Table } from "@/components/mdx/Table";
 import type { ContentDoc } from "@/lib/content";
 import { SITE_NAME } from "@/lib/site";
 
+// English labels per Morshed's request (2026-09-15) — Bangla translations
+// of these three (প্রাইমারি/মধ্যম/উন্নত) read as less familiar than the
+// plain English terms already common in this space.
 const DIFFICULTY_LABEL: Record<string, string> = {
-  beginner: "প্রাইমারি",
-  intermediate: "মধ্যম",
-  advanced: "উন্নত",
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
 };
 
 export default function ArticleLayout({

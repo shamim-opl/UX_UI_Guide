@@ -18,15 +18,15 @@ export type SearchIndexItem = {
 
 const FILTERS = [
   { value: "all", label: "সব" },
-  { value: "beginner", label: "প্রাইমারি" },
-  { value: "intermediate", label: "মধ্যম" },
-  { value: "advanced", label: "উন্নত" },
+  { value: "beginner", label: "Beginner" },
+  { value: "intermediate", label: "Intermediate" },
+  { value: "advanced", label: "Advanced" },
 ];
 
 const DIFFICULTY_LABEL: Record<string, string> = {
-  beginner: "প্রাইমারি",
-  intermediate: "মধ্যম",
-  advanced: "উন্নত",
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  advanced: "Advanced",
 };
 
 // Unicode-normalize before comparing (NFC) — Bangla text can reach the page
