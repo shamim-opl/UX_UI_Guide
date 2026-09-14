@@ -29,24 +29,38 @@ export const taxonomy: Level[] = [
   { id: "16", slug: "16-ai-ux", title_bn: "AI UX", title_en: "AI UX", description_bn: "কনভার্সেশনাল UX, AI এজেন্ট, প্রম্পট UX।" },
   { id: "17", slug: "17-human-ai-interaction", title_bn: "মানুষ–AI ইন্টারঅ্যাকশন", title_en: "Human–AI Interaction", description_bn: "কন্ট্রোল, ট্রান্সপারেন্সি, ওভাররাইড।" },
   { id: "18", slug: "18-emerging-future-interaction", title_bn: "উদীয়মান ও ভবিষ্যৎ ইন্টারঅ্যাকশন", title_en: "Emerging & Future Interaction", description_bn: "ভয়েস, জেসচার, স্প্যাশিয়াল কম্পিউটিং। প্রতিষ্ঠিত/উদীয়মান/পরীক্ষামূলক/অনুমানভিত্তিক লেবেল আবশ্যক।" },
+  // Product Management track — added 2026-09-14 per Morshed's curriculum
+  // review (see decisions.md). Appended as new levels rather than
+  // renumbering 00-18, which would have broken every existing article's
+  // URL and cross-link. UX/UI stays the platform's core identity; this
+  // track covers the adjacent PM discipline a Product Designer works
+  // alongside, not a full standalone PM bootcamp.
+  { id: "19", slug: "19-product-management-fundamentals", title_bn: "প্রোডাক্ট ম্যানেজমেন্টের ভিত্তি", title_en: "Product Management Fundamentals", description_bn: "PM/PO/Designer-এর ভূমিকার পার্থক্য, প্রোডাক্ট লাইফসাইকেল, Agile প্রোডাক্ট ডেভেলপমেন্ট।" },
+  { id: "20", slug: "20-product-requirements-and-documentation", title_bn: "প্রোডাক্ট রিকোয়ারমেন্ট ও ডকুমেন্টেশন", title_en: "Product Requirements & Documentation", description_bn: "PRD, User Story, Acceptance Criteria — একটা ফিচার লেখার মাধ্যমে দলকে বোঝানো।" },
+  { id: "21", slug: "21-prioritization-and-roadmapping", title_bn: "প্রাধান্য নির্ধারণ ও রোডম্যাপ", title_en: "Prioritization & Roadmapping", description_bn: "RICE, MoSCoW, Kano Model — কোন ফিচার আগে বানাবে তা সিদ্ধান্ত নেওয়ার ফ্রেমওয়ার্ক।" },
+  { id: "22", slug: "22-agile-scrum-and-delivery", title_bn: "Agile, Scrum ও প্রোডাক্ট ডেলিভারি", title_en: "Agile, Scrum & Product Delivery", description_bn: "Scrum-এর ভূমিকা ও অনুষ্ঠান, MVP ডেলিভারি, রিলিজ ম্যানেজমেন্ট।" },
+  { id: "23", slug: "23-product-analytics-and-growth", title_bn: "প্রোডাক্ট অ্যানালিটিক্স ও গ্রোথ", title_en: "Product Analytics & Growth", description_bn: "North Star Metric, Funnel, Retention, AARRR — সংখ্যা দিয়ে প্রোডাক্টের স্বাস্থ্য বোঝা।" },
+  { id: "24", slug: "24-business-market-and-monetization", title_bn: "বিজনেস, মার্কেট ও মনিটাইজেশন", title_en: "Business, Market & Monetization", description_bn: "Business Model Canvas, TAM/SAM/SOM, প্রাইসিং ও রেভিনিউ মডেল।" },
+  { id: "25", slug: "25-career-and-professional-growth", title_bn: "ক্যারিয়ার ও পেশাগত উন্নয়ন", title_en: "Career & Professional Growth", description_bn: "পোর্টফোলিও, কেস স্টাডি লেখা, ইন্টারভিউ প্রস্তুতি — একটা রিডিং রেফারেন্স, কোনো সাবমিশন/স্কোরিং ফিচার ছাড়া।" },
 ];
 
 export function getLevelBySlug(slug: string): Level | undefined {
   return taxonomy.find((l) => l.slug === slug);
 }
 
-// Sidebar section grouping (Docspace-style redesign, 2026-09-10 — see
-// decisions.md). Purely a presentation grouping for the Learn sidebar; not
-// a change to the taxonomy itself, which stays flat 00-18 per
-// 05-content-taxonomy.md — a level's group here is derived, not stored.
+// Sidebar section grouping — restructured 2026-09-14 into 5 named
+// "Learning Paths" per Morshed's curriculum review (see decisions.md),
+// replacing the earlier 7 untitled sections. Purely a presentation
+// grouping for the Learn sidebar; not a change to the taxonomy itself,
+// which stays flat 00-25 per 05-content-taxonomy.md — a level's group
+// here is derived, not stored, so this can be re-shuffled freely without
+// touching any level's id/slug/URL.
 export type LevelGroup = { title_bn: string; levelIds: string[] };
 
 export const levelGroups: LevelGroup[] = [
-  { title_bn: "ভিত্তি", levelIds: ["00", "01"] },
-  { title_bn: "মানুষ ও গবেষণা", levelIds: ["02", "03", "04"] },
-  { title_bn: "স্ট্রাকচার ও ডিজাইন", levelIds: ["05", "06", "07", "08"] },
-  { title_bn: "মান যাচাই", levelIds: ["09", "10"] },
-  { title_bn: "প্ল্যাটফর্ম ও সিস্টেম", levelIds: ["11", "12"] },
-  { title_bn: "প্রোডাক্ট", levelIds: ["13", "14", "15"] },
-  { title_bn: "ভবিষ্যৎ", levelIds: ["16", "17", "18"] },
+  { title_bn: "Design Foundations", levelIds: ["00", "01", "02", "03"] },
+  { title_bn: "UX Design", levelIds: ["04", "05", "06", "09"] },
+  { title_bn: "UI Design ও Design Systems", levelIds: ["07", "08", "10", "11", "12"] },
+  { title_bn: "Product Design ও Management", levelIds: ["13", "14", "15", "19", "20", "21", "22", "23", "24"] },
+  { title_bn: "Advanced ও Career", levelIds: ["16", "17", "18", "25"] },
 ];

@@ -90,6 +90,13 @@ const ICONS: Record<string, (p: IconProps) => React.ReactElement> = {
   "16": SparkleIcon,
   "17": SparkleIcon,
   "18": SparkleIcon,
+  "19": CompassIcon,
+  "20": BookIcon,
+  "21": CheckCircleIcon,
+  "22": LayersIcon,
+  "23": GridIcon,
+  "24": CompassIcon,
+  "25": BookIcon,
 };
 
 export default function LevelIcon({ levelId, className }: { levelId: string; className?: string }) {
