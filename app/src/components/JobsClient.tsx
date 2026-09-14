@@ -139,7 +139,11 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
                   <span>{job.jobType}</span>
                   {job.experience_level && <span>{job.experience_level}</span>}
                   <span style={{ color: open ? "var(--color-success)" : "var(--color-error)" }}>
-                    {open ? `আবেদনের শেষ তারিখ: ${formatDate(job.deadline)}` : `মেয়াদ শেষ হয়েছে (${formatDate(job.deadline)})`}
+                    {!job.deadline
+                      ? "চলমান নিয়োগ (নির্দিষ্ট ডেডলাইন নেই)"
+                      : open
+                        ? `আবেদনের শেষ তারিখ: ${formatDate(job.deadline)}`
+                        : `মেয়াদ শেষ হয়েছে (${formatDate(job.deadline)})`}
                   </span>
                 </div>
               </Link>

@@ -11,9 +11,9 @@ export function getAllJobs(): Job[] {
   if (!fs.existsSync(file)) return [];
   const raw = fs.readFileSync(file, "utf8");
   const jobs = (loadYaml(raw) as Job[]) ?? [];
-  // Soonest-expiring first — the most actionable ordering for a listing
-  // page where every entry has a real, ticking deadline.
-  return [...jobs].sort((a, b) => (a.deadline < b.deadline ? -1 : 1));
+  // Soonest-expiring first — the most actionable ordering. Rolling/no-deadline
+  // postings sort last since there's no urgency attached to them.
+  return [...jobs].sort((a, b) => (a.deadline ?? "9999-99-99").localeCompare(b.deadline ?? "9999-99-99"));
 }
 
 export function getJobBySlug(slug: string): Job | undefined {

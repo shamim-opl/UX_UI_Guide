@@ -41,7 +41,7 @@ export default async function JobDetailPage({ params }: PageProps<"/jobs/[slug]"
         <span className="tag shrink-0">{CATEGORY_LABELS[job.category]}</span>
       </div>
 
-      {!open && (
+      {!open && job.deadline && (
         <div className="card mt-6" style={{ borderColor: "var(--color-error)" }}>
           <p className="type-body-sm" style={{ color: "var(--color-error)" }}>
             এই পোস্টের আবেদনের মেয়াদ শেষ হয়ে গেছে ({formatDate(job.deadline)})। এটা রেফারেন্সের জন্য রাখা হয়েছে।
@@ -85,7 +85,7 @@ export default async function JobDetailPage({ params }: PageProps<"/jobs/[slug]"
               আবেদনের শেষ তারিখ
             </dt>
             <dd className="type-body-sm" style={{ color: open ? "var(--color-success)" : "var(--color-error)" }}>
-              {formatDate(job.deadline)}
+              {job.deadline ? formatDate(job.deadline) : "চলমান নিয়োগ (নির্দিষ্ট ডেডলাইন নেই)"}
             </dd>
           </div>
           <div className="flex flex-wrap gap-2 py-2">

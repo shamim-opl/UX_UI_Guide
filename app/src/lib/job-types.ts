@@ -38,7 +38,11 @@ export type Job = {
   // posted_date would violate the sourcing rule above, so we record the
   // date *we* verified the listing was live instead.
   verified_date: string; // ISO date (YYYY-MM-DD) — when this entry was checked against its source
-  deadline: string; // ISO date (YYYY-MM-DD)
+  // Many corporate postings (LinkedIn especially) run rolling/"open until
+  // filled" recruitment with no stated deadline. Guessing one would violate
+  // the sourcing rule above, so this is optional — omit it rather than
+  // invent a date; isJobOpen() and the UI both treat "no deadline" as open.
+  deadline?: string; // ISO date (YYYY-MM-DD)
   summary_bn: string;
   responsibilities: string[];
   requirements: string[];
@@ -60,6 +64,7 @@ export const CATEGORY_LABELS: Record<JobCategory, string> = {
 };
 
 export function isJobOpen(job: Job): boolean {
+  if (!job.deadline) return true;
   // Compared as date-only strings (YYYY-MM-DD sorts lexicographically same
   // as chronologically) — avoids timezone drift from Date object math.
   const today = new Date().toISOString().slice(0, 10);
