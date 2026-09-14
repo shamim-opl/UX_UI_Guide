@@ -3,7 +3,7 @@ import TopicCard from "@/components/TopicCard";
 import { getContentByLevel } from "@/lib/content";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "মানুষ ও সাইকোলজি" };
+export const metadata: Metadata = { title: "হিউম্যান ও সাইকোলজি" };
 
 // This section mirrors taxonomy level 02 (Human & Psychology) content in a
 // dedicated primary-nav view, per UX_UI Documentation/docs/02-information-architecture.md
@@ -15,7 +15,7 @@ export default function PsychologyPage() {
     <div className="mx-auto max-w-[1280px] px-4 py-8 md:px-6">
       <Breadcrumb items={[{ label: "সাইকোলজি" }]} />
       <h1 className="type-h1 mt-4" style={{ color: "var(--color-text-primary)" }}>
-        মানুষ ও সাইকোলজি
+        হিউম্যান ও সাইকোলজি
       </h1>
       <p className="type-body-lg mt-2 max-w-2xl" style={{ color: "var(--color-text-secondary)" }}>
         উপলব্ধি, স্মৃতি, Cognitive Load, Decision Making — ডিজাইন-প্রাসঙ্গিক মানব আচরণ ও কগনিশন। এটা মেডিকেল পরামর্শ না।
