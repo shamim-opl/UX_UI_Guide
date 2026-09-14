@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/site";
 import { taxonomy, levelGroups } from "@/lib/taxonomy";
 import { getAllContent, getContentByReferenceCategory } from "@/lib/content";
 import { platforms } from "@/lib/platforms";
+import { getAllJobs, isJobOpen } from "@/lib/jobs";
 
 export const dynamic = "force-static";
 
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/resources",
     "/glossary",
     "/search",
+    "/jobs",
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: new Date(),
@@ -70,5 +72,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...levelRoutes, ...learningPathRoutes, ...articleRoutes, ...referenceCategoryRoutes, ...platformRoutes];
+  // Only open postings — an expired listing is kept as a page (for anyone
+  // who already has the link) but shouldn't be offered to search engines.
+  const jobRoutes = getAllJobs()
+    .filter(isJobOpen)
+    .map((job) => ({
+      url: `${SITE_URL}/jobs/${job.slug}`,
+      lastModified: job.verified_date,
+      changeFrequency: "daily" as const,
+      priority: 0.6,
+    }));
+
+  return [...staticRoutes, ...levelRoutes, ...learningPathRoutes, ...articleRoutes, ...referenceCategoryRoutes, ...platformRoutes, ...jobRoutes];
 }

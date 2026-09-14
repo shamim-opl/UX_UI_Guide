@@ -1,0 +1,141 @@
+# Real, verified job listings only — see src/lib/jobs.ts for the sourcing
+# rule. Every entry's `source` is the exact page it was confirmed on, and
+# `verified_date` is when that check happened. Do not add a listing here
+# without opening its real source page first.
+#
+# To add more later: browse the source site, copy its real fields, set
+# verified_date to today, and never guess a deadline or apply link.
+
+- id: "job-001"
+  slug: "ui-ux-designer-one-direction-companies"
+  title: "UI/UX Designer"
+  company: "One Direction Companies Limited"
+  category: "ui-ux"
+  jobType: "Full-time"
+  location: "Dhaka Sadar, Dhaka"
+  experience_level: "৩ বছর বা তার বেশি অভিজ্ঞতা"
+  verified_date: "2026-09-14"
+  deadline: "2026-09-30"
+  summary_bn: "One Direction Companies Limited-এ একজন UI/UX Designer নেওয়া হচ্ছে, Computer Science/IT অথবা Fine Arts ব্যাকগ্রাউন্ডের প্রার্থীদের জন্য।"
+  responsibilities:
+    - "প্রোডাক্টের জন্য ইউজার-সেন্টার্ড UI/UX ডিজাইন তৈরি করা"
+    - "ওয়্যারফ্রেম, প্রোটোটাইপ ও ভিজ্যুয়াল ডিজাইন বানানো"
+  requirements:
+    - "Bachelor of Science (BSc) in Computer Science & Engineering, Information Technology, অথবা Bachelor of Arts in Fine Arts"
+    - "কমপক্ষে ৩ বছরের প্রাসঙ্গিক অভিজ্ঞতা"
+  apply_link: "https://bdjobs.com/h/details/1530411?ln=1"
+  source: "https://bdjobs.com/h/details/1530411?ln=1"
+
+- id: "job-002"
+  slug: "senior-ui-ux-designer-brain-craft"
+  title: "Senior UI/UX Designer"
+  company: "Brain Craft Ltd."
+  category: "ui-ux"
+  jobType: "Full-time"
+  location: "Mohakhali, Dhaka"
+  experience_level: "২ বছর বা তার বেশি অভিজ্ঞতা"
+  verified_date: "2026-09-14"
+  deadline: "2026-09-29"
+  summary_bn: "Brain Craft Ltd.-এ Senior UI/UX Designer পদে নিয়োগ, যেকোনো বিষয়ে স্নাতকদের জন্য যাদের UI/UX ডিজাইন প্রিন্সিপলে ভালো ধারণা আছে।"
+  responsibilities:
+    - "প্রোডাক্টের UI/UX ডিজাইন লিড করা"
+    - "ডিজাইন প্রিন্সিপল অনুযায়ী ইন্টারফেস তৈরি করা"
+  requirements:
+    - "যেকোনো স্বীকৃত বিশ্ববিদ্যালয় থেকে স্নাতক"
+    - "UI/UX ডিজাইন প্রিন্সিপল সম্পর্কে দৃঢ় ধারণা"
+    - "কমপক্ষে ২ বছরের অভিজ্ঞতা"
+  apply_link: "https://bdjobs.com/h/details/1527334?ln=1"
+  source: "https://bdjobs.com/h/details/1527334?ln=1"
+
+- id: "job-003"
+  slug: "senior-ui-ux-designer-nocfinity"
+  title: "Senior UI/UX Designer"
+  company: "Nocfinity"
+  category: "ui-ux"
+  jobType: "Full-time"
+  location: "Aftabnagar, Dhaka"
+  experience_level: "৩ থেকে ৫ বছর অভিজ্ঞতা"
+  verified_date: "2026-09-14"
+  deadline: "2026-10-09"
+  summary_bn: "Nocfinity-তে Senior UI/UX Designer নেওয়া হচ্ছে, সাথে ২টি ফেস্টিভাল বোনাস, পারফরম্যান্স বোনাস, বার্ষিক ট্যুরসহ বেশ কিছু সুবিধা।"
+  responsibilities:
+    - "প্রোডাক্টের জন্য উচ্চমানের UI/UX ডিজাইন তৈরি ও মেইনটেইন করা"
+  requirements:
+    - "৩ থেকে ৫ বছরের প্রাসঙ্গিক অভিজ্ঞতা"
+  apply_link: "https://bdjobs.com/h/details/1531505?ln=1"
+  source: "https://bdjobs.com/h/details/1531505?ln=1"
+
+- id: "job-004"
+  slug: "ui-ux-designer-betopia-group"
+  title: "UI UX Designer"
+  company: "Betopia Group"
+  category: "ui-ux"
+  jobType: "Full-time"
+  location: "Mohakhali, Dhaka"
+  experience_level: "৪ থেকে ৫ বছর অভিজ্ঞতা"
+  verified_date: "2026-09-14"
+  deadline: "2026-09-23"
+  summary_bn: "Betopia Group-এ UI/UX Designer পদে নিয়োগ, Design, Human-Computer Interaction, বা Information Architecture-এ ডিগ্রিধারীদের জন্য।"
+  responsibilities:
+    - "ইউজার রিসার্চ ও ইউজেবিলিটি টেস্টিং-ভিত্তিক ডিজাইন তৈরি করা"
+  requirements:
+    - "Design, Human-Computer Interaction, Information Architecture বা প্রাসঙ্গিক বিষয়ে ব্যাচেলর ডিগ্রি"
+    - "৪ থেকে ৫ বছরের অভিজ্ঞতা"
+  apply_link: "https://bdjobs.com/h/details/1525472?ln=1"
+  source: "https://bdjobs.com/h/details/1525472?ln=1"
+
+- id: "job-005"
+  slug: "senior-assistant-engineer-ux-ui-tekvision"
+  title: "Senior Assistant Engineer - UX/UI Designer"
+  company: "Tekvision (BD) Limited"
+  category: "ui-ux"
+  jobType: "Full-time"
+  location: "KEPZ (Korean Export Processing Zone), Chattogram"
+  experience_level: "১ থেকে ৩ বছর অভিজ্ঞতা"
+  verified_date: "2026-09-14"
+  deadline: "2026-09-15"
+  summary_bn: "Tekvision (BD) Limited-এ Senior Assistant Engineer - UX/UI Designer পদে নিয়োগ, Computer Science বা HCI ব্যাকগ্রাউন্ডের প্রার্থীদের জন্য। ডেডলাইন খুব কাছাকাছি।"
+  responsibilities:
+    - "প্রোডাক্টের UX/UI ডিজাইন তৈরি ও উন্নয়ন করা"
+  requirements:
+    - "Computer Science, Human-Computer Interaction (HCI) বা প্রাসঙ্গিক বিষয়ে ব্যাচেলর ডিগ্রি"
+    - "১ থেকে ৩ বছরের অভিজ্ঞতা"
+  apply_link: "https://bdjobs.com/h/details/1529763?ln=1"
+  source: "https://bdjobs.com/h/details/1529763?ln=1"
+
+- id: "job-006"
+  slug: "ui-ux-graphic-designer-part-time-next-it"
+  title: "UI/UX & Graphic Designer (Part-Time)"
+  company: "Next IT LTD"
+  category: "ui-ux"
+  jobType: "Part-time"
+  location: "Gulshan 1, Dhaka"
+  experience_level: "৫ বছর বা তার বেশি অভিজ্ঞতা"
+  verified_date: "2026-09-14"
+  deadline: "2026-10-01"
+  summary_bn: "Next IT LTD-এ পার্ট-টাইম UI/UX ও গ্রাফিক ডিজাইনার নেওয়া হচ্ছে, অভিজ্ঞ ডিজাইনারদের জন্য যারা ফুল-টাইম ছাড়া কাজ করতে চান।"
+  responsibilities:
+    - "UI/UX ডিজাইন ও গ্রাফিক ডিজাইন কাজ পার্ট-টাইম ভিত্তিতে সম্পন্ন করা"
+  requirements:
+    - "কমপক্ষে ৫ বছরের অভিজ্ঞতা"
+  apply_link: "https://bdjobs.com/h/details/1528383?ln=1"
+  source: "https://bdjobs.com/h/details/1528383?ln=1"
+
+- id: "job-007"
+  slug: "creative-designer-fast-corporation"
+  title: "Creative Designer (Graphic Design, Video Editing & Motion Graphics)"
+  company: "Fast Corporation (Pvt.) Ltd."
+  category: "ui-ux"
+  jobType: "Full-time"
+  location: "Dhaka"
+  experience_level: "২ থেকে ৪ বছর অভিজ্ঞতা"
+  verified_date: "2026-09-14"
+  deadline: "2026-10-13"
+  summary_bn: "Fast Corporation (Pvt.) Ltd.-এ একজন Creative Designer নেওয়া হচ্ছে — গ্রাফিক ডিজাইন, ভিডিও এডিটিং ও মোশন গ্রাফিক্স নিয়ে কাজ, UI/UX-সংলগ্ন ক্রিয়েটিভ ভূমিকা।"
+  responsibilities:
+    - "গ্রাফিক ডিজাইন, ভিডিও এডিটিং ও মোশন গ্রাফিক্স কনটেন্ট তৈরি করা"
+  requirements:
+    - "Graphic Design, Fine Arts, Multimedia বা প্রাসঙ্গিক বিষয়ে ন্যূনতম ব্যাচেলর ডিগ্রি"
+    - "২ থেকে ৪ বছরের অভিজ্ঞতা"
+  apply_link: "https://bdjobs.com/h/details/1532964?ln=1"
+  source: "https://bdjobs.com/h/details/1532964?ln=1"

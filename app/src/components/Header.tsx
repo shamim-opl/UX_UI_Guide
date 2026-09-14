@@ -23,6 +23,7 @@ const TABS = [
   { href: "/reference", label: "রেফারেন্স" },
   { href: "/patterns", label: "প্যাটার্ন" },
   { href: "/platforms", label: "প্ল্যাটফর্ম" },
+  { href: "/jobs", label: "চাকরি" },
 ];
 
 const MORE_LINKS = [
