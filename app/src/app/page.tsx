@@ -31,8 +31,8 @@ export default function Home() {
           <Link href="/learn" className="btn btn-primary">
             শূন্য থেকে শুরু করুন
           </Link>
-          <Link href="/reference" className="btn btn-secondary">
-            রেফারেন্স দেখুন
+          <Link href="/jobs" className="btn btn-secondary">
+            চাকরি খুঁজুন
           </Link>
         </div>
       </section>
