@@ -58,16 +58,19 @@ export default function SearchBar({ compact = false }: { compact?: boolean }) {
       {/* Right-side circular CTA (moved from a left-side icon, redesigned
           2026-09-15 per Morshed's reference) — Enter still submits since
           this stays a real <form>, the button just gives the same action a
-          visible, clickable target. */}
+          visible, clickable target. Sized a couple px under the pill's own
+          height/border and inset from the edge, so it reads as a chip
+          sitting inside the search field rather than flush with its edge
+          (feedback 2026-09-15). */}
       <button
         type="submit"
         aria-label="খুঁজুন"
-        className="search-cta absolute right-0 flex items-center justify-center rounded-full"
+        className="search-cta absolute right-[2px] flex items-center justify-center rounded-full"
         style={{
           top: "50%",
-          marginTop: "calc(var(--size-touch-target) / -2)",
-          width: "var(--size-touch-target)",
-          height: "var(--size-touch-target)",
+          marginTop: "calc((var(--size-touch-target) - 4px) / -2)",
+          width: "calc(var(--size-touch-target) - 4px)",
+          height: "calc(var(--size-touch-target) - 4px)",
           background: "var(--color-accent-strong)",
           color: "var(--color-on-accent)",
         }}
