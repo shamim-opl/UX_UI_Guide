@@ -26,7 +26,10 @@ export async function generateMetadata({
     description: doc.meta.summary_bn,
     keywords: doc.meta.tags,
     alternates: { canonical },
-    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article" },
+    // og:image/twitter:image come from the colocated opengraph-image.tsx
+    // file convention. Share feature, 2026-09-15 (see decisions.md).
+    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article", url: canonical },
+    twitter: { card: "summary_large_image", title: doc.meta.title_bn, description: doc.meta.summary_bn },
   };
 }
 
@@ -35,10 +38,14 @@ export default async function PatternTopicPage({ params }: PageProps<"/patterns/
   const doc = getContentBySlug(topicSlug);
   if (!doc || doc.meta.reference_category !== "patterns") notFound();
 
+  const level = taxonomy.find((l) => l.id === doc.meta.level);
+  const canonicalPath = `/learn/${level?.slug ?? doc.meta.level}/${doc.meta.slug}`;
+
   return (
     <ArticleLayout
       doc={doc}
       mode="reference"
+      canonicalPath={canonicalPath}
       breadcrumb={[{ label: "প্যাটার্ন", href: "/patterns" }, { label: doc.meta.title_bn }]}
       prev={null}
       next={null}

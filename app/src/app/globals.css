@@ -383,6 +383,14 @@ a:hover {
   background: var(--color-surface-hover);
 }
 
+/* Generic hover for rows inside a .dropdown-panel (ShareButtons' copy-link
+   row and platform links) — same treatment as .feedback-topic-option,
+   named generically since more than one dropdown-panel now uses it. */
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
+  background: var(--color-surface-hover);
+}
+
 .tag {
   display: inline-block;
   font-family: var(--font-heading);

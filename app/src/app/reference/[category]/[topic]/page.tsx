@@ -35,7 +35,10 @@ export async function generateMetadata({
     description: doc.meta.summary_bn,
     keywords: doc.meta.tags,
     alternates: { canonical },
-    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article" },
+    // og:image/twitter:image come from the colocated opengraph-image.tsx
+    // file convention. Share feature, 2026-09-15 (see decisions.md).
+    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article", url: canonical },
+    twitter: { card: "summary_large_image", title: doc.meta.title_bn, description: doc.meta.summary_bn },
   };
 }
 
@@ -47,10 +50,16 @@ export default async function ReferenceTopicPage({
   const doc = getContentBySlug(topicSlug);
   if (!categoryTitle || !doc || doc.meta.reference_category !== category) notFound();
 
+  // Same canonical this doc's generateMetadata resolves to — Learn is the
+  // canonical URL for every article, so Share always points there too.
+  const level = taxonomy.find((l) => l.id === doc.meta.level);
+  const canonicalPath = `/learn/${level?.slug ?? doc.meta.level}/${doc.meta.slug}`;
+
   return (
     <ArticleLayout
       doc={doc}
       mode="reference"
+      canonicalPath={canonicalPath}
       breadcrumb={[
         { label: "রেফারেন্স", href: "/reference" },
         { label: categoryTitle, href: `/reference/${category}` },

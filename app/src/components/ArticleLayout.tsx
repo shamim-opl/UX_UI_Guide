@@ -6,6 +6,7 @@ import LearnSidebar from "@/components/LearnSidebar";
 import PrevNext, { type NavTarget } from "@/components/PrevNext";
 import RelatedTopics from "@/components/RelatedTopics";
 import CopyPageButton from "@/components/CopyPageButton";
+import ShareButtons from "@/components/ShareButtons";
 import Callout from "@/components/mdx/Callout";
 import { H2, H3 } from "@/components/mdx/Heading";
 import { Table } from "@/components/mdx/Table";
@@ -26,6 +27,7 @@ export default function ArticleLayout({
   mode,
   breadcrumb,
   levelSlug,
+  canonicalPath,
   prev,
   next,
   related,
@@ -34,6 +36,7 @@ export default function ArticleLayout({
   mode: "learn" | "reference";
   breadcrumb: Crumb[];
   levelSlug?: string;
+  canonicalPath: string;
   prev: NavTarget;
   next: NavTarget;
   related: ContentDoc[];
@@ -60,7 +63,10 @@ export default function ArticleLayout({
       <div className="min-w-0 flex-1">
         <div className="flex items-center justify-between gap-4">
           <Breadcrumb items={breadcrumb} />
-          <CopyPageButton markdown={doc.body_bn} />
+          <div className="flex items-center gap-2">
+            <ShareButtons path={canonicalPath} title={doc.meta.title_bn} />
+            <CopyPageButton markdown={doc.body_bn} />
+          </div>
         </div>
 
         <header className="mt-4 mb-6">

@@ -17,6 +17,7 @@ export async function generateMetadata({
   const { level: levelSlug, topic } = await params;
   const doc = getContentBySlug(topic);
   if (!doc) return { title: "Learn" };
+  const canonical = `/learn/${levelSlug}/${doc.meta.slug}`;
   return {
     title: doc.meta.title_bn,
     description: doc.meta.summary_bn,
@@ -24,8 +25,12 @@ export async function generateMetadata({
     // Self-canonical: this Learn URL is the canonical one for every article
     // (see decisions.md) — the Reference alternate view points its own
     // canonical tag back here.
-    alternates: { canonical: `/learn/${levelSlug}/${doc.meta.slug}` },
-    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article" },
+    alternates: { canonical },
+    // og:image/twitter:image come from the colocated opengraph-image.tsx
+    // file convention — Next attaches it automatically, no manual `images`
+    // array needed here. Share feature, 2026-09-15 (see decisions.md).
+    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article", url: canonical },
+    twitter: { card: "summary_large_image", title: doc.meta.title_bn, description: doc.meta.summary_bn },
   };
 }
 
@@ -45,6 +50,7 @@ export default async function LearnTopicPage({ params }: PageProps<"/learn/[leve
       doc={doc}
       mode="learn"
       levelSlug={level.slug}
+      canonicalPath={`/learn/${level.slug}/${doc.meta.slug}`}
       breadcrumb={[
         { label: "শেখা", href: "/learn" },
         { label: level.title_bn, href: `/learn/${level.slug}` },
