@@ -72,40 +72,53 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
         </div>
       </div>
 
-      {/* Category filter pills */}
-      <div className="mt-4 flex flex-wrap items-center gap-2" role="group" aria-label="ক্যাটাগরি অনুযায়ী ফিল্টার">
-        <button
-          type="button"
-          onClick={() => setActiveCategory(null)}
-          className="tag"
-          style={
-            activeCategory === null
-              ? { background: "var(--color-accent)", color: "var(--color-on-accent)", borderColor: "var(--color-accent)" }
-              : undefined
-          }
+      {/* Category filter pills — horizontally scrollable on mobile instead
+          of wrapping (feedback 2026-09-15): 9 categories used to wrap onto
+          8-9 separate lines on a narrow phone, pushing every job listing
+          ~440px down the page before the wrap even finished. A single
+          swipeable row is the standard mobile chip-filter pattern and
+          keeps results visible immediately; sm: and up reverts to the
+          original wrapping row since there's enough width to fit most of
+          them without scrolling. */}
+      <div className="mt-4">
+        <div
+          className="flex items-center gap-2 overflow-x-auto pb-1 sm:flex-wrap"
+          role="group"
+          aria-label="ক্যাটাগরি অনুযায়ী ফিল্টার"
         >
-          সব ({jobs.filter((j) => showClosed || isJobOpen(j)).length})
-        </button>
-        {categories.map((c) => {
-          const count = jobs.filter((j) => j.category === c && (showClosed || isJobOpen(j))).length;
-          if (count === 0) return null;
-          return (
-            <button
-              key={c}
-              type="button"
-              onClick={() => setActiveCategory(c === activeCategory ? null : c)}
-              className="tag"
-              style={
-                activeCategory === c
-                  ? { background: "var(--color-accent)", color: "var(--color-on-accent)", borderColor: "var(--color-accent)" }
-                  : undefined
-              }
-            >
-              {CATEGORY_LABELS[c]} ({count})
-            </button>
-          );
-        })}
-        <label className="type-caption ml-auto flex items-center gap-2" style={{ color: "var(--color-text-muted)" }}>
+          <button
+            type="button"
+            onClick={() => setActiveCategory(null)}
+            className="tag shrink-0"
+            style={
+              activeCategory === null
+                ? { background: "var(--color-accent)", color: "var(--color-on-accent)", borderColor: "var(--color-accent)" }
+                : undefined
+            }
+          >
+            সব ({jobs.filter((j) => showClosed || isJobOpen(j)).length})
+          </button>
+          {categories.map((c) => {
+            const count = jobs.filter((j) => j.category === c && (showClosed || isJobOpen(j))).length;
+            if (count === 0) return null;
+            return (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setActiveCategory(c === activeCategory ? null : c)}
+                className="tag shrink-0"
+                style={
+                  activeCategory === c
+                    ? { background: "var(--color-accent)", color: "var(--color-on-accent)", borderColor: "var(--color-accent)" }
+                    : undefined
+                }
+              >
+                {CATEGORY_LABELS[c]} ({count})
+              </button>
+            );
+          })}
+        </div>
+        <label className="type-caption mt-3 flex items-center gap-2" style={{ color: "var(--color-text-muted)" }}>
           <input type="checkbox" checked={showClosed} onChange={(e) => setShowClosed(e.target.checked)} />
           মেয়াদ শেষ হওয়া পোস্টও দেখাও
         </label>
