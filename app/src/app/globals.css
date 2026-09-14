@@ -349,6 +349,11 @@ a:hover {
   background: var(--color-surface-hover);
 }
 
+.feedback-topic-option:hover,
+.feedback-topic-option:focus-visible {
+  background: var(--color-surface-hover);
+}
+
 .tag {
   display: inline-block;
   font-family: var(--font-heading);

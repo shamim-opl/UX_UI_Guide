@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 // Feedback & Suggestions form — added 2026-09-15. This is a fully static
 // site (see next.config.ts's GITHUB_PAGES export mode and the gh-pages
@@ -64,7 +64,30 @@ export default function FeedbackForm({ topicSuggestions }: { topicSuggestions: s
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errorDetail, setErrorDetail] = useState<string | null>(null);
-  const datalistId = useId();
+
+  // Custom dropdown instead of native <input list>/<datalist> — that combo
+  // renders unreliably on mobile (Safari/Chrome often show it as a
+  // barely-usable native picker or nothing at all), so this reuses the same
+  // .dropdown-panel pattern as the header's "আরও" menu: a plain filtered
+  // list, tap/click to select, works identically on every device.
+  const [showTopicSuggestions, setShowTopicSuggestions] = useState(false);
+  const topicFieldRef = useRef<HTMLDivElement>(null);
+
+  const filteredTopics = useMemo(() => {
+    const q = relatedTopic.trim().toLowerCase();
+    if (!q) return [];
+    return topicSuggestions.filter((t) => t.toLowerCase().includes(q)).slice(0, 8);
+  }, [relatedTopic, topicSuggestions]);
+
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      if (topicFieldRef.current && !topicFieldRef.current.contains(e.target as Node)) {
+        setShowTopicSuggestions(false);
+      }
+    }
+    document.addEventListener("click", onClickOutside);
+    return () => document.removeEventListener("click", onClickOutside);
+  }, []);
 
   const messageError = messageTouched && message.trim().length === 0 ? "একটা মেসেজ লিখতে হবে — খালি রাখা যাবে না।" : null;
   const categoryError = categoryTouched && !category ? "একটা ক্যাটাগরি বেছে নাও।" : null;
@@ -196,15 +219,18 @@ export default function FeedbackForm({ topicSuggestions }: { topicSuggestions: s
       </div>
 
       {/* 2. Related topic/page — optional */}
-      <div>
+      <div ref={topicFieldRef} className="relative">
         <label htmlFor="related-topic" className="type-label mb-2 block" style={{ color: "var(--color-text-primary)" }}>
           কোন টপিক/পেজ নিয়ে? <span className="type-caption" style={{ color: "var(--color-text-muted)" }}>(ঐচ্ছিক)</span>
         </label>
         <input
           id="related-topic"
-          list={datalistId}
           value={relatedTopic}
-          onChange={(e) => setRelatedTopic(e.target.value)}
+          onChange={(e) => {
+            setRelatedTopic(e.target.value);
+            setShowTopicSuggestions(true);
+          }}
+          onFocus={() => setShowTopicSuggestions(true)}
           placeholder="যেমন: 'Fitts's Law' বা 'Design Tokens' — না জানলে খালি রাখো"
           className="input-field w-full rounded-md px-4 outline-none"
           style={{
@@ -213,12 +239,36 @@ export default function FeedbackForm({ topicSuggestions }: { topicSuggestions: s
             color: "var(--color-text-primary)",
             height: "var(--size-input-height)",
           }}
+          role="combobox"
+          aria-expanded={showTopicSuggestions && filteredTopics.length > 0}
+          aria-controls="topic-suggestions"
+          aria-autocomplete="list"
+          autoComplete="off"
         />
-        <datalist id={datalistId}>
-          {topicSuggestions.map((t) => (
-            <option key={t} value={t} />
-          ))}
-        </datalist>
+        {showTopicSuggestions && filteredTopics.length > 0 && (
+          <ul
+            id="topic-suggestions"
+            role="listbox"
+            className="dropdown-panel absolute left-0 right-0 top-full z-10 mt-1 max-h-60 overflow-y-auto rounded-lg py-1"
+            style={{ background: "var(--color-surface-elevated)", border: "1px solid var(--color-border)", boxShadow: "var(--shadow-md)" }}
+          >
+            {filteredTopics.map((t) => (
+              <li key={t} role="option" aria-selected={relatedTopic === t}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setRelatedTopic(t);
+                    setShowTopicSuggestions(false);
+                  }}
+                  className="feedback-topic-option type-body-sm block w-full px-4 py-2 text-left"
+                  style={{ color: "var(--color-text-primary)" }}
+                >
+                  {t}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* 3. Message — required */}
