@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hind_Siliguri, Noto_Sans_Bengali } from "next/font/google";
+import { Hind_Siliguri, Noto_Sans_Bengali, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -23,6 +23,23 @@ const notoSansBengali = Noto_Sans_Bengali({
   subsets: ["bengali"],
   weight: ["400", "500"],
   variable: "--font-noto-bengali",
+  display: "swap",
+});
+
+// Font-family spec, 2026-09-15 (per Morshed): English technical terms
+// (e.g. "Cognitive Load" inline in a Bangla sentence) should render in
+// Inter, not fall through to SolaimanLipi's own Latin glyphs — SolaimanLipi
+// is an older Bangla-typing font and its Latin characters look inconsistent
+// next to the rest of the UI. Placed first in --font-body/--font-heading in
+// globals.css: font fallback in browsers resolves per character, so Latin
+// text picks Inter while Bangla text (which Inter has no glyphs for) falls
+// through to SolaimanLipi/Hind Siliguri automatically — no lang-tagging or
+// per-span markup needed. Bengali digits fall through the same way, so they
+// stay in the Bengali font as specified.
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -81,7 +98,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="bn"
-      className={`${hindSiliguri.variable} ${notoSansBengali.variable}`}
+      className={`${hindSiliguri.variable} ${notoSansBengali.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
       <head>

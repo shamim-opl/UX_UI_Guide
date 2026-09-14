@@ -40,13 +40,20 @@
   --color-info: #1d4ed8;
   --color-focus: #4f46e5;
 
-  /* Hind Siliguri / Noto Sans Bengali are embedded via next/font/google
-     (see layout.tsx) so they're always available. SolaimanLipi is not
-     redistributable as a webfont — it renders only for viewers who have it
-     installed locally (common via Avro Keyboard), otherwise the embedded
-     fonts below cover it. */
-  --font-heading: var(--font-hind-siliguri), var(--font-noto-bengali), system-ui, sans-serif;
-  --font-body: "SolaimanLipi", var(--font-hind-siliguri), var(--font-noto-bengali), system-ui, sans-serif;
+  /* Hind Siliguri / Noto Sans Bengali / Inter are embedded via
+     next/font/google (see layout.tsx) so they're always available.
+     SolaimanLipi is not redistributable as a webfont — it renders only for
+     viewers who have it installed locally (common via Avro Keyboard),
+     otherwise the embedded fonts below cover it.
+
+     Inter is listed FIRST in both stacks (font-family spec, 2026-09-15,
+     per Morshed) so English technical terms inline in Bangla text (e.g.
+     "Cognitive Load") render in Inter rather than SolaimanLipi's own Latin
+     glyphs. This relies on standard per-character font fallback — Inter
+     has no Bangla glyphs (letters or digits), so Bangla text and Bengali
+     numerals fall through to the Bangla fonts automatically. */
+  --font-heading: var(--font-inter), var(--font-hind-siliguri), var(--font-noto-bengali), system-ui, sans-serif;
+  --font-body: var(--font-inter), "SolaimanLipi", var(--font-hind-siliguri), var(--font-noto-bengali), system-ui, sans-serif;
   --font-code: "Fira Code", "JetBrains Mono", ui-monospace, monospace;
 
   /* Sizes bumped 2026-09-10 after Morshed flagged long-form reading as
