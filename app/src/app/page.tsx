@@ -105,7 +105,7 @@ export default function Home() {
       {psychology.length > 0 && (
         <section className="mx-auto max-w-[1280px] px-4 py-12 md:px-6">
           <h2 className="type-h2 mb-6" style={{ color: "var(--color-text-primary)" }}>
-            মানুষ ও মনোবিজ্ঞান
+            মানুষ ও সাইকোলজি
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {psychology.map((doc) => (

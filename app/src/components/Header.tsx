@@ -28,7 +28,7 @@ const TABS = [
 
 const MORE_LINKS = [
   { href: "/reference/measurements", label: "পিক্সেল ও মেজারমেন্ট" },
-  { href: "/psychology", label: "মনোবিজ্ঞান" },
+  { href: "/psychology", label: "সাইকোলজি" },
   { href: "/ai", label: "AI UX" },
   { href: "/resources", label: "রিসোর্স" },
   { href: "/glossary", label: "শব্দকোষ" },

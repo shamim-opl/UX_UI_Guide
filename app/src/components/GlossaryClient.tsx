@@ -8,7 +8,7 @@ import type { GlossaryEntry } from "@/lib/glossary";
 // "related terms" tags related to anything — they weren't even clickable).
 const CATEGORY_LABELS: Record<string, string> = {
   fundamentals: "মৌলিক ধারণা",
-  psychology: "মনোবিজ্ঞান",
+  psychology: "সাইকোলজি",
   "interaction-design": "ইন্টারঅ্যাকশন ডিজাইন",
   research: "গবেষণা",
   usability: "ইউজেবিলিটি",
