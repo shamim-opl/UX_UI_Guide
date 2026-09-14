@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SITE_NAME } from "@/lib/site";
 
 // Same handle across every platform, per Morshed (2026-09-15) — confirmed
@@ -53,6 +54,10 @@ export default function Footer() {
         <p className="type-caption">
           &copy; {new Date().getFullYear()} {SITE_NAME} — তৈরি করেছেন morshedUX
         </p>
+
+        <Link href="/feedback" className="type-caption" style={{ color: "var(--color-text-muted)" }}>
+          মতামত ও পরামর্শ
+        </Link>
 
         <div className="flex items-center gap-1">
           {SOCIAL_LINKS.map((s) => (
