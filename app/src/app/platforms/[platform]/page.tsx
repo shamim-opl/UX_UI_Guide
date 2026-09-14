@@ -34,7 +34,7 @@ export default async function PlatformDetailPage({ params }: PageProps<"/platfor
 
       {/* Quick Facts */}
       <div className="card mt-8">
-        <h2 className="type-h4" style={{ color: "var(--color-text-primary)" }}>
+        <h2 className="type-h3" style={{ color: "var(--color-text-primary)" }}>
           Quick Facts
         </h2>
         <dl className="mt-3 flex flex-col gap-2">
