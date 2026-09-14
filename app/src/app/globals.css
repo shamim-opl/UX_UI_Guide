@@ -315,6 +315,21 @@ a:hover {
   border-color: var(--color-accent) !important;
 }
 
+/* Right-side circular search CTA (SearchBar.tsx, SearchClient.tsx) —
+   2026-09-15 redesign, per Morshed's reference image. Positioning uses
+   top/margin-top instead of a translateY transform so :active can use
+   `transform: scale()` on its own without clobbering the centering. */
+.search-cta {
+  transition: background var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+.search-cta:hover {
+  background: var(--color-accent-strong-hover);
+}
+.search-cta:active {
+  transform: scale(0.92);
+}
+
 .tag {
   display: inline-block;
   font-family: var(--font-heading);

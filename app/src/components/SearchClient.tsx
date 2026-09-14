@@ -97,37 +97,39 @@ export default function SearchClient({ index }: { index: SearchIndexItem[] }) {
         <label htmlFor="search-input" className="sr-only">
           খুঁজুন
         </label>
-        {/* Matches SearchBar.tsx's icon+button pattern — this box previously
-            had neither, which read as inconsistent and, worse, gave no
-            clickable way to (re)submit a refined query into the URL. */}
-        <button
-          type="submit"
-          aria-label="খুঁজুন"
-          className="absolute left-0 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full"
-          style={{
-            color: "var(--color-text-muted)",
-            width: "var(--size-touch-target)",
-            height: "var(--size-touch-target)",
-          }}
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
-            <path d="M21 21l-4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
         <input
           id="search-input"
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="যা খুঁজছেন লিখুন…"
-          className="input-field w-full rounded-full py-3 pl-11 pr-4 outline-none"
+          className="input-field w-full rounded-full py-3 pl-5 pr-14 outline-none"
           style={{
             background: "var(--color-surface)",
             border: "1px solid var(--color-border)",
             color: "var(--color-text-primary)",
           }}
         />
+        {/* Right-side circular CTA, matching SearchBar.tsx's redesign
+            (2026-09-15, per Morshed's reference) — Enter still submits
+            since this stays a real <form>. */}
+        <button
+          type="submit"
+          aria-label="খুঁজুন"
+          className="search-cta absolute right-0 flex items-center justify-center rounded-full"
+          style={{
+            top: "50%",
+            marginTop: "calc(var(--size-touch-target) / -2)",
+            width: "var(--size-touch-target)",
+            height: "var(--size-touch-target)",
+            background: "var(--color-accent-strong)",
+            color: "var(--color-on-accent)",
+          }}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
       </form>
 
       <div className="mt-4 flex flex-wrap gap-2" role="group" aria-label="ফিল্টার">
