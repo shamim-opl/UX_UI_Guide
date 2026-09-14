@@ -43,8 +43,10 @@ export default function CopyPageButton({ markdown }: { markdown: string }) {
       className="type-caption flex items-center gap-1.5 rounded-md px-3 py-1.5"
       style={{ border: "1px solid var(--color-border)", color: "var(--color-text-secondary)" }}
     >
-      {copied ? <CheckIcon /> : <CopyIcon />}
-      {copied ? "কপি হয়েছে" : "পেজ কপি করুন"}
+      <span key={copied ? "check" : "copy"} className="success-pop flex items-center gap-1.5">
+        {copied ? <CheckIcon /> : <CopyIcon />}
+        {copied ? "কপি হয়েছে" : "পেজ কপি করুন"}
+      </span>
     </button>
   );
 }

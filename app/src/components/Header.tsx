@@ -36,13 +36,40 @@ const MORE_LINKS = [
 
 const ALL_NAV = [...TABS, ...MORE_LINKS];
 
+// Matches --duration-fast in globals.css (kept as a JS constant since the
+// unmount delay below needs a real number, not a CSS custom property).
+// Micro-animation pass, 2026-09-15 — closing used to be an instant unmount.
+const DROPDOWN_CLOSE_MS = 150;
+
 function MoreMenu({ active }: { active: boolean }) {
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function requestClose() {
+    setOpen((wasOpen) => {
+      if (!wasOpen) return wasOpen;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion) return false;
+      setClosing(true);
+      closeTimer.current = setTimeout(() => {
+        setOpen(false);
+        setClosing(false);
+      }, DROPDOWN_CLOSE_MS);
+      return wasOpen;
+    });
+  }
+
+  useEffect(() => {
+    return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current);
+    };
+  }, []);
 
   useEffect(() => {
     function onClickOutside(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node)) requestClose();
     }
     document.addEventListener("click", onClickOutside);
     return () => document.removeEventListener("click", onClickOutside);
@@ -51,7 +78,7 @@ function MoreMenu({ active }: { active: boolean }) {
   return (
     <div ref={ref} className="relative">
       <button
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => (open ? requestClose() : setOpen(true))}
         aria-expanded={open}
         aria-haspopup="true"
         className="type-body-sm flex items-center gap-1 border-b-2 px-1 py-3"
@@ -67,7 +94,7 @@ function MoreMenu({ active }: { active: boolean }) {
       </button>
       {open && (
         <div
-          className="dropdown-panel absolute left-0 top-full z-10 mt-1 min-w-[180px] rounded-lg py-2"
+          className={`dropdown-panel absolute left-0 top-full z-10 mt-1 min-w-[180px] rounded-lg py-2 ${closing ? "dropdown-panel-closing" : ""}`}
           style={{ background: "var(--color-surface-elevated)", border: "1px solid var(--color-border)", boxShadow: "var(--shadow-md)" }}
         >
           {MORE_LINKS.map((item) => (

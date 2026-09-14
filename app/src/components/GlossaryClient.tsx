@@ -174,7 +174,7 @@ export default function GlossaryClient({ terms }: { terms: GlossaryEntry[] }) {
             )}
             <dl className="mt-4 flex flex-col gap-4">
               {entries.map((entry) => (
-                <div key={entry.term} id={slugify(entry.term)} className="card scroll-mt-24">
+                <div key={entry.term} id={slugify(entry.term)} className="card list-item-in scroll-mt-24">
                   <dt>
                     <span className="type-h4" style={{ color: "var(--color-text-primary)" }}>
                       {entry.term}

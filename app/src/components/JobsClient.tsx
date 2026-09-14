@@ -123,30 +123,36 @@ export default function JobsClient({ jobs }: { jobs: Job[] }) {
           {filtered.map((job) => {
             const open = isJobOpen(job);
             return (
-              <Link key={job.id} href={`/jobs/${job.slug}`} className="card block" style={{ opacity: open ? 1 : 0.6 }}>
-                <div className="flex flex-wrap items-start justify-between gap-2">
-                  <div>
-                    <h3 className="type-h4" style={{ color: "var(--color-text-primary)" }}>
-                      {job.title}
-                    </h3>
-                    <p className="type-body-sm mt-1" style={{ color: "var(--color-text-secondary)" }}>
-                      {job.company} &bull; {job.location}
-                    </p>
+              // list-item-in's "forwards" fill would otherwise pin opacity:1
+              // permanently once it finishes, clobbering the closed-job dim
+              // below — so the entrance animation lives on a wrapper instead
+              // of the same element that carries the dimmed opacity.
+              <div key={job.id} className="list-item-in">
+                <Link href={`/jobs/${job.slug}`} className="card block" style={{ opacity: open ? 1 : 0.6 }}>
+                  <div className="flex flex-wrap items-start justify-between gap-2">
+                    <div>
+                      <h3 className="type-h4" style={{ color: "var(--color-text-primary)" }}>
+                        {job.title}
+                      </h3>
+                      <p className="type-body-sm mt-1" style={{ color: "var(--color-text-secondary)" }}>
+                        {job.company} &bull; {job.location}
+                      </p>
+                    </div>
+                    <span className="tag shrink-0">{CATEGORY_LABELS[job.category]}</span>
                   </div>
-                  <span className="tag shrink-0">{CATEGORY_LABELS[job.category]}</span>
-                </div>
-                <div className="type-caption mt-3 flex flex-wrap items-center gap-3" style={{ color: "var(--color-text-muted)" }}>
-                  <span>{job.jobType}</span>
-                  {job.experience_level && <span>{job.experience_level}</span>}
-                  <span style={{ color: open ? "var(--color-success)" : "var(--color-error)" }}>
-                    {!job.deadline
-                      ? "চলমান নিয়োগ (নির্দিষ্ট ডেডলাইন নেই)"
-                      : open
-                        ? `আবেদনের শেষ তারিখ: ${formatDate(job.deadline)}`
-                        : `মেয়াদ শেষ হয়েছে (${formatDate(job.deadline)})`}
-                  </span>
-                </div>
-              </Link>
+                  <div className="type-caption mt-3 flex flex-wrap items-center gap-3" style={{ color: "var(--color-text-muted)" }}>
+                    <span>{job.jobType}</span>
+                    {job.experience_level && <span>{job.experience_level}</span>}
+                    <span style={{ color: open ? "var(--color-success)" : "var(--color-error)" }}>
+                      {!job.deadline
+                        ? "চলমান নিয়োগ (নির্দিষ্ট ডেডলাইন নেই)"
+                        : open
+                          ? `আবেদনের শেষ তারিখ: ${formatDate(job.deadline)}`
+                          : `মেয়াদ শেষ হয়েছে (${formatDate(job.deadline)})`}
+                    </span>
+                  </div>
+                </Link>
+              </div>
             );
           })}
         </div>

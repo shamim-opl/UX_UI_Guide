@@ -3,6 +3,7 @@ import { Hind_Siliguri, Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 // Hind Siliguri is the embedded heading webfont (spec §34, §07-design-token
@@ -92,7 +93,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <Header />
         <main id="main-content" className="flex-1">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
       </body>

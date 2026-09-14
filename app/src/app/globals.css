@@ -88,9 +88,14 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.14);
 
-  --duration-fast: 100ms;
+  /* Micro-animation pass, 2026-09-15 (see decisions.md): tightened to the
+     150-300ms band Morshed specified — fast was 100ms (below the floor),
+     slow was 320ms (above the ceiling). ease-standard is an ease-out-leaning
+     curve on purpose: entrances/feedback should decelerate into place, never
+     bounce or overshoot. */
+  --duration-fast: 150ms;
   --duration-default: 200ms;
-  --duration-slow: 320ms;
+  --duration-slow: 300ms;
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 
   --z-dropdown: 100;
@@ -401,6 +406,64 @@ button.tag:active {
   from { opacity: 0; transform: scale(0.96) translateY(-4px); }
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
+/* Close animation, added in the 2026-09-15 micro-animation pass (see
+   decisions.md) — closing used to be an instant unmount. Callers add this
+   class for --duration-fast (see its JS constant, must stay in sync) before
+   actually removing the panel from the tree. */
+.dropdown-panel-closing {
+  animation: dropdown-out var(--duration-fast) var(--ease-standard) forwards;
+}
+@keyframes dropdown-out {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to { opacity: 0; transform: scale(0.96) translateY(-4px); }
+}
 @media (prefers-reduced-motion: reduce) {
-  .dropdown-panel { animation: none; }
+  .dropdown-panel,
+  .dropdown-panel-closing {
+    animation: none;
+  }
+}
+
+/* Page-level entrance, 2026-09-15 micro-animation pass — a small fade+rise
+   on route change so navigating between pages doesn't feel like a hard cut.
+   Kept to opacity+4px translate (no slide-in-from-the-side or scale) so it
+   reads as "content settling in," not a slide/wipe transition. */
+.page-transition {
+  animation: page-in var(--duration-default) var(--ease-standard);
+}
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-transition { animation: none; }
+}
+
+/* Entrance for cards/rows appearing in a filtered list (Glossary, Jobs,
+   Search) — 2026-09-15 micro-animation pass. Only newly-mounted items
+   animate (React doesn't remount items that stay in the filtered result),
+   so this fires exactly when a filter/search actually changes what's
+   visible — a purposeful "this just appeared" cue, not decoration. */
+.list-item-in {
+  animation: list-item-in var(--duration-fast) var(--ease-standard) both;
+}
+@keyframes list-item-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .list-item-in { animation: none; }
+}
+
+/* Success micro-feedback (e.g. CopyPageButton's icon swap on success) —
+   2026-09-15 micro-animation pass. A small settle-in, not a bounce. */
+.success-pop {
+  animation: success-pop var(--duration-fast) var(--ease-standard);
+}
+@keyframes success-pop {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .success-pop { animation: none; }
 }

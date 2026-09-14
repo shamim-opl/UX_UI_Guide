@@ -121,7 +121,7 @@ export default function SearchClient({ index }: { index: SearchIndexItem[] }) {
       <ul className="mt-4 flex flex-col gap-3">
         {results.map((item) => (
           <li key={item.id}>
-            <Link href={item.href} className="card block" style={{ textDecoration: "none" }}>
+            <Link href={item.href} className="card list-item-in block" style={{ textDecoration: "none" }}>
               <div className="flex flex-wrap items-center gap-2">
                 <span className="tag">{item.category}</span>
                 <span className="tag">{DIFFICULTY_LABEL[item.difficulty] ?? item.difficulty}</span>
