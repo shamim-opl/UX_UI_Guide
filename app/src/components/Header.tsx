@@ -18,21 +18,25 @@ import { SITE_NAME } from "@/lib/site";
 // work?"), a real findability bug caught 2026-09-13. Bangla-first to match
 // the platform's own content; "AI" stays as-is since it's the term itself,
 // not a translation choice.
+// Reordered/regrouped 2026-09-15 per Morshed's explicit menu spec
+// (see decisions.md) — TOC, Learn, Psychology, AI UX, and Jobs promoted to
+// the primary row; Reference/Patterns/Platforms moved into আরও alongside
+// Measurements/Resources/Glossary/Feedback.
 const TABS = [
+  { href: "/toc", label: "সুচিপত্র" },
   { href: "/learn", label: "শেখা" },
-  { href: "/reference", label: "রেফারেন্স" },
-  { href: "/patterns", label: "প্যাটার্ন" },
-  { href: "/platforms", label: "প্ল্যাটফর্ম" },
+  { href: "/psychology", label: "হিউম্যান সাইকোলজি" },
+  { href: "/ai", label: "AI UX" },
   { href: "/jobs", label: "চাকরি" },
 ];
 
 const MORE_LINKS = [
-  { href: "/reference/measurements", label: "পিক্সেল ও মেজারমেন্ট" },
-  { href: "/psychology", label: "সাইকোলজি" },
-  { href: "/ai", label: "AI UX" },
+  { href: "/reference/measurements", label: "মেজারমেন্ট ও স্পেসিং" },
+  { href: "/patterns", label: "প্যাটার্ন" },
+  { href: "/platforms", label: "প্ল্যাটফর্ম" },
   { href: "/resources", label: "রিসোর্স" },
+  { href: "/reference", label: "রেফারেন্স" },
   { href: "/glossary", label: "শব্দকোষ" },
-  { href: "/toc", label: "সুচিপত্র" },
   { href: "/feedback", label: "মতামত ও পরামর্শ" },
 ];
 
