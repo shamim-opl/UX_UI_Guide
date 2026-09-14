@@ -73,24 +73,23 @@ export default function TocPage() {
                           run-on; a real table with its own header row scans far
                           faster, especially for a level with 8-10 topics.
 
-                          table-layout: fixed with explicit column widths, added
-                          after a follow-up fix: the Topic column previously forced
-                          whiteSpace:nowrap, so a long title (common — many titles
-                          carry a " — " subtitle) pushed Description/Level off the
-                          visible width, and reaching them needed an unlabeled
-                          horizontal scroll most people never noticed. Both text
-                          columns now wrap normally; only the short Level badge
-                          stays nowrap. This is also what makes the table render
-                          correctly on mobile without its own scrollbar. */}
-                      <div className="mt-2 overflow-x-auto rounded-md" style={{ border: "1px solid var(--color-border)" }}>
-                        <table className="w-full" style={{ borderCollapse: "collapse", tableLayout: "fixed" }}>
+                          Mobile follow-up: a fixed-width Level column (needed on
+                          desktop so "Intermediate" never overflows) left barely
+                          ~90px for Description on a 375px screen, wrapping it into
+                          6-7 cramped lines — technically no overflow, but genuinely
+                          hard to read. Below 640px, .toc-table switches to the
+                          standard responsive-table pattern: thead hides, each row
+                          becomes a stacked block, and td::before (from data-label)
+                          prints the column name inline — same markup, no JS. */}
+                      <div className="toc-table-wrap mt-2 overflow-x-auto rounded-md" style={{ border: "1px solid var(--color-border)" }}>
+                        <table className="toc-table w-full" style={{ borderCollapse: "collapse", tableLayout: "fixed" }}>
                           <colgroup>
                             <col style={{ width: "35%" }} />
                             <col />
                             <col style={{ width: "126px" }} />
                           </colgroup>
                           <thead>
-                            <tr style={{ borderBottom: "1px solid var(--color-border)", background: "var(--color-surface)" }}>
+                            <tr style={{ background: "var(--color-surface)" }}>
                               <th className="type-caption px-3 py-2" style={{ textAlign: "left", fontWeight: 600 }}>
                                 Topic
                               </th>
@@ -103,14 +102,9 @@ export default function TocPage() {
                             </tr>
                           </thead>
                           <tbody>
-                            {topics.map((doc, i) => (
-                              <tr
-                                key={doc.meta.id}
-                                style={{
-                                  borderBottom: i < topics.length - 1 ? "1px solid var(--color-border)" : "none",
-                                }}
-                              >
-                                <td className="px-3 py-2" style={{ verticalAlign: "top", wordBreak: "break-word" }}>
+                            {topics.map((doc) => (
+                              <tr key={doc.meta.id} className="toc-table-row">
+                                <td className="px-3 py-2" data-label="Topic" style={{ verticalAlign: "top", wordBreak: "break-word" }}>
                                   <Link
                                     href={`/learn/${level.slug}/${doc.meta.slug}`}
                                     className="type-body-sm"
@@ -119,10 +113,14 @@ export default function TocPage() {
                                     {doc.meta.title_bn}
                                   </Link>
                                 </td>
-                                <td className="type-body-sm px-3 py-2" style={{ verticalAlign: "top", color: "var(--color-text-secondary)", wordBreak: "break-word" }}>
+                                <td
+                                  className="type-body-sm px-3 py-2"
+                                  data-label="Description"
+                                  style={{ verticalAlign: "top", color: "var(--color-text-secondary)", wordBreak: "break-word" }}
+                                >
                                   {doc.meta.summary_bn}
                                 </td>
-                                <td className="px-3 py-2" style={{ verticalAlign: "top" }}>
+                                <td className="px-3 py-2" data-label="Level" style={{ verticalAlign: "top" }}>
                                   <span className="tag" style={{ whiteSpace: "nowrap" }}>{DIFFICULTY_LABEL[doc.meta.difficulty]}</span>
                                 </td>
                               </tr>

@@ -553,3 +553,53 @@ button.tag {
 @media (prefers-reduced-motion: reduce) {
   .success-pop { animation: none; }
 }
+
+/* Row separators for .toc-table — border lives on the <td>s (standard
+   technique with border-collapse:collapse; a border set directly on <tr>
+   doesn't render reliably across browsers in table-row display mode). */
+.toc-table-row:not(:last-child) td {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Responsive table pattern for .toc-table (সুচিপত্র page) — mobile
+   follow-up, 2026-09-15 (see decisions.md). The fixed Level column width
+   needed on desktop (so "Intermediate" never overflows) left too little
+   room for Description on a narrow phone screen, wrapping it into 6-7
+   cramped lines. Below 640px the table stops being a table visually and
+   becomes a stacked card per row instead — thead hides, each td becomes a
+   labeled block (label from the data-label attribute via ::before). Same
+   markup at every width; only the CSS display changes, so this needs no
+   JS and no separate mobile/desktop component. */
+@media (max-width: 640px) {
+  .toc-table-wrap {
+    overflow-x: visible;
+  }
+  .toc-table,
+  .toc-table tbody,
+  .toc-table tr,
+  .toc-table td {
+    display: block;
+    width: 100% !important;
+  }
+  .toc-table thead {
+    display: none;
+  }
+  .toc-table-row {
+    padding: var(--space-3) 0;
+  }
+  .toc-table-row:not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+  }
+  .toc-table td {
+    padding: var(--space-1) var(--space-3) !important;
+    border-bottom: none !important;
+  }
+  .toc-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--text-caption-size);
+    color: var(--color-text-muted);
+    margin-bottom: 2px;
+  }
+}
