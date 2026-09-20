@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { SITE_URL } from "@/lib/site";
 
 function ShareIcon() {
@@ -66,8 +66,24 @@ function shareHref(platform: string, url: string, title: string): string {
 export default function ShareButtons({ path, title }: { path: string; title: string }) {
   const [open, setOpen] = useState(false);
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
+  // Web Share API exists on phones (and some desktops); server snapshot is
+  // false so server and first client render match.
+  const canNativeShare = useSyncExternalStore(
+    () => () => {},
+    () => typeof navigator.share === "function",
+    () => false
+  );
   const ref = useRef<HTMLDivElement>(null);
   const url = `${SITE_URL}${path}`;
+
+  async function handleNativeShare() {
+    setOpen(false);
+    try {
+      await navigator.share({ title, url });
+    } catch {
+      // User dismissed the share sheet — nothing to report.
+    }
+  }
 
   useEffect(() => {
     function onClickOutside(e: MouseEvent) {
@@ -94,7 +110,7 @@ export default function ShareButtons({ path, title }: { path: string; title: str
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-haspopup="true"
-        className="type-caption flex items-center gap-1.5 rounded-md px-3 py-1.5"
+        className="type-caption flex min-h-11 w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md px-3 py-1.5 md:min-h-0 md:w-auto"
         style={{ border: "1px solid var(--color-border)", color: "var(--color-text-secondary)" }}
       >
         <ShareIcon />
@@ -103,7 +119,7 @@ export default function ShareButtons({ path, title }: { path: string; title: str
 
       {open && (
         <div
-          className="dropdown-panel absolute right-0 top-full z-10 mt-1 min-w-[220px] rounded-lg p-2"
+          className="dropdown-panel absolute left-0 top-full z-10 mt-1 min-w-[220px] md:left-auto md:right-0 rounded-lg p-2"
           style={{ background: "var(--color-surface-elevated)", border: "1px solid var(--color-border)", boxShadow: "var(--shadow-md)" }}
         >
           <button
@@ -116,6 +132,17 @@ export default function ShareButtons({ path, title }: { path: string; title: str
               {copyStatus === "copied" ? "লিংক কপি হয়েছে" : copyStatus === "error" ? "কপি করা যায়নি" : "লিংক কপি করো"}
             </span>
           </button>
+
+          {canNativeShare && (
+            <button
+              onClick={handleNativeShare}
+              className="dropdown-item type-body-sm flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-left md:hidden"
+              style={{ color: "var(--color-text-primary)" }}
+            >
+              <ShareIcon />
+              অন্য অ্যাপে শেয়ার করো
+            </button>
+          )}
 
           <div className="my-1" style={{ borderTop: "1px solid var(--color-border)" }} />
 

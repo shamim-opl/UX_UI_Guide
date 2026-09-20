@@ -29,7 +29,7 @@ export async function generateMetadata({
     // og:image/twitter:image come from the colocated opengraph-image.tsx
     // file convention — Next attaches it automatically, no manual `images`
     // array needed here. Share feature, 2026-09-15 (see decisions.md).
-    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article", url: canonical },
+    openGraph: { title: doc.meta.title_bn, description: doc.meta.summary_bn, type: "article", url: canonical, siteName: "UX/UI Guide", locale: "bn_BD" },
     twitter: { card: "summary_large_image", title: doc.meta.title_bn, description: doc.meta.summary_bn },
   };
 }

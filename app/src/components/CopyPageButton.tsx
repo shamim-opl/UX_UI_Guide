@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 function CopyIcon() {
   return (
@@ -35,12 +36,14 @@ function ErrorIcon() {
 // UX_UI Documentation/docs/09... (§39 of the master spec).
 type Status = "idle" | "copied" | "error";
 
-export default function CopyPageButton({ markdown }: { markdown: string }) {
+export default function CopyPageButton({ markdown, title, path }: { markdown: string; title: string; path: string }) {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleCopy() {
+    // Source credit appended so pasted text always points back to the page.
+    const withSource = `# ${title}\n\n${markdown.trim()}\n\n---\nসূত্র: ${SITE_NAME} — ${title}\n${SITE_URL}${path}\n`;
     try {
-      await navigator.clipboard.writeText(markdown);
+      await navigator.clipboard.writeText(withSource);
       setStatus("copied");
       setTimeout(() => setStatus("idle"), 1800);
     } catch {
@@ -53,13 +56,13 @@ export default function CopyPageButton({ markdown }: { markdown: string }) {
   }
 
   const label =
-    status === "copied" ? "কপি হয়েছে" : status === "error" ? "কপি করা যায়নি, আবার চেষ্টা করুন" : "পেজ কপি করুন";
+    status === "copied" ? "কপি হয়েছে" : status === "error" ? "কপি করা যায়নি" : "পেজ কপি করুন";
   const icon = status === "copied" ? <CheckIcon /> : status === "error" ? <ErrorIcon /> : <CopyIcon />;
 
   return (
     <button
       onClick={handleCopy}
-      className="type-caption flex items-center gap-1.5 rounded-md px-3 py-1.5"
+      className="type-caption flex min-h-11 w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-md px-3 py-1.5 md:min-h-0 md:w-auto"
       style={{
         border: `1px solid ${status === "error" ? "var(--color-error)" : "var(--color-border)"}`,
         color: status === "error" ? "var(--color-error)" : "var(--color-text-secondary)",

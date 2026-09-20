@@ -61,18 +61,18 @@ export default function ArticleLayout({
       {mode === "learn" && <LearnSidebar activeLevelSlug={levelSlug} activeTopicSlug={doc.meta.slug} />}
 
       <div className="min-w-0 flex-1">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
           <Breadcrumb items={breadcrumb} />
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 [&>*]:flex-1 md:[&>*]:flex-none">
             <ShareButtons path={canonicalPath} title={doc.meta.title_bn} />
-            <CopyPageButton markdown={doc.body_bn} />
+            <CopyPageButton markdown={doc.body_bn} title={doc.meta.title_bn} path={canonicalPath} />
           </div>
         </div>
 
-        <header className="mt-4 mb-6">
-          <div className="flex flex-wrap items-center gap-2">
+        <header className="mt-10 mb-6 flex flex-col md:mt-11 md:block">
+          <div className="article-meta order-3 mt-4 flex flex-wrap items-center gap-2 md:order-none md:mt-0">
             <span className="tag">{DIFFICULTY_LABEL[doc.meta.difficulty]}</span>
-            <span className="type-caption">{doc.meta.reading_time_minutes} মিনিট পড়া</span>
+            <span className="type-caption article-meta-strong">{doc.meta.reading_time_minutes} মিনিট পড়া</span>
             {mode === "reference" && <span className="tag">রেফারেন্স</span>}
             {doc.meta.last_reviewed && (
               <span className="type-caption">সর্বশেষ পর্যালোচনা: {doc.meta.last_reviewed}</span>
@@ -83,7 +83,7 @@ export default function ArticleLayout({
               </span>
             )}
           </div>
-          <h1 className="type-h1 mt-3" style={{ color: "var(--color-text-primary)" }}>
+          <h1 className="type-h1 mt-3 md:mt-6" style={{ color: "var(--color-text-primary)" }}>
             {doc.meta.title_bn}
           </h1>
           <p className="type-body-lg mt-2" style={{ color: "var(--color-text-secondary)" }}>

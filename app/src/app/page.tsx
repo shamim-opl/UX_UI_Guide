@@ -27,7 +27,7 @@ export default function Home() {
         <p className="type-body-lg mt-4 max-w-xl" style={{ color: "var(--color-text-secondary)" }}>
           একজন শিক্ষানবিশের জন্য শেখার পথ, আর একজন অভিজ্ঞ ডিজাইনারের জন্য দ্রুত রেফারেন্স — একই প্ল্যাটফর্মে।
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex gap-3 sm:flex-wrap [&>.btn]:flex-auto [&>.btn]:whitespace-nowrap [&>.btn]:px-2 [&>.btn]:text-[15px] sm:[&>.btn]:flex-none sm:[&>.btn]:px-5 sm:[&>.btn]:text-base">
           <Link href="/learn" className="btn btn-primary">
             শূন্য থেকে শুরু করুন
           </Link>
