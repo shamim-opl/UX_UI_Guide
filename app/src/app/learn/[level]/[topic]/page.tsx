@@ -49,7 +49,6 @@ export default async function LearnTopicPage({ params }: PageProps<"/learn/[leve
     <ArticleLayout
       doc={doc}
       mode="learn"
-      levelSlug={level.slug}
       canonicalPath={`/learn/${level.slug}/${doc.meta.slug}`}
       breadcrumb={[
         { label: "শেখা", href: "/learn" },

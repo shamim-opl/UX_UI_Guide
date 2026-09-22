@@ -1,9 +1,34 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { taxonomy, levelGroups } from "@/lib/taxonomy";
-import { getContentByLevel } from "@/lib/content";
 import LevelIcon from "@/components/icons/LevelIcon";
 
-export default function LearnSidebar({ activeLevelSlug, activeTopicSlug }: { activeLevelSlug?: string; activeTopicSlug?: string }) {
+export type SidebarTopic = { id: string; slug: string; title_bn: string };
+
+// Client component so it can live in app/learn/[level]/layout.tsx, which
+// persists across /learn/[level]/[topic] navigations instead of remounting
+// per page (see decisions.md, 2026-09-22 — sidebar used to flash/reset scroll
+// on every topic click because it was rendered inside each page.tsx).
+//
+// Topics for the active level are fetched server-side by the layout and
+// passed in as `topics` — getContentByLevel() reads MDX files off disk
+// (node:fs), which can't be bundled into a client component. Only the active
+// topic's highlight is derived here, from the URL, since that's cheap string
+// work and lets the same sidebar work for both /learn/[level] and
+// /learn/[level]/[topic] without the layout needing to know the topic.
+export default function LearnSidebar({
+  activeLevelSlug,
+  topics,
+}: {
+  activeLevelSlug: string;
+  topics: SidebarTopic[];
+}) {
+  const pathname = usePathname();
+  const segments = pathname.split("/").filter(Boolean);
+  const activeTopicSlug = segments[0] === "learn" && segments[1] === activeLevelSlug ? segments[2] : undefined;
+
   return (
     <nav
       aria-label="Learn ন্যাভিগেশন"
@@ -35,7 +60,6 @@ export default function LearnSidebar({ activeLevelSlug, activeTopicSlug }: { act
                 const level = taxonomy.find((l) => l.id === levelId);
                 if (!level) return null;
                 const isActiveLevel = level.slug === activeLevelSlug;
-                const topics = isActiveLevel ? getContentByLevel(level.id) : [];
                 return (
                   <li key={level.id}>
                     <Link
@@ -54,19 +78,16 @@ export default function LearnSidebar({ activeLevelSlug, activeTopicSlug }: { act
                     {isActiveLevel && topics.length > 0 && (
                       <ul className="ml-8 mt-0.5 flex flex-col gap-0.5" style={{ borderLeft: "1px solid var(--color-border)" }}>
                         {topics.map((doc) => (
-                          <li key={doc.meta.id}>
+                          <li key={doc.id}>
                             <Link
-                              href={`/learn/${level.slug}/${doc.meta.slug}`}
+                              href={`/learn/${level.slug}/${doc.slug}`}
                               className="type-caption block py-1 pl-3"
                               style={{
-                                color:
-                                  doc.meta.slug === activeTopicSlug
-                                    ? "var(--color-accent)"
-                                    : "var(--color-text-secondary)",
-                                fontWeight: doc.meta.slug === activeTopicSlug ? 600 : 400,
+                                color: doc.slug === activeTopicSlug ? "var(--color-accent)" : "var(--color-text-secondary)",
+                                fontWeight: doc.slug === activeTopicSlug ? 600 : 400,
                               }}
                             >
-                              {doc.meta.title_bn}
+                              {doc.title_bn}
                             </Link>
                           </li>
                         ))}

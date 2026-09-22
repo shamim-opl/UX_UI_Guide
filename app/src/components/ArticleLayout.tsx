@@ -2,7 +2,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Breadcrumb, { type Crumb } from "@/components/Breadcrumb";
 import TableOfContents from "@/components/TableOfContents";
-import LearnSidebar from "@/components/LearnSidebar";
 import PrevNext, { type NavTarget } from "@/components/PrevNext";
 import RelatedTopics from "@/components/RelatedTopics";
 import CopyPageButton from "@/components/CopyPageButton";
@@ -26,7 +25,6 @@ export default function ArticleLayout({
   doc,
   mode,
   breadcrumb,
-  levelSlug,
   canonicalPath,
   prev,
   next,
@@ -35,7 +33,6 @@ export default function ArticleLayout({
   doc: ContentDoc;
   mode: "learn" | "reference";
   breadcrumb: Crumb[];
-  levelSlug?: string;
   canonicalPath: string;
   prev: NavTarget;
   next: NavTarget;
@@ -55,11 +52,14 @@ export default function ArticleLayout({
     publisher: { "@type": "Organization", name: SITE_NAME },
   };
 
-  return (
-    <div className="mx-auto flex max-w-[1280px] gap-8 px-4 py-8 md:px-6">
+  // Learn topic pages render inside app/learn/[level]/layout.tsx, which
+  // already provides the outer flex row and the sidebar (see decisions.md,
+  // 2026-09-22 — that's what stops the sidebar remounting/flashing on every
+  // topic click). Reference/patterns pages have no such shared layout, so
+  // they still need this component to render its own wrapper.
+  const content = (
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {mode === "learn" && <LearnSidebar activeLevelSlug={levelSlug} activeTopicSlug={doc.meta.slug} />}
-
       <div className="min-w-0 flex-1">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
           <Breadcrumb items={breadcrumb} />
@@ -104,6 +104,10 @@ export default function ArticleLayout({
       </div>
 
       <TableOfContents source={doc.body_bn} />
-    </div>
+    </>
   );
+
+  if (mode === "learn") return content;
+
+  return <div className="mx-auto flex max-w-[1280px] gap-8 px-4 py-8 md:px-6">{content}</div>;
 }
